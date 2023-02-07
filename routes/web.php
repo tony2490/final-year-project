@@ -25,7 +25,7 @@ Route::get('/jobs/{id}', [JobController::class,'show'])->name(('jobs.show'));
 Route::delete('/jobs/{id}', [JobController::class,'destroy'])->name(('jobs.destroy'))->middleware(('auth'));
 
 // Admin Routes
-Route::prefix('admin')->middleware('auth')->name('admin.')->group(function () {
+Route::prefix('admin')->middleware(['auth','auth.isAdmin'])->name('admin.')->group(function () {
     Route::resource('/users', UserController::class);
 });
 
