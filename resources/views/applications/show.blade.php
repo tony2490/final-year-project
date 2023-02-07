@@ -5,6 +5,7 @@
     <h1>    Application for {{ $application->name}} </h1>
 
     <p class="name"> Name - {{$application->name}} </p>
+    <p class="role"> Role - {{$application->role}} </p>
     <p class="astonID"> Aston ID - {{$application->astonID}} </p>
     <p class="studentType"> Student Type - {{$application->studentType}} </p>
     <p class="courseStudied"> Course Studied - {{$application->courseStudied}} </p>
@@ -13,7 +14,6 @@
 
 
   
-    <a href="/applications/create" class="back">  Apply </a>
 </div>
 
 <a href="/applications" class="back"> <- Back to all applicants </a>

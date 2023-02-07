@@ -44,6 +44,7 @@ class ApplicationsController extends Controller
         $application = new Application();
 
         $application->name = request('name');
+        $application->role = request('role');
         $application->astonID = request('astonID');
         $application->studentType = request('studentType');
         $application->courseStudied = request('courseStudied');
