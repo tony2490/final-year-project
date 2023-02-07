@@ -45,6 +45,21 @@
     </div>
 
 </div>
+
+<div class="row mb-3">
+    <label for="password_confirmation" class="col-md-4 col-form-label text-md-end">Password Confirm</label>
+
+    <div class="col-md-6">
+        <input name="password" id="password" type="password" class="form-control @error('password_confirmation') is-invalid @enderror" name="password_confirmation" required autocomplete="new-password">
+
+        @error('password_confirmation')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+        @enderror
+    </div>
+
+</div>
 @endisset
 <div class="mb-3">
     @foreach($roles as $role)
