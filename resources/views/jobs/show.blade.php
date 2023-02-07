@@ -12,6 +12,7 @@
         <button>Remove job</button>
     </form>
     @endcan
+    <a href="/applications/create" class="back">  Apply </a>
 </div>
 
 <a href="/jobs" class="back"> <- Back to all jobs </a>

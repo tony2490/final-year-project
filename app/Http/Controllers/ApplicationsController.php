@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Application;
 use Illuminate\Http\Request;
+use App\Models\Job;
 
 class ApplicationsController extends Controller
 {
@@ -13,7 +15,12 @@ class ApplicationsController extends Controller
      */
     public function index()
     {
-        //
+        
+        $applications = Application::latest()->get();
+        
+        return view('applications.index',[
+            'applications' => $applications,
+        ]);
     }
 
     /**
@@ -23,7 +30,7 @@ class ApplicationsController extends Controller
      */
     public function create()
     {
-        //
+        return view('applications.create');
     }
 
     /**
@@ -34,7 +41,19 @@ class ApplicationsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $application = new Application();
+
+        $application->name = request('name');
+        $application->astonID = request('astonID');
+        $application->studentType = request('studentType');
+        $application->courseStudied = request('courseStudied');
+        $application->relevantModuleGrades = request('relevantModuleGrades');
+        $application->supportingInfo = request('supportingInfo');
+
+
+        $application->save();
+
+        return redirect('/')->with('mssg', 'Application Recieved!');
     }
 
     /**
@@ -45,7 +64,10 @@ class ApplicationsController extends Controller
      */
     public function show($id)
     {
-        //
+        $application = Application::findorFail($id);
+
+        return view('applications.show',['application' => $application]);
+
     }
 
     /**

@@ -1,24 +1,48 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="wrapper-wrapper create-job">
-    <h1> Apply for {{ $job-> course }}</h1>
+<div class="wrapper-wrapper job-application">
+    <h1> Role Application </h1>
+
     <form action="/applications" method="POST">
         @csrf
-        <label for="lecturer"> Lecturer: </label>
-        <input type="text" id="lecturer" name="lecturer">
 
-        <label for="course"> Course Name: </label>
-        <input type="text" id="course" name="course">
+        <label for="role"> Role: </label>
+        <input type="text" id="role" name="role">
 
-        <label for="duration">Duration: </label>
-        <select name="duration" id="duration">
-            <option value="1-2 Weeks"> 1-2 Weeks </option>
-            <option value="2-4 Weeks"> 2-4 Weeks </option>
-            <option value="4-6 Weeks"> 4-6 Weeks </option>
-            <option value="6-8 Weeks"> 6-8 Weeks </option>
+        <br>
+
+        <label for="name"> Name: </label>
+        <input type="text" id="name" name="name">
+
+        <br>
+
+        <label for="astonID"> Aston ID: </label>
+        <input type="text" id="astonID" name="astonID">
+        <br>
+
+
+        <label for="studentType">Student Type: </label>
+        <select name="studentType" id="studentType">
+            <option value="phd Student"> PHD Student </option>
+            <option value="Final Year Student"> Final Year Student </option>
         </select>
-        <input type="submit" value="Create job">
+        <br>
+
+        <label for="courseStudied"> Course Studying: </label>
+        <input type="text" id="courseStudied" name="courseStudied">
+        <br>
+
+        <label for="relevantModuleGrades"> Relevant Module Grades: </label>
+        <input type="text" id="relevantModuleGrades" name="relevantModuleGrades">
+        <br>
+
+        <label for="supportingInfo"> Supporting Information: </label>
+        <input type="text" id="supportingInfo" name="supportingInfo">
+        <br>
+     
+        </select>
+        <input type="submit" value="Apply">
     </form>
 </div>
 

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\ApplicationsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,6 +24,12 @@ Route::get('/jobs/create', [JobController::class,'create'])->name(('jobs.create'
 Route::post('/jobs', [JobController::class,'store'])->name(('jobs.store'))->middleware(('auth'));
 Route::get('/jobs/{id}', [JobController::class,'show'])->name(('jobs.show'));
 Route::delete('/jobs/{id}', [JobController::class,'destroy'])->name(('jobs.destroy'))->middleware(('auth'));
+
+Route::get('/applications', [ApplicationsController::class, 'index'])->name(('applications.index'));
+Route::get('/applications/create', [ApplicationsController::class,'create'])->name(('applications.create'))->middleware(('auth'));
+Route::post('/applications', [ApplicationsController::class,'store'])->name(('applications.store'))->middleware(('auth'));
+Route::get('/applications/{id}', [ApplicationsController::class,'show'])->name(('applications.show'));
+// Route::delete('/jobs/{id}', [JobController::class,'destroy'])->name(('jobs.destroy'))->middleware(('auth'));
 
 // Admin Routes
 Route::prefix('admin')->middleware(['auth','auth.isAdmin'])->name('admin.')->group(function () {

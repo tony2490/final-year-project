@@ -37,11 +37,15 @@
             <a class="nav-link" href="/jobs">Jobs</a>
         </li>
         @can('is-admin')
-        <li class="nav-item active">
-            <a class="nav-link" href="/jobs/create">Create A Job</a>
+        <li class="nav-item">
+            <a class="nav-link" href="/applications">Applications</a>
         </li>
+       
         <li class="nav-item">
             <a class="nav-link" href="{{route('admin.users.index') }} ">Users</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="/jobs/create">Create A Job</a>
         </li>
         @endcan
         </ul>
