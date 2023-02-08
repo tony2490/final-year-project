@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Application;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Job;
 
@@ -16,11 +17,9 @@ class ApplicationsController extends Controller
     public function index()
     {
         
-        $applications = Application::latest()->get();
+
         
-        return view('applications.index',[
-            'applications' => $applications,
-        ]);
+        return view('applications.index',['applications' => Application::paginate(10)]);
     }
 
     /**
@@ -50,6 +49,7 @@ class ApplicationsController extends Controller
         $application->courseStudied = request('courseStudied');
         $application->relevantModuleGrades = request('relevantModuleGrades');
         $application->supportingInfo = request('supportingInfo');
+        $application->status = request('status');
 
 
         $application->save();
@@ -77,9 +77,14 @@ class ApplicationsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
+    public function edit($id){
+
+        
+        return view('applications.edit',[
+            'application' => Application::find($id)
+        ]);
+
+    $request->session()->flash('success', 'You have edited the user');
     }
 
     /**
@@ -91,7 +96,23 @@ class ApplicationsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+    
+        $application = Application::findOrFail($id);
+
+        $application->name = $request->name;
+        $application->role = $request->role;
+        $application->astonID = $request->astonID;
+        $application->studentType = $request->studentType;
+        $application->courseStudied = $request->courseStudied;
+        $application->relevantModuleGrades = $request->relevantModuleGrades;
+        $application->supportingInfo = $request->supportingInfo;
+        $application->status = $request->status;
+
+
+        $application->save();
+        
+        return redirect(route('applications.index'));
     }
 
     /**

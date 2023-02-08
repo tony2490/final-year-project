@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('courseStudied');
             $table->string('relevantModuleGrades');
             $table->string('supportingInfo');
+            $table->string('status');
             $table->timestamps();
         });
     }

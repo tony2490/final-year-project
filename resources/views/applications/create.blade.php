@@ -5,20 +5,21 @@
     <h1> Role Application </h1>
 
     <form action="/applications" method="POST">
+        <!-- @include('applications.partials.form') -->
         @csrf
 
         <label for="role"> Role: </label>
-        <input type="text" id="role" name="role">
+        <input value="" type="text" id="role" name="role">
 
         <br>
 
         <label for="name"> Name: </label>
-        <input type="text" id="name" name="name">
+        <input value=""  type="text" id="name" name="name">
 
         <br>
 
         <label for="astonID"> Aston ID: </label>
-        <input type="text" id="astonID" name="astonID">
+        <input value=""  type="text" id="astonID" name="astonID">
         <br>
 
 
@@ -40,6 +41,8 @@
         <label for="supportingInfo"> Supporting Information: </label>
         <input type="text" id="supportingInfo" name="supportingInfo">
         <br>
+
+        <input type="hidden" id="status" name="status" value="Under Review">
      
         </select>
         <input type="submit" value="Apply">

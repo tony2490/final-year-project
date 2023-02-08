@@ -11,7 +11,17 @@
     <p class="courseStudied"> Course Studied - {{$application->courseStudied}} </p>
     <p class="relevantModuleGrades"> Relevant Module Grades - {{$application->relevantModuleGrades}} </p>
     <p class="supportingInfo"> Supporting Information - {{$application->supportingInfo}} </p>
+    <p class="status"> Status - {{$application->status}} </p>
+    @can('is-admin')
 
+    
+    <label for="status">Update Status: </label>
+        <select name="status" id="status">
+            <option value="Under Review"> Under Review </option>
+            <option value="Accepted"> Accepted </option>
+            <option value="Decline"> Decline </option>
+        </select>
+    @endcan
 
   
 </div>
