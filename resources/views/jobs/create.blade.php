@@ -1,25 +1,79 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="wrapper-wrapper create-job">
-    <h1> Create a new job</h1>
-    <form action="/jobs" method="POST">
-        @csrf
-        <label for="lecturer"> Lecturer: </label>
-        <input type="text" id="lecturer" name="lecturer">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h1> Create a new job</h1>
+                    <form action="/jobs" method="POST">
+                        @csrf
 
-        <label for="course"> Course Name: </label>
-        <input type="text" id="course" name="course">
+                        <div class="row mb-3">
+                            <label for="lecturer" class="col-md-4 col-form-label text-md-end">Lecturer: </label>
 
-        <label for="duration">Duration: </label>
-        <select name="duration" id="duration">
-            <option value="1-2 Weeks"> 1-2 Weeks </option>
-            <option value="2-4 Weeks"> 2-4 Weeks </option>
-            <option value="4-6 Weeks"> 4-6 Weeks </option>
-            <option value="6-8 Weeks"> 6-8 Weeks </option>
-        </select>
-        <input type="submit" value="Create job">
-    </form>
+                            <div class="col-md-6">
+                                <input id="lecturer" class="form-control" type="text" name="lecturer"  value="" >
+
+                                @error('role')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>  
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="course" class="col-md-4 col-form-label text-md-end"> Course Name: </label>
+
+                            <div class="col-md-6">
+                                <input id="course" class="form-control" type="text" name="course"  value="" >
+
+                                @error('course')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>  
+                        </div>
+
+
+                        <div class="row mb-3">
+                            <label for="duration" class="col-md-4 col-form-label text-md-end">{{ __('Status') }}</label>
+
+                            <div class="col-md-6">
+                                
+                            <select name="duration"id="status" type="text" class="form-control" name="duration"  >
+                                
+                            <option value="1-2 Weeks"> 1-2 Weeks </option>
+                            <option value="2-4 Weeks"> 2-4 Weeks </option>
+                            <option value="4-6 Weeks"> 4-6 Weeks </option>
+                            <option value="6-8 Weeks"> 6-8 Weeks </option>
+                            </select>
+
+                                @error('stdurationatus')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            
+                        </div>
+
+                        <div class="row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                            Submit
+                                </button>
+
+                            </div>  
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
 @endsection
