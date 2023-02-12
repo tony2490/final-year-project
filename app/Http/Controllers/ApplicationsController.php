@@ -29,7 +29,8 @@ class ApplicationsController extends Controller
      */
     public function create()
     {
-        return view('applications.create');
+        $jobs = Job::all();
+        return view('applications.create',['jobs'=> $jobs]);
     }
 
     /**
