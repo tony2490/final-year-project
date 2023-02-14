@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Application;
-use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Job;
 
@@ -30,7 +30,8 @@ class ApplicationsController extends Controller
     public function create()
     {
         $jobs = Job::all();
-        return view('applications.create',['jobs'=> $jobs]);
+        $user_id = Auth::id(); 
+        return view('applications.create',['jobs'=> $jobs,'user_id'=>$user_id]);
     }
 
     /**
@@ -44,6 +45,7 @@ class ApplicationsController extends Controller
         $application = new Application();
 
         $application->name = request('name');
+        $application->user_id = request('user_id');
         $application->role = request('role');
         $application->astonID = request('astonID');
         $application->studentType = request('studentType');
@@ -102,6 +104,7 @@ class ApplicationsController extends Controller
         $application = Application::findOrFail($id);
 
         $application->name = $request->name;
+        $application->user_id = $request->user_id;
         $application->role = $request->role;
         $application->astonID = $request->astonID;
         $application->studentType = $request->studentType;

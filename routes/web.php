@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\Application;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\Admin\UserController;
@@ -34,7 +33,6 @@ Route::get('/applications/{id}', [ApplicationsController::class,'show'])->name((
 Route::get('/applications/edit/{id}', [ApplicationsController::class, 'edit'])->name(('applications.edit'));
 Route::patch('/applications/edit/{id}', [ApplicationsController::class, 'update'])->name(('applications.update'));
 
-// Route::delete('/jobs/{id}', [JobController::class,'destroy'])->name(('jobs.destroy'))->middleware(('auth'));
 
 
 

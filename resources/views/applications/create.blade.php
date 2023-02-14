@@ -36,6 +36,15 @@
                         
                     </div>
 
+                        <!-- USER ID -->
+                        <input id="user_id" class="form-control" type="hidden" name="user_id"  value="{{$user_id}}" required>
+                        @error('user_id')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                       
+
 
                     <div class="row mb-3">
                     <label for="astonID" class="col-md-4 col-form-label text-md-end">Aston ID</label>

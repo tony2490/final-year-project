@@ -5,6 +5,7 @@
     <h1>    Application for {{ $application->name}} </h1>
 
     <p class="name"> Name - {{$application->name}} </p>
+    <p class="user_id"> User ID - {{$application->user_id}} </p>
     <p class="role"> Role - {{$application->role}} </p>
     <p class="astonID"> Aston ID - {{$application->astonID}} </p>
     <p class="studentType"> Student Type - {{$application->studentType}} </p>
