@@ -11,14 +11,25 @@
                         @method('PATCH')
                         @csrf
 
-                        <div class="row mb-3">
-                    <label for="id" class="col-md-4 col-form-label text-md-end"></label>
+                    
 
                     <div class="col-md-6">
                         <input id="id" type="hidden" name="id" 
-                        value="" >
+                        value="{{ old('id') }} @isset($application) {{$application->id}} @endisset" >
 
                         @error('id')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <input id="user_id" type="hidden" name="user_id" 
+                        value="{{ old('user_id') }} @isset($application) {{$application->user_id}} @endisset" >
+
+                        @error('user_id')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
@@ -143,7 +154,7 @@
 
 
                     <div class="row mb-3">
-                        <label for="status" class="col-md-4 col-form-label text-md-end">{{ __('Status') }}</label>
+                        <label for="status" class="col-md-4 col-form-label text-md-end">{{ __('Status *') }}</label>
 
                         <div class="col-md-6">
                             
@@ -163,11 +174,6 @@
                         </div>
                         
                     </div>
-
-
-           
-
-
 
 
                     <div class="row mb-0">
