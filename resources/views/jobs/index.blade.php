@@ -15,7 +15,7 @@
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">Course</th>
+                <th scope="col">Module</th>
                 <th scope="col">Lecturer</th>
                 <th scope="col">Duration</th>
                 <th scope="col"></th>
@@ -26,7 +26,7 @@
 
                 <tr>
                 
-                    <td> {{$job->course}} </td>
+                    <td> {{$job->moduleCode}} </td>
                     <td> {{$job->lecturer}} </td>
                     <td> {{$job->duration}} </td>
                     <td>

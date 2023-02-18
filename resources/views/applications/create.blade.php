@@ -21,7 +21,7 @@
 
                             @foreach($jobs as $job)
                             
-                            <option value="{{ $job-> course }} "> {{ $job-> course }}  </option>
+                            <option value="{{ $job-> moduleCode }} "> {{ $job-> moduleCode }}  </option>
 
                             @endforeach
                       

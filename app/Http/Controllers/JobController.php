@@ -38,7 +38,7 @@ class JobController extends Controller
     public function store(){
         $job = new Job();
 
-        $job->course = request('course');
+        $job->moduleCode = request('moduleCode');
         $job->lecturer = request('lecturer');
         $job->duration = request('duration');
 

@@ -25,12 +25,12 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="course" class="col-md-4 col-form-label text-md-end"> Course Name: </label>
+                            <label for="moduleCode" class="col-md-4 col-form-label text-md-end"> Module Code: </label>
 
                             <div class="col-md-6">
-                                <input id="course" class="form-control" type="text" name="course"  value="" >
+                                <input id="moduleCode" class="form-control" type="text" name="moduleCode"  value="" >
 
-                                @error('course')
+                                @error('moduleCode')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

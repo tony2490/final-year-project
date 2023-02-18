@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('course');
+            $table->string('moduleCode');
             $table->string('lecturer');
             $table->string('duration');
         });
