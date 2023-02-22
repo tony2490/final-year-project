@@ -10,13 +10,13 @@
                 <div class="card-body">
             
                     <div class="row mb-3">
-                        <label for="lecturer" class="col-md-4 col-form-label text-md-end">Lecturer: </label>
+                        <label for="hiringManager" class="col-md-4 col-form-label text-md-end">Hiring Manager: </label>
 
                         <div class="col-md-6">
-                            <input id="lecturer" type="text" class="form-control @error('lecturer') is-invalid @enderror" name="lecturer" 
-                            value="{{ old('lecturer') }} @isset($job) {{$job->lecturer}} @endisset" readonly="readonly">
+                            <input id="hiringManager" type="text" class="form-control @error('hiringManager') is-invalid @enderror" name="hiringManager" 
+                            value="{{ old('hiringManager') }} @isset($job) {{$job->hiringManager}} @endisset" readonly="readonly">
 
-                            @error('lecturer')
+                            @error('hiringManager')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -27,13 +27,13 @@
 
 
                     <div class="row mb-3">
-                        <label for="duration" class="col-md-4 col-form-label text-md-end">Duration: </label>
+                        <label for="jobDescription" class="col-md-4 col-form-label text-md-end">Job Description: </label>
 
                         <div class="col-md-6">
-                            <input id="duration" type="text" class="form-control @error('duration') is-invalid @enderror" name="duration" 
-                            value="{{ old('duration') }} @isset($job) {{$job->duration}} @endisset" readonly="readonly">
+                            <input id="jobDescription" type="text" class="form-control @error('jobDescription') is-invalid @enderror" name="jobDescription" 
+                            value="{{ old('jobDescription') }} @isset($job) {{$job->jobDescription}} @endisset" readonly="readonly">
 
-                            @error('duration')
+                            @error('jobDescription')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>

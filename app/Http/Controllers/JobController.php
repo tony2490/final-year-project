@@ -39,8 +39,8 @@ class JobController extends Controller
         $job = new Job();
 
         $job->moduleCode = request('moduleCode');
-        $job->lecturer = request('lecturer');
-        $job->duration = request('duration');
+        $job->hiringManager = request('hiringManager');
+        $job->jobDescription = request('jobDescription');
 
         $job->save();
 

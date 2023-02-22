@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('moduleCode');
-            $table->string('lecturer');
-            $table->string('duration');
+            $table->string('hiringManager');
+            $table->string('jobDescription');
         });
     }
 

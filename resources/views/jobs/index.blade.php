@@ -16,8 +16,8 @@
             <thead>
               <tr>
                 <th scope="col">Module</th>
-                <th scope="col">Lecturer</th>
-                <th scope="col">Duration</th>
+                <th scope="col">Hiring Manager</th>
+                <th scope="col">Job Description</th>
                 <th scope="col"></th>
               </tr>
             </thead>
@@ -27,8 +27,8 @@
                 <tr>
                 
                     <td> {{$job->moduleCode}} </td>
-                    <td> {{$job->lecturer}} </td>
-                    <td> {{$job->duration}} </td>
+                    <td> {{$job->hiringManager}} </td>
+                    <td> {{$job->jobDescription}} </td>
                     <td>
                         <a class="btn btn-sm btn-primary" href="/jobs/{{$job->id}}" role="button"> View </a>
 
