@@ -10,7 +10,7 @@
 
                     <form action="/applications" method="POST">
                         @csrf
-                       
+                       <!-- Role  -->
                         <div class="row mb-3">
                         <label for="role" class="col-md-4 col-form-label text-md-end">{{ __('role') }}</label>
 
@@ -60,6 +60,7 @@
                         </div>  
                     </div>
 
+                    <!-- Name  -->
                     <div class="row mb-3">
                     <label for="name" class="col-md-4 col-form-label text-md-end">Name</label>
 
@@ -74,8 +75,7 @@
                         </div>  
                     </div>
 
-            
-
+                    <!-- Student Type  -->
                     <div class="row mb-3">
                         <label for="studentType" class="col-md-4 col-form-label text-md-end">{{ __('Student Type') }}</label>
 
@@ -98,7 +98,7 @@
                     </div>
 
 
-                    
+                    <!-- Course Studied  -->
                     <div class="row mb-3">
                     <label for="courseStudied" class="col-md-4 col-form-label text-md-end">Course Studied</label>
 
@@ -113,7 +113,7 @@
                         </div>  
                     </div>
 
-                       
+                    <!-- relevantModuleGrades -->
                     <div class="row mb-3">
                     <label for="relevantModuleGrades" class="col-md-4 col-form-label text-md-end">Relevant Module Grades</label>
 
@@ -128,6 +128,7 @@
                         </div>  
                     </div>
 
+                    <!-- supportingInfo  -->
 
                     <div class="row mb-3">
                     <label for="supportingInfo" class="col-md-4 col-form-label text-md-end">Supporting Information</label>
@@ -143,6 +144,7 @@
                         </div>  
                     </div>
 
+                    <!-- status -->
                     <input type="hidden" id="status" name="status" value="Under Review">
 
                     <div class="row mb-0">

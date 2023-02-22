@@ -28,7 +28,6 @@ class ApplicationsController extends Controller
         $user = Auth::user()->id; 
         $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
         
-        
         return view('applications.userShow',['applications' => Application::paginate(10),'myApplications'=> $myApplications]);
     }
 

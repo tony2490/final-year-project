@@ -36,9 +36,11 @@
         <li class="nav-item active">
             <a class="nav-link" href="/jobs">Jobs</a>
         </li>
+        @cannot('is-admin')
         <li class="nav-item">
             <a class="nav-link" href="/applications/myApplications">My Applications</a>
         </li>
+        @endcannot
 
         @can('is-admin')
         <li class="nav-item">
