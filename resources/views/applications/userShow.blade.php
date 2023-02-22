@@ -8,8 +8,6 @@
         </div>
     </div>
 
-
-
     <div class="card">
 
         <table class="table">
@@ -23,15 +21,14 @@
               </tr>
             </thead>
             <tbody>
-                @foreach($applications as $application)
+                @foreach($myApplications as $myApplication)
 
                 <tr>
-                    <th scope="row"> {{$application->id}} </th>
-                    <td> {{$application->role}} </td>
-                    <td> {{$application->name}} </td>
-                    <td> {{$application->status}} </td>
+                    <th scope="row"> {{$myApplication->id}} </th>
+                    <td> {{$myApplication->role}} </td>
+                    <td> {{$myApplication->name}} </td>
+                    <td> {{$myApplication->status}} </td>
                     <td>
-                        <a class="btn btn-sm btn-primary" href="{{route('applications.edit',$application->id)}}" role="button"> Edit </a>
 
                     </td>
                   </tr>
@@ -41,8 +38,7 @@
             
             </tbody>
           </table>
-          {{$applications->links()}}
-
+ 
 
     </div>
 

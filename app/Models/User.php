@@ -60,4 +60,10 @@ class User extends Authenticatable
     public function hasAnyRoles(array $role){
         return null !== $this->roles()->whereIn('name',$role)->first();
     }
+
+    public function Applications()
+{
+
+    return $this->hasMany(Application::class, 'user_id', 'id');
+}
 }
