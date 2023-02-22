@@ -56,7 +56,7 @@
                     @endcan
              
                        
-
+                    @cannot('is-admin')
                     <form action="/applications/create">
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
@@ -67,6 +67,7 @@
                             </div>
                         </div>
                     </form>
+                    @endcannot
 
                         </div>
                     </form>

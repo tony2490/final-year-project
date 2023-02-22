@@ -12,12 +12,12 @@
                         @csrf
                        <!-- Role  -->
                         <div class="row mb-3">
-                        <label for="role" class="col-md-4 col-form-label text-md-end">{{ __('role') }}</label>
+                        <label for="role" class="col-md-4 col-form-label text-md-end">{{ __('Role') }}</label>
 
                         <div class="col-md-6">
                             
                         <select name="role"id="role" type="text" class="form-control @error('status') is-invalid @enderror" name="role" 
-                            value=" " >
+                            value="" >
 
                             @foreach($jobs as $job)
                             
@@ -65,7 +65,7 @@
                     <label for="name" class="col-md-4 col-form-label text-md-end">Name</label>
 
                     <div class="col-md-6">
-                        <input id="name" class="form-control" type="text" name="name"  value="" required>
+                        <input id="name" class="form-control" type="text" name="name"  value="{{$username}}" required readonly="readonly">
 
                         @error('name')
                             <span class="invalid-feedback" role="alert">
