@@ -19,8 +19,8 @@
     <label for="status">Update Status: </label>
         <select name="status" id="status">
             <option value="Under Review"> Under Review </option>
-            <option value="Accepted"> Accepted </option>
-            <option value="Decline"> Decline </option>
+            <option value="Offered"> Offered </option>
+            <option value="Unsuccessful"> Unsuccessful </option>
         </select>
     @endcan
 

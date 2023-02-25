@@ -31,8 +31,7 @@
                     <td> {{$application->name}} </td>
                     <td> {{$application->status}} </td>
                     <td>
-                        <a class="btn btn-sm btn-primary" href="{{route('applications.edit',$application->id)}}" role="button"> Edit </a>
-
+                        <a class="btn btn-sm btn-primary" href="{{route('applications.edit',$application->id)}}" role="button"> Update </a>
                     </td>
                   </tr>
 

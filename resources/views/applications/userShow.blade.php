@@ -1,6 +1,6 @@
 @extends('layouts.app')
-
 @section('content')
+
 <div class="wrapper job-index">
     <div class="row">
         <div class="col-12">

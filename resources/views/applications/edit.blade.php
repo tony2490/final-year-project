@@ -162,8 +162,8 @@
                             value="{{ old('status') }} @isset($application) {{$application->status}} @endisset" >
                             
                             <option value="Under Review"> Under Review </option>
-                            <option value="Accepted"> Accepted </option>
-                            <option value="Decline"> Decline </option>
+                            <option value="Offered"> Offered </option>
+                            <option value="Unsuccessful"> Unsuccessful </option>
                         </select>
 
                             @error('status')

@@ -1,6 +1,5 @@
 
 @extends('layouts.app')
-
 @section('content')
 
 <div class="flex-center position-ref full-height">
@@ -16,6 +15,7 @@
                 <a href=" {{route('jobs.create') }}"> Create A Job</a>
                 @endcan
                 </div>
+
             </div>
         </div>
 @endsection

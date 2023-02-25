@@ -16,8 +16,6 @@
     <body>
         @yield('content')
 
-        <footer> 
-            Copyright Aston University Flex 2023
-        </footer>
+   
     </body>
 </html>
