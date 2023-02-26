@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Edit Application</h1>
+<h1>Application Response</h1>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -159,11 +159,11 @@
                         <div class="col-md-6">
                             
                         <select name="status"id="status" type="text" class="form-control @error('status') is-invalid @enderror" name="status" 
-                            value="{{ old('status') }} @isset($application) {{$application->status}} @endisset" >
+                            value="{{ old('status') }} @isset($application) {{$application->status}} @endisset"  >
                             
-                            <option value="Under Review"> Under Review </option>
-                            <option value="Offered"> Offer </option>
-                            <option value="Unsuccessful"> Unsuccessful </option>
+                           
+                            <option value="Accepted"> Accept </option>
+                            <option value="Withdrew"> Withdraw </option>
                         </select>
 
                             @error('status')

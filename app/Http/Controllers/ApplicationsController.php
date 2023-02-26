@@ -25,7 +25,7 @@ class ApplicationsController extends Controller
 
     public function userShow()
     {
-   
+        $application = Application::all();
         $user = Auth::user()->id; 
         $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
         
@@ -101,6 +101,21 @@ class ApplicationsController extends Controller
 
     $request->session()->flash('success', 'You have edited the user');
     }
+
+    
+    public function userResponse($id){
+        $user = Auth::user()->id; 
+        $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
+
+        return view('applications.userResponse',[
+            'application' => Application::find($id),
+            'myApplications'=> $myApplications,
+            'applications' => Application::paginate(10)
+        ]);
+
+    $request->session()->flash('success', 'You have responded');
+    }
+
 
     /**
      * Update the specified resource in storage.

@@ -4,7 +4,7 @@
 <div class="wrapper job-index">
     <div class="row">
         <div class="col-12">
-            <h1 class="float-left">Applications</h1>
+            <h1 class="float-left">My Applications</h1>
         </div>
     </div>
 
@@ -28,9 +28,13 @@
                     <td> {{$myApplication->role}} </td>
                     <td> {{$myApplication->name}} </td>
                     <td> {{$myApplication->status}} </td>
-                    <td>
 
+                    <?php if($myApplication->status == "Offered") : ?>
+                      <td>
+                    <a class="btn btn-sm btn-primary" href="{{route('applications.userResponse',$myApplication->id)}}" role="button"> Update </a>
                     </td>
+                    <?php endif; ?>
+
                   </tr>
 
                 @endforeach
