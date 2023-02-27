@@ -13,7 +13,7 @@
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">#Id</th>
+                <th scope="col">Application Id</th>
                 <th scope="col">Role</th>
                 <th scope="col">Name</th>
                 <th scope="col">Status</th>
@@ -24,14 +24,14 @@
                 @foreach($myApplications as $myApplication)
 
                 <tr>
-                    <th scope="row"> {{$myApplication->id}} </th>
+                    <th scope="row"> #{{$myApplication->id}} </th>
                     <td> {{$myApplication->role}} </td>
                     <td> {{$myApplication->name}} </td>
                     <td> {{$myApplication->status}} </td>
 
                     <?php if($myApplication->status == "Offered") : ?>
                       <td>
-                    <a class="btn btn-sm btn-primary" href="{{route('applications.userResponse',$myApplication->id)}}" role="button"> Update </a>
+                    <a class="btn btn-sm btn-primary" href="{{route('applications.userResponse',$myApplication->id)}}" role="button"> Respond </a>
                     </td>
                     <?php endif; ?>
 

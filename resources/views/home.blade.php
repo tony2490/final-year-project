@@ -15,7 +15,15 @@
                     @endif
 
                     {{ __('You are logged in!') }}
-                    <p> <a href="/jobs"> View all jobs </a> </p>
+                    <p> <a href="/jobs"> View all jobs </a> <br>
+
+                    @can('is-admin')
+                    <a href="/applications"> Applications </a> <br>
+                    @endcan
+                    @cannot('is-admin')
+                    <a href="/applications/myApplications"> My Applications </a> </p>
+                    @endcannot
+
                 </div>
             </div>
         </div>
