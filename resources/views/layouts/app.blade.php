@@ -15,9 +15,10 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Aston Part Time</title>
+    <title>Aston University Teaching Assistants</title>
     
 </head>
 <body>
@@ -28,7 +29,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">LOGO</a>
+        <a class="navbar-brand" href="/">LOGO</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -36,28 +37,27 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
+              <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
             <li class="nav-item active">
-                <a class="nav-link" href="/jobs">Jobs <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/jobs">Jobs <span class="sr-only"></span></a>
             </li>
             @cannot('is-admin')
             <li class="nav-item active">
-                <a class="nav-link"  href="/applications/myApplications"> My Applications <span class="sr-only">(current)</span></a>
+                <a class="nav-link"  href="/applications/myApplications"> My Applications <span class="sr-only"></span></a>
             </li>
             @endcannot
          
             @can('is-admin')
             <li class="nav-item active">
-                <a class="nav-link"  href="/applications">Applications <span class="sr-only">(current)</span></a>
+                <a class="nav-link"  href="/applications">Applications <span class="sr-only"></span></a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link"  href="{{route('admin.users.index') }} ">Users<span class="sr-only">(current)</span></a>
+                <a class="nav-link"  href="{{route('admin.users.index') }} ">Users<span class="sr-only"></span></a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link"  href="/jobs/create">Create A Job<span class="sr-only">(current)</span></a>
+                <a class="nav-link"  href="/jobs/create">Create A Job<span class="sr-only"></span></a>
             </li>
             @endcan
              </ul>
@@ -102,9 +102,11 @@
       </nav>
 
 
-        <main class="container">
+        <main class="container-fluid">
+        <div class="row">
             @include('partials.alerts')
             @yield('content')
+</div>
         </main>
   
 

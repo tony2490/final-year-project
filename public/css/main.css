@@ -1,11 +1,30 @@
-html, body {
+.home-page{
+    padding-top: 0;
     background-color: #fff;
     color: #636b6f;
-    font-family: 'Raleway';
+    font-family: sans-serif;
     font-weight: 100;
     height: 100vh;
     margin: 0;
 }
+
+
+
+html, body:not(.home-page){
+    padding-top: 50px;
+    background-color: #fff;
+    color: #636b6f;
+    font-family: sans-serif;
+    font-weight: 100;
+    height: 100vh;
+    margin: 0;
+}
+
+.container-fluid{
+    padding: 0;
+ }
+
+
 .full-height {
     height: 100vh;
 }
@@ -80,4 +99,4 @@ h1{
 html {
     overflow-y: scroll;
   }
-  
+
