@@ -29,7 +29,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">LOGO</a>
+        <a class="navbar-brand" href="/">
+            <img src="\img\aston-logo.svg" alt="" height="36">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -37,27 +39,27 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+              <a class="nav-link" href="/">Home </a>
             <li class="nav-item active">
-                <a class="nav-link" href="/jobs">Jobs <span class="sr-only"></span></a>
+                <a class="nav-link" href="/jobs">Jobs </a>
             </li>
             @cannot('is-admin')
             <li class="nav-item active">
-                <a class="nav-link"  href="/applications/myApplications"> My Applications <span class="sr-only"></span></a>
+                <a class="nav-link"  href="/applications/myApplications"> My Applications </a>
             </li>
             @endcannot
          
             @can('is-admin')
             <li class="nav-item active">
-                <a class="nav-link"  href="/applications">Applications <span class="sr-only"></span></a>
+                <a class="nav-link"  href="/applications">Applications </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link"  href="{{route('admin.users.index') }} ">Users<span class="sr-only"></span></a>
+                <a class="nav-link"  href="{{route('admin.users.index') }} ">Users </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link"  href="/jobs/create">Create A Job<span class="sr-only"></span></a>
+                <a class="nav-link"  href="/jobs/create">Create A Job </a>
             </li>
             @endcan
              </ul>

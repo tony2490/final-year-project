@@ -7,8 +7,6 @@
             <h1 class="float-left">Jobs</h1>
         </div>
     </div>
-    
-
 
     <div class="card">
 
