@@ -103,3 +103,12 @@ html {
     overflow-y: scroll;
   }
 
+
+.home-stripe{
+    font-family: sans-serif;
+    color: white;
+    height: 80px;
+    background-color: #343a40;
+    text-align: center;
+    padding: 10px;
+}
