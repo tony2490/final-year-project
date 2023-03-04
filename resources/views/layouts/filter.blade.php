@@ -22,11 +22,11 @@
             <button class="dropdown-item" type="button">Status: Under Review</button>
           </button></a>
 
-          <a href="/"><button class="dropdown-item" type="button">
+          <a href="/applications/offered"><button class="dropdown-item" type="button">
             <button class="dropdown-item" type="button">Status: Offered</button>
           </button></a>
 
-        <a href="/"><button class="dropdown-item" type="button">
+        <a href="/applications/withdrawn"><button class="dropdown-item" type="button">
         <button class="dropdown-item" type="button">Status: Withdrawn</button>
         </button></a>
         

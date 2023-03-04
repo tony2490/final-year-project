@@ -167,5 +167,18 @@ class ApplicationsController extends Controller
 
     }
 
+    public function offered(){
+
+        return view('applications.admin-filters.statusOffered',['applications' => Application::paginate(10)]);
+
+    }
+
+    public function withdrawn(){
+
+        return view('applications.admin-filters.statusWithdrawn',['applications' => Application::paginate(10)]);
+
+    }
+
+
     
 }

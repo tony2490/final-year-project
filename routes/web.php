@@ -31,6 +31,8 @@ Route::get('/applications', [ApplicationsController::class, 'index'])->name(('ap
 // Filters
 Route::get('/applications/statusAccepted', [ApplicationsController::class, 'statusAccepted'])->name(('applications.statusAccepted'))->middleware(['auth','auth.isAdmin']);
 Route::get('/applications/underReview', [ApplicationsController::class, 'underReview'])->name(('applications.underReview'))->middleware(['auth','auth.isAdmin']);
+Route::get('/applications/offered', [ApplicationsController::class, 'offered'])->name(('applications.offered'))->middleware(['auth','auth.isAdmin']);
+Route::get('/applications/withdrawn', [ApplicationsController::class, 'withdrawn'])->name(('applications.withdrawn'))->middleware(['auth','auth.isAdmin']);
 
 
 
