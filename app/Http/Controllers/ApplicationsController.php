@@ -157,7 +157,7 @@ class ApplicationsController extends Controller
 
     public function statusAccepted(){
 
-        return view('applications.statusAccepted',['applications' => Application::paginate(10)]);
+        return view('applications.admin-filters.statusAccepted',['applications' => Application::paginate(10)]);
 
     }
 }
