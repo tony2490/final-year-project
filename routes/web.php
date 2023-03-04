@@ -27,16 +27,21 @@ Route::delete('/jobs/{id}', [JobController::class,'destroy'])->name(('jobs.destr
 
 
 Route::get('/applications', [ApplicationsController::class, 'index'])->name(('applications.index'))->middleware(['auth','auth.isAdmin']);
+
+// Filters
+Route::get('/applications/statusAccepted', [ApplicationsController::class, 'statusAccepted'])->name(('applications.statusAccepted'))->middleware(['auth','auth.isAdmin']);
+
+
+
 Route::get('/applications/myApplications', [ApplicationsController::class, 'userShow'])->name(('applications.userShow'))->middleware(('auth'));
-
-
 Route::get('/applications/create', [ApplicationsController::class,'create'])->name(('applications.create'))->middleware(('auth'));
 Route::post('/applications', [ApplicationsController::class,'store'])->name(('applications.store'))->middleware(('auth'));
 Route::get('/applications/{id}', [ApplicationsController::class,'show'])->name(('applications.show'))->middleware(['auth','auth.isAdmin']);
 Route::get('/applications/edit/{id}', [ApplicationsController::class, 'edit'])->name(('applications.edit'))->middleware(['auth','auth.isAdmin']);
 Route::get('/applications/userResponse/{id}', [ApplicationsController::class, 'userResponse'])->name(('applications.userResponse'));
-
 Route::patch('/applications/edit/{id}', [ApplicationsController::class, 'update'])->name(('applications.update'));
+
+
 
 
 

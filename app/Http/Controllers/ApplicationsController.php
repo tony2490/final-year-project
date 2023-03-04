@@ -18,8 +18,6 @@ class ApplicationsController extends Controller
     public function index()
     {
         
-
-        
         return view('applications.index',['applications' => Application::paginate(10)]);
     }
 
@@ -155,5 +153,11 @@ class ApplicationsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function statusAccepted(){
+
+        return view('applications.statusAccepted',['applications' => Application::paginate(10)]);
+
     }
 }

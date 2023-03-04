@@ -13,8 +13,7 @@
       </button>
 
       <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-
-          <a href="/applications/statusAccepted"><button class="dropdown-item" type="button">
+           <a href="/applications/statusAccepted"><button class="dropdown-item" type="button">
             Status: Successful
           </button></a>
 
@@ -52,8 +51,13 @@
                 <th scope="col"></th>
               </tr>
             </thead>
+
+       
+    
             <tbody>
                 @foreach($applications as $application)
+                <?php
+            if($application->status == "Accepted") :?>
 
                 <tr>
                     <th scope="row"> {{$application->id}} </th>
@@ -64,11 +68,15 @@
                         <a class="btn btn-sm btn-primary" href="{{route('applications.edit',$application->id)}}" role="button"> Update </a>
                     </td>
                   </tr>
-
+                  <?php endif; ?>
                 @endforeach
-            
+
+ 
             
             </tbody>
+
+      
+            
           </table>
           {{$applications->links()}}
 
