@@ -30,6 +30,7 @@ Route::get('/applications', [ApplicationsController::class, 'index'])->name(('ap
 
 // Filters
 Route::get('/applications/statusAccepted', [ApplicationsController::class, 'statusAccepted'])->name(('applications.statusAccepted'))->middleware(['auth','auth.isAdmin']);
+Route::get('/applications/underReview', [ApplicationsController::class, 'underReview'])->name(('applications.underReview'))->middleware(['auth','auth.isAdmin']);
 
 
 

@@ -15,14 +15,10 @@
       <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
 
           <a href="/applications/statusAccepted"><button class="dropdown-item" type="button">
-            Status: Successful
+            Status: Accepted
           </button></a>
 
-          <a href="/"><button class="dropdown-item" type="button">
-            <button class="dropdown-item" type="button">Status: Accepted</button>
-          </button></a>
-
-          <a href="/"><button class="dropdown-item" type="button">
+          <a href="/applications/underReview"><button class="dropdown-item" type="button">
             <button class="dropdown-item" type="button">Status: Under Review</button>
           </button></a>
 

@@ -160,4 +160,12 @@ class ApplicationsController extends Controller
         return view('applications.admin-filters.statusAccepted',['applications' => Application::paginate(10)]);
 
     }
+
+    public function underReview(){
+
+        return view('applications.admin-filters.statusUnderReview',['applications' => Application::paginate(10)]);
+
+    }
+
+    
 }
