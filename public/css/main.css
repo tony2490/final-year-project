@@ -113,5 +113,5 @@ html {
     padding: 10px;
 }
 
-table.table { table-layout:fixed; }
-table.table td { overflow: hidden; }
+.table { table-layout:fixed; }
+.table td { overflow: hidden; }
