@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\ApplicationsController;
+use App\Http\Controllers\ContactsPageController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,6 +36,7 @@ Route::get('/applications/statusAccepted', [ApplicationsController::class, 'stat
 Route::get('/applications/underReview', [ApplicationsController::class, 'underReview'])->name(('applications.underReview'))->middleware(['auth','auth.isAdmin']);
 Route::get('/applications/offered', [ApplicationsController::class, 'offered'])->name(('applications.offered'))->middleware(['auth','auth.isAdmin']);
 Route::get('/applications/withdrawn', [ApplicationsController::class, 'withdrawn'])->name(('applications.withdrawn'))->middleware(['auth','auth.isAdmin']);
+Route::get('/applications/latest', [ApplicationsController::class, 'latest'])->name(('applications.latest'))->middleware(['auth','auth.isAdmin']);
 
 
 
@@ -43,6 +47,9 @@ Route::get('/applications/{id}', [ApplicationsController::class,'show'])->name((
 Route::get('/applications/edit/{id}', [ApplicationsController::class, 'edit'])->name(('applications.edit'))->middleware(['auth','auth.isAdmin']);
 Route::get('/applications/userResponse/{id}', [ApplicationsController::class, 'userResponse'])->name(('applications.userResponse'));
 Route::patch('/applications/edit/{id}', [ApplicationsController::class, 'update'])->name(('applications.update'));
+
+
+Route::get('/contacts', [ContactsPageController::class, 'index'])->name(('contacts.index'))->middleware(('auth'));
 
 
 

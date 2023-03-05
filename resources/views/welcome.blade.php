@@ -41,6 +41,10 @@
                 </div>
             </div>
 
+            <h2>What is Aston University Teaching Assistants?</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem libero, ultrices in faucibus sit amet, finibus ut lacus. Cras viverra accumsan ex non ultricies. Ut orci neque, 
+                dictum a sollicitudin eget, lacinia vitae felis. Etiam a nisi tortor. Proin mollis venenatis purus, ut convallis lectus commodo ac. Donec luctus sit amet elit et egestas. Donec nec neque a odio vulputate ornare nec nec lacus. Cras dictum eleifend hendrerit. Suspendisse ut justo et metus commodo ultricies.</p>
+
     
 
     </body>
