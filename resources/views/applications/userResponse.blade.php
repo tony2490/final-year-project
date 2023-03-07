@@ -1,7 +1,18 @@
 @extends('layouts.app')
-
 @section('content')
-<h1>Application Response</h1>
+
+<div class="row">
+        <div class="col-12">
+          <div class="headings">
+            <h1 class="headings">{{$application->role}} Application Response </h1>
+          </div>
+        </div>
+        <div class="subHeadings">
+          <h5> Please Update The Status Of Your Application As Soon As Possible</h5>
+        </div>
+</div>
+
+<h1></h1>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -10,7 +21,6 @@
                     <form method="POST" action="{{ route('applications.update', $application->id) }}">
                         @method('PATCH')
                         @csrf
-
                     
 
                     <div class="col-md-6">

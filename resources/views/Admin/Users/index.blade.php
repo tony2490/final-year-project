@@ -2,9 +2,19 @@
 
 @section('content')
     <div class="wrapper job-index">
+    <div class="row">
+        <div class="col-12">
+          <div class="headings">
+            <h1 class="headings">Platform Users</h1>
+          </div>
+        </div>
+        <div class="subHeadings">
+          <h5> Create, Edit & Delete User Accounts On The Platform.</h5>
+        </div>
+
+    </div>
         <div class="row">
             <div class="col-12">
-                <h1 class="float-left">Users</h1>
                     <a class="btn btn-sm btn-success create" href="{{route('admin.users.create')}}" role="button"> Create</a>
             </div>
         </div>

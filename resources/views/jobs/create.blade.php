@@ -1,15 +1,25 @@
-@extends('layouts.app')
 
+<div class="row">
+        <div class="col-12">
+          <div class="headings">
+            <h1 class="headings">Create A New Job</h1>
+          </div>
+        </div>
+        <div class="subHeadings">
+          <h5> Create A New Teaching Assistant Job Application</h5>
+        </div>
+</div>
+    
+@extends('layouts.app')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-body">
-                    <h1> Create a new job</h1>
+                    <!-- <h1> Create a new job</h1> -->
                     <form action="/jobs" method="POST">
                         @csrf
-
                         <div class="row mb-3">
                             <label for="hiringManager" class="col-md-4 col-form-label text-md-end">Hiring Manager: </label>
 

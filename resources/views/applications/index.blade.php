@@ -1,4 +1,17 @@
+<div class="row">
+        <div class="col-12">
+          <div class="headings">
+            <h1 class="headings">Applications</h1>
+          </div>
+        </div>
+        <div class="subHeadings">
+          <h5> View All Teaching Assistant Applications & Update Their Status </h5>
+        </div>
+
+    </div>
 @include('layouts.filter')
+
+
 
     <div class="card">
         <table class="table">
@@ -8,7 +21,7 @@
                 <th scope="col">Role</th>
                 <th scope="col">Name</th>
                 <th scope="col">Status</th>
-                <th scope="col"></th>
+                <th scope="col">Actions</th>
               </tr>
             </thead>
             <tbody>

@@ -10,6 +10,8 @@
 
 
 
+
+
 html, body:not(.home-page){
     padding-top: 50px;
     background-color: #fff;
@@ -112,6 +114,23 @@ html {
     text-align: center;
     padding: 10px;
 }
+.headings{
+    padding: 10px;
+    font-size: 50px;
+    text-align: center;
+}
+.subHeadings{
 
+    background-color: rgb(225, 225, 225);
+    text-align: center;
+    font-size: 14;
+    padding: 15px;
+
+}
+.card{
+
+    padding: 60px;
+}
 .table { table-layout:fixed; }
 .table td { overflow: hidden; }
+

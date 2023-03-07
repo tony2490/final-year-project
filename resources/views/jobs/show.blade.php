@@ -1,8 +1,20 @@
 
 @extends('layouts.app')
-
 @section('content')
-<h1> Role for {{ $job->moduleCode}} </h1>
+
+<div class="wrapper job-index">
+    <div class="row">
+        <div class="col-12">
+          <div class="headings">
+            <h1 class="headings">Teaching Assistant Role for {{ $job->moduleCode}}</h1>
+          </div>
+        </div>
+        <div class="subHeadings">
+          <h5> Please Read The Details Of The Role Carefully Before Applying</h5>
+        </div>
+        <h1>  </h1>
+
+<!-- <h1> Role for {{ $job->moduleCode}} </h1> -->
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

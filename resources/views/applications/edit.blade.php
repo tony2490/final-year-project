@@ -1,7 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Edit Application</h1>
+
+<div class="row">
+        <div class="col-12">
+          <div class="headings">
+            <h1 class="headings">Update Application Status </h1>
+          </div>
+        </div>
+        <div class="subHeadings">
+          <h5> Please Select The Correct Status for This Application To Be Updated To</h5>
+        </div>
+</div>
+
+<h1></h1>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
