@@ -61,7 +61,7 @@
                     <label for="astonID" class="col-md-4 col-form-label text-md-end">Aston ID</label>
 
                     <div class="col-md-8">
-                        <input id="astonID" class="form-control" type="text" name="astonID" placeholder="Please Enter Your Aston 9 Digit ID"  value="" required>
+                        <input id="astonID" class="form-control" type="text" name="astonID" minlength="9" maxlength="9" placeholder="Please Enter Your Aston 9 Digit ID"  value="" required>
 
                         @error('astonID')
                             <span class="invalid-feedback" role="alert">
@@ -93,7 +93,7 @@
                         <div class="col-md-8">
                             
                         <select name="studentType"id="studentType"  type="text" class="form-control @error('studentType') is-invalid @enderror" name="studentType" 
-                            value="" >
+                            value="" required>
                             <option value="" disabled selected>Select your option</option>
                             <option value="PHD Student"> PHD Student </option>
                             <option value="Final Year Student"> Final Year Student </option>

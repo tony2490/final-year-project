@@ -172,7 +172,7 @@
                         <div class="col-md-8">
                             
                         <select name="status"id="status" type="text" class="form-control @error('status') is-invalid @enderror" name="status" 
-                            value="{{ old('status') }} @isset($application) {{$application->status}} @endisset" >
+                            value="{{ old('status') }} @isset($application) {{$application->status}} @endisset" required>
 
 
                             <option value="" disabled selected>Select your option</option>
