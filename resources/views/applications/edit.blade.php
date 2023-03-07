@@ -1,6 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
 
 <div class="row">
         <div class="col-12">
@@ -12,6 +9,10 @@
           <h5> Please Select The Correct Status for This Application To Be Updated To</h5>
         </div>
 </div>
+
+@extends('layouts.app')
+@section('content')
+
 
 <h1></h1>
 <div class="container">
@@ -25,7 +26,7 @@
 
                     
 
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                         <input id="id" type="hidden" name="id" 
                         value="{{ old('id') }} @isset($application) {{$application->id}} @endisset" >
 
@@ -37,7 +38,7 @@
                     </div>
 
 
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                         <input id="user_id" type="hidden" name="user_id" 
                         value="{{ old('user_id') }} @isset($application) {{$application->user_id}} @endisset" >
 
@@ -52,7 +53,7 @@
                     <div class="row mb-3">
                         <label for="role" class="col-md-4 col-form-label text-md-end">{{ __('Role') }}</label>
 
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                             <input id="role" type="text" class="form-control @error('role') is-invalid @enderror" name="role" 
                             value="{{ old('role') }} @isset($application) {{$application->role}} @endisset" readonly="readonly">
 
@@ -68,7 +69,7 @@
                     <div class="row mb-3">
                         <label for="astonID" class="col-md-4 col-form-label text-md-end">{{ __(' Aston ID') }}</label>
 
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                             <input id="astonID" type="text" class="form-control @error('astonID') is-invalid @enderror" name="astonID" 
                             value="{{ old('astonID') }} @isset($application) {{$application->astonID}} @endisset" readonly="readonly">
 
@@ -86,7 +87,7 @@
                     <div class="row mb-3">
                         <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
 
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                             <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" 
                             value="{{ old('name') }} @isset($application) {{$application->name}} @endisset" readonly="readonly">
 
@@ -102,7 +103,7 @@
                     <div class="row mb-3">
                         <label for="studentType" class="col-md-4 col-form-label text-md-end">{{ __(' Student Type') }}</label>
 
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                             <input id="studentType" type="text" class="form-control @error('studentType') is-invalid @enderror" name="studentType" 
                             value="{{ old('studentType') }} @isset($application) {{$application->studentType}} @endisset" readonly="readonly">
 
@@ -118,7 +119,7 @@
                     <div class="row mb-3">
                         <label for="courseStudied" class="col-md-4 col-form-label text-md-end">{{ __(' Course Studied') }}</label>
 
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                             <input id="courseStudied" type="text" class="form-control @error('courseStudied') is-invalid @enderror" name="courseStudied" 
                             value="{{ old('courseStudied') }} @isset($application) {{$application->courseStudied}} @endisset" readonly="readonly">
 
@@ -135,7 +136,7 @@
                     <div class="row mb-3">
                         <label for="relevantModuleGrades" class="col-md-4 col-form-label text-md-end">{{ __('Relevant Module Grades') }}</label>
 
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                             <input id="relevantModuleGrades" type="text" class="form-control @error('relevantModuleGrades') is-invalid @enderror" name="relevantModuleGrades" 
                             value="{{ old('relevantModuleGrades') }} @isset($application) {{$application->relevantModuleGrades}} @endisset" readonly="readonly">
 
@@ -151,7 +152,7 @@
                     <div class="row mb-3">
                         <label for="supportingInfo" class="col-md-4 col-form-label text-md-end">{{ __('Supporting Information') }}</label>
 
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                             <input id="supportingInfo" type="text" class="form-control @error('relevantModuleGrades') is-invalid @enderror" name="supportingInfo" 
                             value="{{ old('supportingInfo') }} @isset($application) {{$application->supportingInfo}} @endisset" readonly="readonly">
 
@@ -168,11 +169,13 @@
                     <div class="row mb-3">
                         <label for="status" class="col-md-4 col-form-label text-md-end">{{ __('Status *') }}</label>
 
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                             
                         <select name="status"id="status" type="text" class="form-control @error('status') is-invalid @enderror" name="status" 
                             value="{{ old('status') }} @isset($application) {{$application->status}} @endisset" >
-                            
+
+
+                            <option value="" disabled selected>Select your option</option>
                             <option value="Under Review"> Under Review </option>
                             <option value="Offered"> Offer </option>
                             <option value="Unsuccessful"> Unsuccessful </option>
@@ -189,7 +192,7 @@
 
 
                     <div class="row mb-0">
-                        <div class="col-md-6 offset-md-4">
+                        <div class="col-md-8 offset-md-4">
                             <button type="submit" class="btn btn-primary">
                         Update
                             </button>

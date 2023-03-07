@@ -25,7 +25,7 @@
                         <div class="row mb-3">
                         <label for="role" class="col-md-4 col-form-label text-md-end">{{ __('Role') }}</label>
 
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                             
                         <select name="role"id="role" type="text" class="form-control @error('status') is-invalid @enderror" name="role" 
                             value="" >
@@ -60,8 +60,8 @@
                     <div class="row mb-3">
                     <label for="astonID" class="col-md-4 col-form-label text-md-end">Aston ID</label>
 
-                    <div class="col-md-6">
-                        <input id="astonID" class="form-control" type="text" name="astonID"  value="" required>
+                    <div class="col-md-8">
+                        <input id="astonID" class="form-control" type="text" name="astonID" placeholder="Please Enter Your Aston 9 Digit ID"  value="" required>
 
                         @error('astonID')
                             <span class="invalid-feedback" role="alert">
@@ -75,7 +75,7 @@
                     <div class="row mb-3">
                     <label for="name" class="col-md-4 col-form-label text-md-end">Name</label>
 
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                         <input id="name" class="form-control" type="text" name="name"  value="{{$username}}" required readonly="readonly">
 
                         @error('name')
@@ -90,10 +90,11 @@
                     <div class="row mb-3">
                         <label for="studentType" class="col-md-4 col-form-label text-md-end">{{ __('Student Type') }}</label>
 
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                             
-                        <select name="studentType"id="studentType" type="text" class="form-control @error('studentType') is-invalid @enderror" name="studentType" 
+                        <select name="studentType"id="studentType"  type="text" class="form-control @error('studentType') is-invalid @enderror" name="studentType" 
                             value="" >
+                            <option value="" disabled selected>Select your option</option>
                             <option value="PHD Student"> PHD Student </option>
                             <option value="Final Year Student"> Final Year Student </option>
                       
@@ -113,8 +114,8 @@
                     <div class="row mb-3">
                     <label for="courseStudied" class="col-md-4 col-form-label text-md-end">Course Studied</label>
 
-                    <div class="col-md-6">
-                        <input id="courseStudied" class="form-control" type="text" name="courseStudied"  value="" required>
+                    <div class="col-md-8">
+                        <input id="courseStudied" class="form-control" type="text" name="courseStudied" placeholder="Please Enter Course You Have Completed" value="" required>
 
                         @error('courseStudied')
                             <span class="invalid-feedback" role="alert">
@@ -128,8 +129,8 @@
                     <div class="row mb-3">
                     <label for="relevantModuleGrades" class="col-md-4 col-form-label text-md-end">Relevant Module Grades</label>
 
-                    <div class="col-md-6">
-                        <input id="relevantModuleGrades" class="form-control" type="text" name="relevantModuleGrades"  value="" required>
+                    <div class="col-md-8">
+                        <input id="relevantModuleGrades" class="form-control" type="text" name="relevantModuleGrades" placeholder="Please Provide The Module Code and Grade"   value="" required>
 
                         @error('relevantModuleGrades')
                             <span class="invalid-feedback" role="alert">
@@ -144,8 +145,8 @@
                     <div class="row mb-3">
                     <label for="supportingInfo" class="col-md-4 col-form-label text-md-end">Supporting Information</label>
 
-                    <div class="col-md-6">
-                        <input id="supportingInfo" class="form-control" type="text" name="supportingInfo"  value="" required>
+                    <div class="col-md-8">
+                        <input  id="supportingInfo" class="form-control" type="text" name="supportingInfo" placeholder="Please Provide Additional Information or N/A" value="" required>
 
                         @error('supportingInfo')
                             <span class="invalid-feedback" role="alert">
@@ -159,7 +160,7 @@
                     <input type="hidden" id="status" name="status" value="Under Review">
 
                     <div class="row mb-0">
-                        <div class="col-md-6 offset-md-4">
+                        <div class="col-md-8 offset-md-4">
                             <button type="submit" class="btn btn-primary">
                         Apply
                             </button>
