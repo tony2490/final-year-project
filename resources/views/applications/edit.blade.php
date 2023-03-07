@@ -6,7 +6,7 @@
           </div>
         </div>
         <div class="subHeadings">
-          <h5> Please Select The Correct Status for This Application To Be Updated To</h5>
+          <h5> Update The Application Status</h5>
         </div>
 </div>
 
