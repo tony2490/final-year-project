@@ -167,6 +167,41 @@
 
 
                     <div class="row mb-3">
+                        <label for="reasonForApplying" class="col-md-4 col-form-label text-md-end">{{ __('Reason For Applying') }}</label>
+
+                        <div class="col-md-8">
+                            <input id="reasonForApplying" type="text" class="form-control @error('reasonForApplying') is-invalid @enderror" name="reasonForApplying" 
+                            value="{{ old('reasonForApplying') }} @isset($application) {{$application->reasonForApplying}} @endisset" readonly="readonly">
+
+                            @error('reasonForApplying')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="placementComplete" class="col-md-4 col-form-label text-md-end">{{ __('Placement Complete') }}</label>
+
+                        <div class="col-md-8">
+                            <input id="placementComplete" type="text" class="form-control @error('placementComplete') is-invalid @enderror" name="placementComplete" 
+                            value="{{ old('placementComplete') }} @isset($application) {{$application->placementComplete}} @endisset" readonly="readonly">
+
+                            @error('placementComplete')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        
+                    </div>
+
+
+
+
+                    <div class="row mb-3">
                         <label for="status" class="col-md-4 col-form-label text-md-end">{{ __('Status *') }}</label>
 
                         <div class="col-md-8">

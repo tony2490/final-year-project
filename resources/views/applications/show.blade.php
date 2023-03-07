@@ -11,6 +11,8 @@
     <p class="studentType"> Student Type - {{$application->studentType}} </p>
     <p class="courseStudied"> Course Studied - {{$application->courseStudied}} </p>
     <p class="relevantModuleGrades"> Relevant Module Grades - {{$application->relevantModuleGrades}} </p>
+    <p class="reasonForApplying"> Reason For Applying - {{$application->reasonForApplying}} </p>
+    <p class="placementComplete"> Placement Completed? - {{$application->placementComplete}} </p>
     <p class="supportingInfo"> Supporting Information - {{$application->supportingInfo}} </p>
     <p class="status"> Status - {{$application->status}} </p>
     @can('is-admin')

@@ -31,7 +31,7 @@
                             value="" >
 
                             @foreach($jobs as $job)
-                            
+                            <option value="" disabled selected>Select your option</option>
                             <option value="{{ $job-> moduleCode }} "> {{ $job-> moduleCode }}  </option>
 
                             @endforeach
@@ -112,10 +112,10 @@
 
                     <!-- Course Studied  -->
                     <div class="row mb-3">
-                    <label for="courseStudied" class="col-md-4 col-form-label text-md-end">Course Studied</label>
+                    <label for="courseStudied" class="col-md-4 col-form-label text-md-end">Modules Completed</label>
 
                     <div class="col-md-8">
-                        <input id="courseStudied" class="form-control" type="text" name="courseStudied" placeholder="Please Enter Course You Have Completed" value="" required>
+                        <input id="courseStudied" class="form-control" type="text" name="courseStudied" placeholder="Please Provide The Module Code" value="" required>
 
                         @error('courseStudied')
                             <span class="invalid-feedback" role="alert">
@@ -138,6 +138,45 @@
                             </span>
                         @enderror
                         </div>  
+                    </div>
+
+                    <!-- reasonForApplying -->
+                    <div class="row mb-3">
+                    <label for="reasonForApplying" class="col-md-4 col-form-label text-md-end">Reason For Applying</label>
+
+                    <div class="col-md-8">
+                        <input id="reasonForApplying" class="form-control" type="text" name="reasonForApplying" placeholder="Please Provide The Reason(s) For Applying"   value="" required>
+
+                        @error('reasonForApplying')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                        </div>  
+                    </div>
+
+                    <!-- placementComplete -->
+
+                    <div class="row mb-3">
+                        <label for="placementComplete" class="col-md-4 col-form-label text-md-end">{{ __('Placement Completed?') }}</label>
+
+                        <div class="col-md-8">
+                            
+                        <select name="placementComplete"id="placementComplete"  type="text" class="form-control @error('placementComplete') is-invalid @enderror" name="placementComplete" 
+                            value="" required>
+                            <option value="" disabled selected>Select your option</option>
+                            <option value="Completed"> Yes </option>
+                            <option value="Not Completed"> No </option>
+                      
+                        </select>
+
+                            @error('studentType')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        
                     </div>
 
                     <!-- supportingInfo  -->

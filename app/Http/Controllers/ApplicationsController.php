@@ -61,6 +61,8 @@ class ApplicationsController extends Controller
         $application->studentType = request('studentType');
         $application->courseStudied = request('courseStudied');
         $application->relevantModuleGrades = request('relevantModuleGrades');
+        $application->reasonForApplying = request('reasonForApplying');
+        $application->placementComplete = request('placementComplete');
         $application->supportingInfo = request('supportingInfo');
         $application->status = request('status');
 
@@ -135,6 +137,10 @@ class ApplicationsController extends Controller
         $application->studentType = $request->studentType;
         $application->courseStudied = $request->courseStudied;
         $application->relevantModuleGrades = $request->relevantModuleGrades;
+
+        $application->reasonForApplying = $request->reasonForApplying;
+        $application->placementComplete = $request->placementComplete;
+
         $application->supportingInfo = $request->supportingInfo;
         $application->status = $request->status;
 
