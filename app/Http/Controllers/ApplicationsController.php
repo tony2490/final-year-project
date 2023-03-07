@@ -185,6 +185,14 @@ class ApplicationsController extends Controller
 
     }
 
+    public function unsucessful(){
+
+        return view('applications.admin-filters.statusUnsuccessful',['applications' => Application::paginate(10)]);
+
+    }
+    
+    
+
 
     
 }

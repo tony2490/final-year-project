@@ -36,7 +36,7 @@ Route::get('/applications/statusAccepted', [ApplicationsController::class, 'stat
 Route::get('/applications/underReview', [ApplicationsController::class, 'underReview'])->name(('applications.underReview'))->middleware(['auth','auth.isAdmin']);
 Route::get('/applications/offered', [ApplicationsController::class, 'offered'])->name(('applications.offered'))->middleware(['auth','auth.isAdmin']);
 Route::get('/applications/withdrawn', [ApplicationsController::class, 'withdrawn'])->name(('applications.withdrawn'))->middleware(['auth','auth.isAdmin']);
-Route::get('/applications/latest', [ApplicationsController::class, 'latest'])->name(('applications.latest'))->middleware(['auth','auth.isAdmin']);
+Route::get('/applications/unsucessful', [ApplicationsController::class, 'unsucessful'])->name(('applications.unsucessful'))->middleware(['auth','auth.isAdmin']);
 
 
 
