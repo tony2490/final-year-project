@@ -1,7 +1,7 @@
 <div class="row">
         <div class="col-12">
           <div class="headings">
-            <h1 class="headings">SEEN Applications</h1>
+            <h1 class="headings"> Applications</h1>
           </div>
         </div>
         <div class="subHeadings">

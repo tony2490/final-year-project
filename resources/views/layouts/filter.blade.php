@@ -11,8 +11,13 @@
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Filter
       </button>
+      <ul class="dropdown-menu">
 
       <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+
+        <a href="/applications/statusAccepted"><button class="dropdown-item" type="button">
+          Status: Accepted
+        </button></a>
 
           <a href="/applications/statusAccepted"><button class="dropdown-item" type="button">
             Status: Accepted
@@ -40,7 +45,6 @@
 
 
 @endsection
-
 
 
 
