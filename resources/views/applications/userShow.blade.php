@@ -1,5 +1,3 @@
-@extends('layouts.app')
-@section('content')
 
 <div class="wrapper job-index">
 <div class="row">
@@ -13,6 +11,9 @@
         </div>
 
     </div>
+
+    @include('layouts.studentFilters')
+
 
     <div class="card">
 
@@ -55,9 +56,6 @@
  
 
     </div>
-
-
-@endsection
 
 
 

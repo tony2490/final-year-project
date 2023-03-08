@@ -31,12 +31,20 @@ Route::delete('/jobs/{id}', [JobController::class,'destroy'])->name(('jobs.destr
 
 Route::get('/applications', [ApplicationsController::class, 'index'])->name(('applications.index'))->middleware(['auth','auth.isAdmin']);
 
-// Filters
-Route::get('/applications/statusAccepted', [ApplicationsController::class, 'statusAccepted'])->name(('applications.statusAccepted'))->middleware(['auth','auth.isAdmin']);
-Route::get('/applications/underReview', [ApplicationsController::class, 'underReview'])->name(('applications.underReview'))->middleware(['auth','auth.isAdmin']);
-Route::get('/applications/offered', [ApplicationsController::class, 'offered'])->name(('applications.offered'))->middleware(['auth','auth.isAdmin']);
-Route::get('/applications/withdrawn', [ApplicationsController::class, 'withdrawn'])->name(('applications.withdrawn'))->middleware(['auth','auth.isAdmin']);
-Route::get('/applications/unsucessful', [ApplicationsController::class, 'unsucessful'])->name(('applications.unsucessful'))->middleware(['auth','auth.isAdmin']);
+// Filters Admin
+Route::get('/applications/statusAccepted', [ApplicationsController::class, 'statusAcceptedAdmin'])->name(('applications.statusAccepted'))->middleware(['auth','auth.isAdmin']);
+Route::get('/applications/underReview', [ApplicationsController::class, 'underReviewAdmin'])->name(('applications.underReview'))->middleware(['auth','auth.isAdmin']);
+Route::get('/applications/offered', [ApplicationsController::class, 'offeredAdmin'])->name(('applications.offered'))->middleware(['auth','auth.isAdmin']);
+Route::get('/applications/withdrawn', [ApplicationsController::class, 'withdrawnAdmin'])->name(('applications.withdrawn'))->middleware(['auth','auth.isAdmin']);
+Route::get('/applications/unsuccessful', [ApplicationsController::class, 'unsucessfulAdmin'])->name(('applications.unsucessful'))->middleware(['auth','auth.isAdmin']);
+
+
+// Filters Students 
+Route::get('/myApplications/Accepted', [ApplicationsController::class, 'statusAcceptedStudent'])->name(('applications.statusAcceptedStudent'))->middleware(['auth']);
+Route::get('/myApplications/underReview', [ApplicationsController::class, 'statusUnderReviewStudent'])->name(('applications.statusUnderReviewStudent'))->middleware(['auth']);
+Route::get('/myApplications/offered', [ApplicationsController::class, 'statusOfferedStudent'])->name(('applications.statusOfferedStudent'))->middleware(['auth']);
+Route::get('/myApplications/withdrawn', [ApplicationsController::class, 'statusWithdrawnStudent'])->name(('applications.statusWithdrawnStudent'))->middleware(['auth']);
+Route::get('/myApplications/unsuccessful', [ApplicationsController::class, 'statusUnsuccessfulStudent'])->name(('applications.statusUnsuccessfulStudent'))->middleware(['auth']);
 
 
 

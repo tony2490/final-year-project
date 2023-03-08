@@ -18,14 +18,14 @@
             <th scope="col">Role</th>
             <th scope="col">Name</th>
             <th scope="col">Status</th>
-            <th scope="col"></th>
+            <th scope="col">Actions</th>
           </tr>
         </thead>
         <tbody>
 
         @foreach($applications as $application)
       <?php
-  if($application->status == "withdrawn") :?>
+  if($application->status == "Withdrew") :?>
 
       <tr>
           <th scope="row"> {{$application->id}} </th>

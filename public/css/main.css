@@ -134,3 +134,7 @@ html {
 .table { table-layout:fixed; }
 .table td { overflow: hidden; }
 
+.filter-button{
+    padding-bottom: 15px; 
+    padding-top: 15px;
+}

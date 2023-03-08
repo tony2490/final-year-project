@@ -11,8 +11,6 @@
     </div>
 @include('layouts.filter')
 
-
-
     <div class="card">
         <table class="table">
             <thead>

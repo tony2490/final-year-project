@@ -161,38 +161,77 @@ class ApplicationsController extends Controller
         //
     }
 
-    public function statusAccepted(){
+    public function statusAcceptedAdmin(){
 
         return view('applications.admin-filters.statusAccepted',['applications' => Application::paginate(10)]);
 
     }
 
-    public function underReview(){
+    public function underReviewAdmin(){
 
         return view('applications.admin-filters.statusUnderReview',['applications' => Application::paginate(10)]);
 
     }
 
-    public function offered(){
+    public function offeredAdmin(){
 
         return view('applications.admin-filters.statusOffered',['applications' => Application::paginate(10)]);
 
     }
 
-    public function withdrawn(){
+    public function withdrawnAdmin(){
 
         return view('applications.admin-filters.statusWithdrawn',['applications' => Application::paginate(10)]);
 
     }
 
-    public function unsucessful(){
+    public function unsucessfulAdmin(){
 
         return view('applications.admin-filters.statusUnsuccessful',['applications' => Application::paginate(10)]);
 
     }
+
+    public function statusAcceptedStudent(){
+        $user = Auth::user()->id; 
+        $application = Application::all();
+        $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
+
+        return view('applications.student-filters.statusAccepted',[ 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
+
+    }
+
+
+    public function statusUnderReviewStudent(){
+        $user = Auth::user()->id; 
+        $application = Application::all();
+        $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
+
+        return view('applications.student-filters.statusUnderReview',[ 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
+    }
+    public function statusOfferedStudent(){
+        $user = Auth::user()->id; 
+        $application = Application::all();
+        $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
+
+        return view('applications.student-filters.statusOffered',[ 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
+    }
+
+    public function statusWithdrawnStudent(){
+        $user = Auth::user()->id; 
+        $application = Application::all();
+        $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
+
+        return view('applications.student-filters.statusWithdrawn',[ 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
+    }
+
+    public function statusUnsuccessfulStudent(){
+        $user = Auth::user()->id; 
+        $application = Application::all();
+        $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
+
+        return view('applications.student-filters.statusUnsuccessful',[ 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
+    }
     
     
 
-
-    
 }

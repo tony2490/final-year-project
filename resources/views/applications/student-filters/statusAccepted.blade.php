@@ -1,7 +1,7 @@
 <div class="row">
         <div class="col-12">
           <div class="headings">
-            <h1 class="headings">Applications</h1>
+            <h1 class="headings">SEEN Applications</h1>
           </div>
         </div>
         <div class="subHeadings">
@@ -9,7 +9,7 @@
         </div>
 </div>
 
-@include('layouts.filter')
+@include('layouts.studentFilters')
 
 <div class="card">
     <table class="table">
@@ -24,18 +24,16 @@
         </thead>
         <tbody>
 
-        @foreach($applications as $application)
+        @foreach($myApplications as $myApplication)
       <?php
-  if($application->status == "Accepted") :?>
+  if($myApplication->status == "Accepted") :?>
 
       <tr>
-          <th scope="row"> {{$application->id}} </th>
-          <td> {{$application->role}} </td>
-          <td> {{$application->name}} </td>
-          <td> {{$application->status}} </td>
-          <td>
-              <a class="btn btn-sm btn-primary" href="{{route('applications.edit',$application->id)}}" role="button"> Update </a>
-          </td>
+          <th scope="row"> {{$myApplication->id}} </th>
+          <td> {{$myApplication->role}} </td>
+          <td> {{$myApplication->name}} </td>
+          <td> {{$myApplication->status}} </td>
+          
         </tr>
         <?php endif; ?>
       @endforeach
