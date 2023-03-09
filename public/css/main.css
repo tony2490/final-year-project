@@ -139,7 +139,24 @@ html {
     padding-top: 15px;
 }
 
-.dropdown:hover .dropdown-menu{
-
-   
+.dropdown-submenu {
+    position: relative;
+  }
+  
+  .dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+  }
+.a-link{
+    text-align: center;
+    color: black;
+    font-family: sans-serif;
+    font-weight: 100;
+  }
+  ul li { display: list-item; 
+  text-align: center;
+  color: black;
+  font-family: sans-serif;
+  font-weight: 100;
 }

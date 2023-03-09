@@ -1,47 +1,64 @@
 @extends('layouts.app')
 @section('content')
-<div class="wrapper job-index">
-    <!-- <div class="row">
-        <div class="col-12">
-            <h1 class="float-left">Applications</h1>
-        </div>
-    </div> -->
 
-    <div class="dropdown filter-button">
+  <div class="container">                                       
+    <div class="dropdown">
+      <div class="filter-button">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Filters
+        Filter
       </button>
-
-      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <a href="/myApplications/Accepted"><button class="dropdown-item" type="button">
-            Status: Accepted
-          </button></a>
-
-          <a href="/myApplications/underReview"><button class="dropdown-item" type="button">
-            <button class="dropdown-item" type="button">Status: Under Review</button>
-          </button></a>
-
-          <a href="/myApplications/offered"><button class="dropdown-item" type="button">
-            <button class="dropdown-item" type="button">Status: Offered</button>
-          </button></a>
-
-          <a href="/myApplications/unsuccessful"><button class="dropdown-item" type="button">
-        <button class="dropdown-item" type="button">Status: Unsuccessful</button>
-        </button></a>
-
-        <a href="/myApplications/withdrawn"><button class="dropdown-item" type="button">
-        <button class="dropdown-item" type="button">Status: Withdrawn</button>
-        </button></a>
+  
+      <ul class="dropdown-menu">
+        <li><a class="test a-link" tabindex="-1" href="#">HTML</a></li>
+        <li><a class="test a-link" tabindex="-1" href="#">CSS</a></li>
         
-      </div>
+        <li class="dropdown-submenu">
+          <a class="test a-link" tabindex="-1" href="#">Status </a>
+  
+          <ul class="dropdown-menu">
+            <li><a href="/myApplications/statusAccepted"><button class="dropdown-item" type="button">
+              Status: Accepted
+            </button></a> </li>
+
+            <li><a href="/myApplications/underReview"><button class="dropdown-item" type="button">
+              <button class="dropdown-item" type="button">Status: Under Review</button>
+            </button></a> </li>
+
+            <li><a href="/myApplications/offered"><button class="dropdown-item" type="button">
+              <button class="dropdown-item" type="button">Status: Offered</button>
+            </button></a></li>
+
+            <li><a href="/myApplications/unsuccessful"><button class="dropdown-item" type="button">
+              <button class="dropdown-item" type="button">Status: Unsuccessful</button>
+              </button></a></li>
+
+
+              <li><a href="/myApplications/withdrawn"><button class="dropdown-item" type="button">
+                <button class="dropdown-item" type="button">Status: Withdrawn</button>
+                </button></a> </li>
+
+          
+          </ul>
+        </li>
+      </ul>
     </div>
-
-
+  </div>
+</div>
+  
+  <script>
+  $(document).ready(function(){
+    $('.dropdown-submenu a.test').on("click", function(e){
+      $(this).next('ul').toggle();
+      e.stopPropagation();
+      e.preventDefault();
+    });
+  });
+  </script>
+  
+  </body>
+ 
 
 @endsection
-
-
-
 
 
 
