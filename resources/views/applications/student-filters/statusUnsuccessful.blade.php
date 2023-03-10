@@ -43,9 +43,9 @@
       </table>
       {{$applications->links()}}
 
-
+   
 </div>
-
+@include('layouts.footer')
 
 
 

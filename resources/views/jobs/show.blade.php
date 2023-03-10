@@ -2,7 +2,7 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="wrapper job-index">
+
     <div class="row">
         <div class="col-12">
           <div class="headings">
@@ -13,6 +13,7 @@
           <h5> Please Read The Details Of The Role Carefully Before Applying</h5>
         </div>
         <h1>  </h1>
+</div>
 
 <!-- <h1> Role for {{ $job->moduleCode}} </h1> -->
 <div class="container">
@@ -88,6 +89,7 @@
             </div>
         </div>
     </div>
-</div>
+
+@include('layouts.footer')
 @endsection
 

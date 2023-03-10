@@ -30,4 +30,5 @@
 </div>
 
 <a href="/applications" class="back"> <- Back to all applicants </a>
+@include('layouts.footer')
 @endsection

@@ -11,5 +11,5 @@
         </div>
 </div>
 <h2>CONTACTS</h2>
-
+@include('layouts.footer')
 @endsection

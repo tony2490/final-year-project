@@ -8,7 +8,7 @@
           <h5> View All Teaching Assistant Applications & Update Their Status </h5>
         </div>
 
-    </div>
+</div>
 @include('layouts.filter')
 
     <div class="card">
@@ -44,3 +44,4 @@
 
 
     </div>
+    @include('layouts.footer')
