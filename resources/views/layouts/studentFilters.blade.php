@@ -8,16 +8,17 @@
         Filter
       </button>
   
+  
       <ul class="dropdown-menu">
-        <li><a class="test a-link" tabindex="-1" href="#">HTML</a></li>
-        <li><a class="test a-link" tabindex="-1" href="#">CSS</a></li>
-        
+        <li><a class="test a-link" tabindex="-1" href="#">Roles</a></li>
         <li class="dropdown-submenu">
           <a class="test a-link" tabindex="-1" href="#">Status </a>
   
           <ul class="dropdown-menu">
-            <li><a href="/myApplications/statusAccepted"><button class="dropdown-item" type="button">
-              Status: Accepted
+       
+
+            <li><a href="/myApplications/Accepted"><button class="dropdown-item" type="button">
+              <button class="dropdown-item" type="button">   Status: Accepted</button>
             </button></a> </li>
 
             <li><a href="/myApplications/underReview"><button class="dropdown-item" type="button">

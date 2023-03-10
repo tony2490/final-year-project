@@ -9,13 +9,12 @@
       </button>
   
       <ul class="dropdown-menu">
-        <li><a class="test a-link" tabindex="-1" href="#">HTML</a></li>
-        <li><a class="test a-link" tabindex="-1" href="#">CSS</a></li>
+        <li><a class="test a-link" tabindex="-1" href="#">Roles</a></li>
         <li class="dropdown-submenu">
           <a class="test a-link" tabindex="-1" href="#">Status </a>
   
           <ul class="dropdown-menu">
-            <li><a href="/applications/statusAccepted"><button class="dropdown-item" type="button">
+            <li><a href="/applications/Accepted"><button class="dropdown-item" type="button">
               Status: Accepted
             </button></a> </li>
 

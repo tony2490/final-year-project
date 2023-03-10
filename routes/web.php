@@ -32,7 +32,7 @@ Route::delete('/jobs/{id}', [JobController::class,'destroy'])->name(('jobs.destr
 Route::get('/applications', [ApplicationsController::class, 'index'])->name(('applications.index'))->middleware(['auth','auth.isAdmin']);
 
 // Filters Admin
-Route::get('/applications/statusAccepted', [ApplicationsController::class, 'statusAcceptedAdmin'])->name(('applications.statusAccepted'))->middleware(['auth','auth.isAdmin']);
+Route::get('/applications/Accepted', [ApplicationsController::class, 'statusAcceptedAdmin'])->name(('applications.statusAccepted'))->middleware(['auth','auth.isAdmin']);
 Route::get('/applications/underReview', [ApplicationsController::class, 'underReviewAdmin'])->name(('applications.underReview'))->middleware(['auth','auth.isAdmin']);
 Route::get('/applications/offered', [ApplicationsController::class, 'offeredAdmin'])->name(('applications.offered'))->middleware(['auth','auth.isAdmin']);
 Route::get('/applications/withdrawn', [ApplicationsController::class, 'withdrawnAdmin'])->name(('applications.withdrawn'))->middleware(['auth','auth.isAdmin']);
