@@ -42,14 +42,15 @@
                         <label for="jobDescription" class="col-md-4 col-form-label text-md-end">Job Description: </label>
 
                         <div class="col-md-8" rows="4" cols="50">
-                            <input id="jobDescription" type="text" class="form-control @error('jobDescription') is-invalid @enderror" name="jobDescription" 
-                            value="{{ old('jobDescription') }} @isset($job) {{$job->jobDescription}} @endisset" readonly="readonly">
+                            <p id="jobDescription" type="text" class="form-control @error('jobDescription') is-invalid @enderror" name="jobDescription" 
+                            value="{{ old('jobDescription') }} @isset($job)  @endisset" readonly="readonly">{{$job->jobDescription}}  </p>
 
                             @error('jobDescription')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
+                          
                         </div>
                         
                     </div>
