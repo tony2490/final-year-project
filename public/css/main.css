@@ -112,7 +112,7 @@ html {
     height: 80px;
     background-color: #343a40;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
 }
 .headings{
     padding: 10px;
@@ -159,4 +159,150 @@ html {
   color: black;
   font-family: sans-serif;
   font-weight: 100;
+}
+
+.homepage-content{
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 0px;
+}
+
+.home-content-left{
+    padding-top: 30px;
+    padding-right: 60%;
+}
+.home-content-right{
+    padding-top: 30px;
+    padding-left: 60%;
+}
+.underline{
+        padding-top: 30px;
+        padding-left: 70px;
+        padding-right: 70px;
+        
+        width: 100%;
+        border-bottom: 5px solid #343a40;
+
+}
+
+.content-title{
+    text-decoration: underline;
+    text-decoration-color: #343a40;
+}
+.home-testimonial{background-color: #231834;
+    padding-bottom: 100px;
+    height: 380px}
+.home-testimonial-bottom{background-color: #f8f8f8;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, 
+    box-shadow 0.3s
+    ;margin-top: 20px;
+    margin-bottom: 0px;
+    position: relative;
+    height: 130px;
+    top: 190px}
+
+.home-testimonial h3{color: var(--orange);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase}
+
+.home-testimonial h2{color: white;
+    font-size: 28px;font-weight: 700}
+    
+.testimonial-inner{position: relative;
+    top: -174px}
+    
+.testimonial-pos{position: relative;
+    top: 24px}
+
+    .testimonial-inner .tour-desc{border-radius: 5px;padding: 40px}.color-grey-3{font-family: "Montserrat", Sans-serif;font-size: 14px;color: #6c83a2}.testimonial-inner img.tm-people{width: 60px;height: 60px;-webkit-border-radius: 50%;border-radius: 50%;-o-object-fit: cover;object-fit: cover;max-width: none}.link-name{font-family: "Montserrat", Sans-serif;font-size: 14px;color: #6c83a2}.link-position{font-family: "Montserrat", Sans-serif;font-size: 12px;color: #6c83a2}
+
+
+.home-footer-padding{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.footer-container{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row-footer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+}
+
+footer{
+    background-color: #343a40;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 280px;
+    width: 100%;
+
+}
+.footer{
+    background-color: #343a40;
+    padding: 70px 0;
+}
+.footer-col{
+    width:25%;
+    padding: 0 15px;
+    
+
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-family: sans-serif;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 10;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+
+}
+
+.footer-col ul li a:hover{
+
+    color: white;
+    padding-left: 8px;
+}
+
+@media(max-width:574px){
+    .footer-col{
+        width: 100%;
+
+    }
+}
+
+.footer-copyright{
+    color: #bbbbbb;
 }
