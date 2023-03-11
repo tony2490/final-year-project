@@ -24,10 +24,11 @@ class ApplicationsController extends Controller
     public function userShow()
     {
         $application = Application::all();
+        $jobs = Job::all();
         $user = Auth::user()->id; 
         $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
         
-        return view('applications.userShow',['applications' => Application::paginate(10),'myApplications'=> $myApplications]);
+        return view('applications.userShow',['jobs'=> $jobs,'applications' => Application::paginate(10),'myApplications'=> $myApplications]);
     }
 
     /**
@@ -193,43 +194,48 @@ class ApplicationsController extends Controller
 
     public function statusAcceptedStudent(){
         $user = Auth::user()->id; 
+        $jobs = Job::all();
         $application = Application::all();
         $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
 
-        return view('applications.student-filters.statusAccepted',[ 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
+        return view('applications.student-filters.statusAccepted',[ 'jobs'=> $jobs,'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
 
     }
 
 
     public function statusUnderReviewStudent(){
         $user = Auth::user()->id; 
+        $jobs = Job::all();
         $application = Application::all();
         $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
 
-        return view('applications.student-filters.statusUnderReview',[ 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
+        return view('applications.student-filters.statusUnderReview',['jobs'=> $jobs, 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
     }
     public function statusOfferedStudent(){
         $user = Auth::user()->id; 
+        $jobs = Job::all();
         $application = Application::all();
         $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
 
-        return view('applications.student-filters.statusOffered',[ 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
+        return view('applications.student-filters.statusOffered',[ 'jobs'=> $jobs,'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
     }
 
     public function statusWithdrawnStudent(){
         $user = Auth::user()->id; 
+        $jobs = Job::all();
         $application = Application::all();
         $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
 
-        return view('applications.student-filters.statusWithdrawn',[ 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
+        return view('applications.student-filters.statusWithdrawn',['jobs'=> $jobs, 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
     }
 
     public function statusUnsuccessfulStudent(){
         $user = Auth::user()->id; 
+        $jobs = Job::all();
         $application = Application::all();
         $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
 
-        return view('applications.student-filters.statusUnsuccessful',[ 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
+        return view('applications.student-filters.statusUnsuccessful',['jobs'=> $jobs, 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
     }
     
     
