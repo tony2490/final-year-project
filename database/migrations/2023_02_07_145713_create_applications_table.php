@@ -22,9 +22,9 @@ return new class extends Migration
             $table->string('studentType');
             $table->string('courseStudied');
             $table->string('relevantModuleGrades');
-            $table->string('reasonForApplying');
+            $table->text('reasonForApplying');
             $table->string('placementComplete');
-            $table->string('supportingInfo');
+            $table->text('supportingInfo');
             $table->string('status');
             $table->timestamps();
         });
