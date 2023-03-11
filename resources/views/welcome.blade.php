@@ -16,57 +16,74 @@
         <div class="home-stripe">
             <h3 >Teaching Assistant Roles For Both Final Year & PHD Aston Students</h3>
         </div>
-
+        
         <div class="homepage-content">
             <div class="card-group homepage-content">
                 <div class="card">
-                    <img class="card-img-top" src="/img/teaching.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="/img/money.svg" alt="hourly pay">
                     <div class="card-body">
-                        <h5 class="card-title">Benefit 1</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <h5 class="card-title">Paid Hourly</h5>
+                        <p class="card-text">Teaching Assistant Roles are paid at an hourly rate. (Please see job description for accurate rates).</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top" src="/img/teaching.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="/img/school.svg" alt="invaluable experience">
                     <div class="card-body">
-                    <h5 class="card-title">Benefit 2</h5>
+                    <h5 class="card-title">An Invaluable Experience</h5>
                     <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top" src="/img/teaching.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="/img/balance.svg" alt="balance work and studies">
                     <div class="card-body">
-                    <h5 class="card-title">Benefit 3</h5>
+                    <h5 class="card-title">Great Work-Life Balance</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                     </div>
                 </div>
             </div>
             <!-- <strong> <div class="underline homepage-content" ></div> </strong> -->
 
-            <div class="home-content-left homepage-content">   
+            <div class="homepage-cards-content homepage-p">
+                <p> <img src="/img/teaching.jpg" class="img-to-right " alt="" >
 
-                <h2 class="content-title">What is Aston University Teaching Assistants?</h2>
-                <p>This website was designed to give the opportunity for Phd & final year Aston students
-                    to apply to the latest paid teaching assistant roles available at Aston Universirty. 
-                    After feedback from the both staff and students we decided that it was essential 
-                    to launch this website so there can be a reference point to where students can refer to, 
-                    when searching for paid teaching assistant work. <br> <br>
-                    
+                <h2 class="content-title">What is Aston University Teaching Assistants?</h2> <br>
+                    <p>This website was designed to give the opportunity for Phd & final year Aston students
+                        to apply to the latest paid teaching assistant roles available at Aston Universirty. 
+                        After feedback from the both staff and students we decided that it was essential 
+                        to launch this website so there can be a reference point to where students can refer to, 
+                        when searching for paid teaching assistant work. <br> <br>
+
+
                 </p>
             </div>
 
-            <div class="home-content-right homepage-content">   
-                <h2 class="content-title">What is Aston University Teaching Assistants?</h2>
-                <p>This website was designed to give the opportunity for Phd & final year Aston students
-                    to apply to the latest paid teaching assistant roles available at Aston Universirty. 
-                    After feedback from the both staff and students we decided that it was essential 
-                    to launch this website so there can be a reference point to where students can refer to, 
-                    when searching for paid teaching assistant work. <br> <br>
+            <div style="padding-top: 80px;"></div>
 
-                    <button class="faq-button" >FAQs</button>
-                    
+            <div class="homepage-cards-content homepage-p">
+                <p> <img src="/img/teaching.jpg" class="img-to-left " alt="" >
+
+                <h2 class="content-title">What is Aston University Teaching Assistants?</h2> <br>
+                    <p">This website was designed to give the opportunity for Phd & final year Aston students
+                        to apply to the latest paid teaching assistant roles available at Aston Universirty. 
+                        After feedback from the both staff and students we decided that it was essential 
+                        to launch this website so there can be a reference point to where students can refer to, 
+                        when searching for paid teaching assistant work. <br> <br>
+
+
                 </p>
             </div>
+
+            <div style="padding-bottom: 80px;"></div>
+
+       
+
+
+
+    
+
+   
+   
+            
 
             <section class="home-testimonial homepage-content">
                 <div class="container-fluid">
