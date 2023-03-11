@@ -18,7 +18,11 @@ return new class extends Migration
             $table->timestamps();
             $table->string('moduleCode');
             $table->string('hiringManager');
-            $table->string('jobDescription');
+            $table->text('jobDescription');
+            $table->float('hourlyRate');
+            $table->date('closingDate');
+
+
         });
     }
 

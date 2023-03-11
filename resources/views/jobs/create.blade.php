@@ -63,6 +63,36 @@
                             </div>  
                         </div>
 
+                        <div class="row mb-3">
+                            <label for="hourlyRate" class="col-md-4 col-form-label text-md-end"> Hourly Rate (In £): </label>
+
+                            <div class="col-md-8">
+                                <input id="hourlyRate" class="form-control" type="text" name="hourlyRate" placeholder="Please Enter The Hourly Rate" value=""  required>
+
+                                @error('hourlyRate')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>  
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="closingDate" class="col-md-4 col-form-label text-md-end"> Closing Date: </label>
+
+                            <div class="col-md-8">
+                                <input id="closingDate" class="form-control" type="date" name="closingDate" placeholder="Please Enter The Closing Date" value=""  required>
+
+                                @error('closingDate')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>  
+                        </div>
+
+                        
+
 
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">

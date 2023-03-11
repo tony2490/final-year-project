@@ -55,6 +55,42 @@
                         </div>
                         
                     </div>
+
+                    <div class="row mb-3">
+                        <label for="hourlyRate" class="col-md-4 col-form-label text-md-end">Hourly Rate (In £): </label>
+
+                        <div class="col-md-8" rows="4" cols="50">
+                            <p id="hourlyRate" type="text" class="form-control @error('hourlyRate') is-invalid @enderror" name="hourlyRate" 
+                            value="{{ old('hourlyRate') }} @isset($job)  @endisset" readonly="readonly">{{$job->hourlyRate}}  </p>
+
+                            @error('hourlyRate')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                          
+                        </div>
+                        
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="closingDate" class="col-md-4 col-form-label text-md-end">Closing Date (YYYY/MM/DD): </label>
+
+                        <div class="col-md-8" rows="4" cols="50">
+                            <p id="closingDate" type="text" class="form-control @error('closingDate') is-invalid @enderror" name="closingDate" 
+                            value="{{ old('closingDate') }} @isset($job)  @endisset" readonly="readonly">{{$job->closingDate}}  </p>
+
+                            @error('closingDate')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                          
+                        </div>
+                        
+                    </div>
+
+
                     @can('is-admin')
                     <div class="row mb-0">
                         <div class="col-md-6 offset-md-4">                     
@@ -89,6 +125,7 @@
             </div>
         </div>
     </div>
+</div>
 
 @include('layouts.footer')
 @endsection
