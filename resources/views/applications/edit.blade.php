@@ -270,6 +270,7 @@
                             <option value="" disabled selected>Select your option</option>
                             <option value="Under Review"> Under Review </option>
                             <option value="Offered"> Offer </option>
+                            <option value="Assigned"> Assigned </option>
                             <option value="Unsuccessful"> Unsuccessful </option>
                         </select>
 

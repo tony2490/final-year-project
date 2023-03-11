@@ -307,3 +307,43 @@ footer{
 .footer-copyright{
     color: #bbbbbb;
 }
+
+.homepage-content h5{
+    text-align: center;
+    width: 100%;
+    text-decoration: underline;
+}
+
+.homepage-content p{
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.card-img-top{
+    transform:scale(0.5);
+}
+
+.img-to-right{
+    float: right;
+    padding-left: 150px;
+}
+
+.img-to-left{
+    float: left;
+    padding-right: 150px;
+}
+
+.homepage-cards-content{
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 30px;
+
+}
+.homepage-p{
+    text-align: center;
+}
+
+.personImage{
+    scale: 0.65;
+    color: white;
+}
