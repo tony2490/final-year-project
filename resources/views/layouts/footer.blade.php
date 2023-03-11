@@ -4,8 +4,8 @@
                     <div class="footer-col">
                         <h4>Important Pages</h4>
                         <ul>
-                            <li><a href="">My Application</a></li>
-                            <li><a href="">Avaliable Jobs</a></li>
+                            <li><a href="/applications/myApplications">My Application</a></li>
+                            <li><a href="/jobs">Avaliable Jobs</a></li>
 
                         </ul>
                     </div>
