@@ -237,6 +237,25 @@ class ApplicationsController extends Controller
 
         return view('applications.student-filters.statusUnsuccessful',['jobs'=> $jobs, 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
     }
+
+    public function statusAssignedStudent(){
+        $user = Auth::user()->id; 
+        $jobs = Job::all();
+        $application = Application::all();
+        $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
+
+        return view('applications.student-filters.statusAssigned',['jobs'=> $jobs, 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
+    }
+
+
+    public function moduleCode(){
+        $user = Auth::user()->id; 
+        $jobs = Job::all();
+        $application = Application::all();
+        $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
+
+        return view('applications.student-filters.moduleCode',['jobs'=> $jobs, 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
+    }
     
     
 

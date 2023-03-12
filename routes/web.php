@@ -45,6 +45,10 @@ Route::get('/myApplications/underReview', [ApplicationsController::class, 'statu
 Route::get('/myApplications/offered', [ApplicationsController::class, 'statusOfferedStudent'])->name(('applications.statusOfferedStudent'))->middleware(['auth']);
 Route::get('/myApplications/withdrawn', [ApplicationsController::class, 'statusWithdrawnStudent'])->name(('applications.statusWithdrawnStudent'))->middleware(['auth']);
 Route::get('/myApplications/unsuccessful', [ApplicationsController::class, 'statusUnsuccessfulStudent'])->name(('applications.statusUnsuccessfulStudent'))->middleware(['auth']);
+Route::get('/myApplications/assigned', [ApplicationsController::class, 'statusAssignedStudent'])->name(('applications.statusAssignedStudent'))->middleware(['auth']);
+
+
+Route::get('/myApplications/moduleCode', [ApplicationsController::class, 'moduleCode'])->name(('applications.moduleCode'))->middleware(['auth']);
 
 
 
