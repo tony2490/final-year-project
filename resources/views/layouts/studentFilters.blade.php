@@ -19,7 +19,7 @@
        
           <ul class="dropdown-menu">
         
-          <form action="/applications/myApplications" method="POST">
+          <form action="/myApplications/moduleCode" method="POST">
             @csrf
 
             <li>

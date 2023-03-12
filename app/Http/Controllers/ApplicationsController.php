@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Job;
 
+use App\Models\filteredModuleCode;
+
 class ApplicationsController extends Controller
 {
     /**
@@ -193,68 +195,78 @@ class ApplicationsController extends Controller
     }
 
     public function statusAcceptedStudent(){
+        $latestModule = filteredModuleCode::where('filteredModuleCode')->latest()->get();
         $user = Auth::user()->id; 
         $jobs = Job::all();
         $application = Application::all();
         $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
 
-        return view('applications.student-filters.statusAccepted',[ 'jobs'=> $jobs,'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
+        return view('applications.student-filters.statusAccepted',['latestModule' => $latestModule, 'jobs'=> $jobs,'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
 
     }
 
 
     public function statusUnderReviewStudent(){
+
+        $latestModule = filteredModuleCode::where('filteredModuleCode')->latest()->get();
         $user = Auth::user()->id; 
         $jobs = Job::all();
         $application = Application::all();
         $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
 
-        return view('applications.student-filters.statusUnderReview',['jobs'=> $jobs, 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
+        return view('applications.student-filters.statusUnderReview',['latestModule' => $latestModule,'jobs'=> $jobs, 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
     }
     public function statusOfferedStudent(){
+        $latestModule = filteredModuleCode::where('filteredModuleCode')->latest()->get();
         $user = Auth::user()->id; 
         $jobs = Job::all();
         $application = Application::all();
         $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
 
-        return view('applications.student-filters.statusOffered',[ 'jobs'=> $jobs,'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
+        return view('applications.student-filters.statusOffered',['latestModule' => $latestModule, 'jobs'=> $jobs,'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
     }
 
     public function statusWithdrawnStudent(){
+        $latestModule = filteredModuleCode::where('filteredModuleCode')->latest()->get();
         $user = Auth::user()->id; 
         $jobs = Job::all();
         $application = Application::all();
         $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
 
-        return view('applications.student-filters.statusWithdrawn',['jobs'=> $jobs, 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
+        return view('applications.student-filters.statusWithdrawn',['latestModule' => $latestModule, 'jobs'=> $jobs, 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
     }
 
     public function statusUnsuccessfulStudent(){
+        $latestModule = filteredModuleCode::where('filteredModuleCode')->latest()->get();
         $user = Auth::user()->id; 
         $jobs = Job::all();
         $application = Application::all();
         $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
 
-        return view('applications.student-filters.statusUnsuccessful',['jobs'=> $jobs, 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
+        return view('applications.student-filters.statusUnsuccessful',['latestModule' => $latestModule,'jobs'=> $jobs, 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
     }
 
     public function statusAssignedStudent(){
+        $latestModule = filteredModuleCode::where('filteredModuleCode')->latest()->get();
         $user = Auth::user()->id; 
         $jobs = Job::all();
         $application = Application::all();
         $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
 
-        return view('applications.student-filters.statusAssigned',['jobs'=> $jobs, 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
+        return view('applications.student-filters.statusAssigned',['latestModule' => $latestModule,'jobs'=> $jobs, 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
     }
 
 
     public function moduleCode(){
+
+
+        $latestModule = filteredModuleCode::where('filteredModuleCode')->latest()->get();
         $user = Auth::user()->id; 
         $jobs = Job::all();
         $application = Application::all();
         $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
 
-        return view('applications.student-filters.moduleCode',['jobs'=> $jobs, 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
+        return view('applications.student-filters.moduleCode',['latestModule' => $latestModule, 'jobs'=> $jobs, 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
     }
     
     

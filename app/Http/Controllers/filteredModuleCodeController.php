@@ -43,7 +43,7 @@ class filteredModuleCodeController extends Controller
 
 
 
-        return redirect('/applications/myApplications');
+        return redirect('/myApplications/moduleCode');
     }
 
     /**

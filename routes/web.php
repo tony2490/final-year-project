@@ -31,7 +31,7 @@ Route::get('/jobs/{id}', [JobController::class,'show'])->name(('jobs.show'))->mi
 Route::delete('/jobs/{id}', [JobController::class,'destroy'])->name(('jobs.destroy'))->middleware(['auth','auth.isAdmin']);
 // --------------------------------------------------------------------------------
 
-Route::post('/applications/myApplications', [filteredModuleCodeController::class,'store'])->name(('filteredModuleCodes.store'))->middleware(['auth']);
+Route::post('/myApplications/moduleCode', [filteredModuleCodeController::class,'store'])->name(('filteredModuleCodes.store'))->middleware(['auth']);
 
 
 

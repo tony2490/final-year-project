@@ -26,7 +26,13 @@
 
         @foreach($myApplications as $myApplication)
       <?php
-  if($myApplication->status == "Withdrew") :?>
+
+      dd($myApplication->role, $latestModule);
+      
+      
+
+       if($myApplication->role == $latestModule)  :?>
+  
 
       <tr>
           <th scope="row"> {{$myApplication->id}} </th>
