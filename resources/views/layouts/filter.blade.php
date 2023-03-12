@@ -8,14 +8,44 @@
         Filter
       </button>
   
+  
       <ul class="dropdown-menu">
         <li><a class="test a-link" tabindex="-1" href="#">Roles</a></li>
+
+       
+
+        <li class="dropdown-submenu">
+          <a class="test a-link" tabindex="-1" href="#">Module </a>
+       
+          <ul class="dropdown-menu">
+        
+          <form action="/applications/moduleCode" method="POST">
+            @csrf
+
+            <li>
+        
+              @foreach($jobs as $job)
+              
+              <input class="dropdown-item" type="submit" name="filteredModuleCode" id="filteredModuleCode" value="{{$job->moduleCode}}">
+
+              @endforeach
+
+            </li>
+
+          </form>
+          </ul>
+        </li>
+
+
+
         <li class="dropdown-submenu">
           <a class="test a-link" tabindex="-1" href="#">Status </a>
   
           <ul class="dropdown-menu">
+       
+
             <li><a href="/applications/Accepted"><button class="dropdown-item" type="button">
-              Status: Accepted
+              <button class="dropdown-item" type="button">   Status: Accepted</button>
             </button></a> </li>
 
             <li><a href="/applications/underReview"><button class="dropdown-item" type="button">

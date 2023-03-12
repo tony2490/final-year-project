@@ -5,6 +5,7 @@ use App\Http\Controllers\JobController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\ApplicationsController;
 use App\Http\Controllers\filteredModuleCodeController;
+use App\Http\Controllers\adminFilteredModuleCodeController;
 
 
 
@@ -31,7 +32,11 @@ Route::get('/jobs/{id}', [JobController::class,'show'])->name(('jobs.show'))->mi
 Route::delete('/jobs/{id}', [JobController::class,'destroy'])->name(('jobs.destroy'))->middleware(['auth','auth.isAdmin']);
 // --------------------------------------------------------------------------------
 
+// student 
 Route::post('/myApplications/moduleCode', [filteredModuleCodeController::class,'store'])->name(('filteredModuleCodes.store'))->middleware(['auth']);
+
+// admin 
+Route::post('/applications/moduleCode', [adminFilteredModuleCodeController::class,'store'])->name(('adminFilteredModuleCodes.store'))->middleware(['auth']);
 
 
 
@@ -45,6 +50,7 @@ Route::get('/applications/underReview', [ApplicationsController::class, 'underRe
 Route::get('/applications/offered', [ApplicationsController::class, 'offeredAdmin'])->name(('applications.offered'))->middleware(['auth','auth.isAdmin']);
 Route::get('/applications/withdrawn', [ApplicationsController::class, 'withdrawnAdmin'])->name(('applications.withdrawn'))->middleware(['auth','auth.isAdmin']);
 Route::get('/applications/unsuccessful', [ApplicationsController::class, 'unsucessfulAdmin'])->name(('applications.unsucessful'))->middleware(['auth','auth.isAdmin']);
+Route::get('/applications/moduleCode', [ApplicationsController::class, 'moduleCodeAdmin'])->name(('applications.moduleCode'))->middleware(['auth','auth.isAdmin']);
 
 
 // Filters Students 
@@ -79,7 +85,7 @@ Route::get('/contacts', [ContactsPageController::class, 'index'])->name(('contac
 
 
 // Admin Routes
-Route::prefix('admin')->middleware(['auth','auth.isAdmin'])->name('admin.')->group(function () {
+Route::prefix('admin')->middleware(['auth'])->name('admin.')->group(function () {
     Route::resource('/users', UserController::class);
 });
 

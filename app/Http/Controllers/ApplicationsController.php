@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\adminFilteredModuleCode;
 use App\Models\Application;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -19,8 +20,9 @@ class ApplicationsController extends Controller
      */
     public function index()
     {
+        $jobs = Job::all();
         
-        return view('applications.index',['applications' => Application::paginate(10)]);
+        return view('applications.index',['jobs'=>$jobs, 'applications' => Application::paginate(10)]);
     }
 
     public function userShow()
@@ -166,31 +168,79 @@ class ApplicationsController extends Controller
 
     public function statusAcceptedAdmin(){
 
-        return view('applications.admin-filters.statusAccepted',['applications' => Application::paginate(10)]);
+        $adminLatestModule = adminFilteredModuleCode::all('filteredModuleCode');
+        $adminLatestModule = adminFilteredModuleCode::orderBy('id', 'desc')->first();
+
+        $user = Auth::user()->id; 
+        $jobs = Job::all();
+        $application = Application::all();
+        $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
+        return view('applications.admin-filters.statusAccepted',['adminLatestModule'=>  $adminLatestModule, 'jobs'=> $jobs,'applications' => Application::paginate(10)]);
 
     }
 
     public function underReviewAdmin(){
+        $adminLatestModule = adminFilteredModuleCode::all('filteredModuleCode');
+        $adminLatestModule = adminFilteredModuleCode::orderBy('id', 'desc')->first();
 
-        return view('applications.admin-filters.statusUnderReview',['applications' => Application::paginate(10)]);
+        $user = Auth::user()->id; 
+        $jobs = Job::all();
+        $application = Application::all();
+        $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
+
+        return view('applications.admin-filters.statusUnderReview',['adminLatestModule'=>  $adminLatestModule, 'jobs'=> $jobs,'applications' => Application::paginate(10)]);
 
     }
 
     public function offeredAdmin(){
+        $adminLatestModule = adminFilteredModuleCode::all('filteredModuleCode');
+        $adminLatestModule = adminFilteredModuleCode::orderBy('id', 'desc')->first();
 
-        return view('applications.admin-filters.statusOffered',['applications' => Application::paginate(10)]);
+        $user = Auth::user()->id; 
+        $jobs = Job::all();
+        $application = Application::all();
+        $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
+
+        return view('applications.admin-filters.statusOffered',['adminLatestModule'=>  $adminLatestModule, 'jobs'=> $jobs,'applications' => Application::paginate(10)]);
 
     }
 
     public function withdrawnAdmin(){
+        $adminLatestModule = adminFilteredModuleCode::all('filteredModuleCode');
+        $adminLatestModule = adminFilteredModuleCode::orderBy('id', 'desc')->first();
 
-        return view('applications.admin-filters.statusWithdrawn',['applications' => Application::paginate(10)]);
+        $user = Auth::user()->id; 
+        $jobs = Job::all();
+        $application = Application::all();
+        $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
+
+        return view('applications.admin-filters.statusWithdrawn',['adminLatestModule'=>  $adminLatestModule, 'jobs'=> $jobs,'applications' => Application::paginate(10)]);
 
     }
 
     public function unsucessfulAdmin(){
+        $adminLatestModule = adminFilteredModuleCode::all('filteredModuleCode');
+        $adminLatestModule = adminFilteredModuleCode::orderBy('id', 'desc')->first();
 
-        return view('applications.admin-filters.statusUnsuccessful',['applications' => Application::paginate(10)]);
+        $user = Auth::user()->id; 
+        $jobs = Job::all();
+        $application = Application::all();
+        $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
+
+        return view('applications.admin-filters.statusUnsuccessful',['adminLatestModule'=>  $adminLatestModule, 'jobs'=> $jobs,'applications' => Application::paginate(10)]);
+
+    }
+
+    public function moduleCodeAdmin(){
+        $adminLatestModule = adminFilteredModuleCode::all('filteredModuleCode');
+        $adminLatestModule = adminFilteredModuleCode::orderBy('id', 'desc')->first();
+
+        $user = Auth::user()->id; 
+        $jobs = Job::all();
+        $application = Application::all();
+        $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
+
+        return view('applications.admin-filters.moduleCode',['adminLatestModule'=>  $adminLatestModule, 'jobs'=> $jobs,'applications' => Application::paginate(10)]);
 
     }
 

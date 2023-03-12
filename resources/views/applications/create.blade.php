@@ -27,7 +27,7 @@
 
                         <div class="col-md-8">
                             
-                        <select name="role"id="role" type="text" class="form-control @error('status') is-invalid @enderror" name="role" 
+                        <select name="role"id="role" type="text" class="form-control @error('status') is-invalid @enderror" name="role" required 
                             value="" >
                             <option value="" disabled selected>Select your option</option>
 
