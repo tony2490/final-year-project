@@ -20,7 +20,7 @@
           <ul class="dropdown-menu">
         
 
-            <li><a href="/myApplications/Accepted"><button class="dropdown-item" type="button">
+            <li><a href="/myApplications/moduleCode"><button class="dropdown-item" type="button">
               <button class="dropdown-item" type="button">  Module: {{$job->moduleCode}} </button>
             </button></a> </li>
 
@@ -38,6 +38,10 @@
 
             <li><a href="/myApplications/Accepted"><button class="dropdown-item" type="button">
               <button class="dropdown-item" type="button">   Status: Accepted</button>
+            </button></a> </li>
+
+            <li><a href="/myApplications/assigned"><button class="dropdown-item" type="button">
+              <button class="dropdown-item" type="button">   Status: Assigned</button>
             </button></a> </li>
 
             <li><a href="/myApplications/underReview"><button class="dropdown-item" type="button">
