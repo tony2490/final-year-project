@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\ApplicationsController;
-use App\Http\Controllers\ContactsPageController;
+use App\Http\Controllers\filteredModuleCodeController;
+
 
 
 /*
@@ -22,13 +23,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// JOBS 
 Route::get('/jobs', [JobController::class, 'index'])->name(('jobs.index'))->middleware(('auth'));
 Route::get('/jobs/create', [JobController::class,'create'])->name(('jobs.create'))->middleware(['auth','auth.isAdmin']);
 Route::post('/jobs', [JobController::class,'store'])->name(('jobs.store'))->middleware(['auth','auth.isAdmin']);
 Route::get('/jobs/{id}', [JobController::class,'show'])->name(('jobs.show'))->middleware(('auth'));
 Route::delete('/jobs/{id}', [JobController::class,'destroy'])->name(('jobs.destroy'))->middleware(['auth','auth.isAdmin']);
+// --------------------------------------------------------------------------------
+
+Route::post('/applications/myApplications', [filteredModuleCodeController::class,'store'])->name(('filteredModuleCodes.store'))->middleware(['auth']);
 
 
+
+// ------------------------------------------
+// APPLICATIONS - ADMIN VIEW
 Route::get('/applications', [ApplicationsController::class, 'index'])->name(('applications.index'))->middleware(['auth','auth.isAdmin']);
 
 // Filters Admin
@@ -50,7 +58,7 @@ Route::get('/myApplications/assigned', [ApplicationsController::class, 'statusAs
 
 Route::get('/myApplications/moduleCode', [ApplicationsController::class, 'moduleCode'])->name(('applications.moduleCode'))->middleware(['auth']);
 
-
+// APPLICATIONS - STUDENT VIEW
 
 Route::get('/applications/myApplications', [ApplicationsController::class, 'userShow'])->name(('applications.userShow'))->middleware(('auth'));
 Route::get('/applications/create', [ApplicationsController::class,'create'])->name(('applications.create'))->middleware(('auth'));
@@ -60,6 +68,7 @@ Route::get('/applications/edit/{id}', [ApplicationsController::class, 'edit'])->
 Route::get('/applications/userResponse/{id}', [ApplicationsController::class, 'userResponse'])->name(('applications.userResponse'));
 Route::patch('/applications/edit/{id}', [ApplicationsController::class, 'update'])->name(('applications.update'));
 
+// -------------------------------------------------
 
 Route::get('/contacts', [ContactsPageController::class, 'index'])->name(('contacts.index'))->middleware(('auth'));
 

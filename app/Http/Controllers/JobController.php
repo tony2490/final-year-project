@@ -16,7 +16,7 @@ class JobController extends Controller
         // $jobs = Job::all();
 
         $jobs = Job::latest()->get();
-        
+                
         return view('jobs.index',[
             'jobs' => $jobs,
         ]);

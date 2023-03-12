@@ -19,19 +19,20 @@
        
           <ul class="dropdown-menu">
         
+          <form action="/applications/myApplications" method="POST">
+            @csrf
 
             <li>
-              
+        
               @foreach($jobs as $job)
-              <a href="/myApplications/moduleCode">
-                <button class="dropdown-item" type="button"> 
-                  Module: {{$job->moduleCode}} 
-                </button>
-              </a> 
+              
+              <input class="dropdown-item" type="submit" name="filteredModuleCode" id="filteredModuleCode" value="{{$job->moduleCode}}">
+
               @endforeach
+
             </li>
 
-          
+          </form>
           </ul>
         </li>
 
