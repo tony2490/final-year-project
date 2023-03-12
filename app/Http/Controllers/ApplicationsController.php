@@ -260,13 +260,16 @@ class ApplicationsController extends Controller
     public function moduleCode(){
 
 
-        $latestModule = filteredModuleCode::where('filteredModuleCode')->latest()->get();
+        // $latestModule = filteredModuleCode::orderBy('id', 'desc')->first();
+        $latestModule = filteredModuleCode::all('filteredModuleCode');
+        $latestModule = filteredModuleCode::orderBy('id', 'desc')->first();
+        
         $user = Auth::user()->id; 
         $jobs = Job::all();
         $application = Application::all();
         $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
 
-        return view('applications.student-filters.moduleCode',['latestModule' => $latestModule, 'jobs'=> $jobs, 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
+        return view('applications.student-filters.moduleCode',['latestModule' => $latestModule,'jobs'=> $jobs, 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
     }
     
     

@@ -27,11 +27,10 @@
         @foreach($myApplications as $myApplication)
       <?php
 
-      dd($myApplication->role, $latestModule);
       
       
 
-       if($myApplication->role == $latestModule)  :?>
+       if($myApplication->role == $latestModule->filteredModuleCode)  :?>
   
 
       <tr>
