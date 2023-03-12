@@ -29,9 +29,9 @@
                             
                         <select name="role"id="role" type="text" class="form-control @error('status') is-invalid @enderror" name="role" 
                             value="" >
+                            <option value="" disabled selected>Select your option</option>
 
                             @foreach($jobs as $job)
-                            <option value="" disabled selected>Select your option</option>
                             <option value="{{ $job-> moduleCode }} "> {{ $job-> moduleCode }}  </option>
 
                             @endforeach
