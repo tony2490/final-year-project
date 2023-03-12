@@ -16,18 +16,25 @@
 
         <li class="dropdown-submenu">
           <a class="test a-link" tabindex="-1" href="#">Module </a>
-          @foreach($jobs as $job)
+       
           <ul class="dropdown-menu">
         
 
-            <li><a href="/myApplications/moduleCode"><button class="dropdown-item" type="button">
-              <button class="dropdown-item" type="button">  Module: {{$job->moduleCode}} </button>
-            </button></a> </li>
+            <li>
+              
+              @foreach($jobs as $job)
+              <a href="/myApplications/moduleCode">
+                <button class="dropdown-item" type="button"> 
+                  Module: {{$job->moduleCode}} 
+                </button>
+              </a> 
+              @endforeach
+            </li>
 
           
           </ul>
         </li>
-        @endforeach
+
 
 
         <li class="dropdown-submenu">
