@@ -36,7 +36,7 @@ Route::delete('/jobs/{id}', [JobController::class,'destroy'])->name(('jobs.destr
 Route::post('/myApplications/moduleCode', [filteredModuleCodeController::class,'store'])->name(('filteredModuleCodes.store'))->middleware(['auth']);
 
 // admin 
-Route::post('/applications/moduleCode', [adminFilteredModuleCodeController::class,'store'])->name(('adminFilteredModuleCodes.store'))->middleware(['auth']);
+Route::post('/applications/moduleCode', [adminFilteredModuleCodeController::class,'store'])->name(('adminFilteredModuleCodes.store'))->middleware(['auth','auth.isAdmin']);
 
 
 
@@ -50,6 +50,8 @@ Route::get('/applications/underReview', [ApplicationsController::class, 'underRe
 Route::get('/applications/offered', [ApplicationsController::class, 'offeredAdmin'])->name(('applications.offered'))->middleware(['auth','auth.isAdmin']);
 Route::get('/applications/withdrawn', [ApplicationsController::class, 'withdrawnAdmin'])->name(('applications.withdrawn'))->middleware(['auth','auth.isAdmin']);
 Route::get('/applications/unsuccessful', [ApplicationsController::class, 'unsucessfulAdmin'])->name(('applications.unsucessful'))->middleware(['auth','auth.isAdmin']);
+Route::get('/applications/assigned', [ApplicationsController::class, 'assignedAdmin'])->name(('applications.assigned'))->middleware(['auth','auth.isAdmin']);
+
 Route::get('/applications/moduleCode', [ApplicationsController::class, 'moduleCodeAdmin'])->name(('applications.moduleCode'))->middleware(['auth','auth.isAdmin']);
 
 

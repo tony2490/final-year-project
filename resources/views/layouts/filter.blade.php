@@ -44,6 +44,10 @@
           <ul class="dropdown-menu">
        
 
+          <li><a href="/applications/assigned"><button class="dropdown-item" type="button">
+              <button class="dropdown-item" type="button">   Status: Assigned</button>
+            </button></a> </li>
+            
             <li><a href="/applications/Accepted"><button class="dropdown-item" type="button">
               <button class="dropdown-item" type="button">   Status: Accepted</button>
             </button></a> </li>

@@ -231,6 +231,20 @@ class ApplicationsController extends Controller
 
     }
 
+    public function assignedAdmin(){
+        $adminLatestModule = adminFilteredModuleCode::all('filteredModuleCode');
+        $adminLatestModule = adminFilteredModuleCode::orderBy('id', 'desc')->first();
+
+        $user = Auth::user()->id; 
+        $jobs = Job::all();
+        $application = Application::all();
+        $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
+
+        return view('applications.admin-filters.statusAssigned',['adminLatestModule'=>  $adminLatestModule, 'jobs'=> $jobs,'applications' => Application::paginate(10)]);
+
+    }
+
+
     public function moduleCodeAdmin(){
         $adminLatestModule = adminFilteredModuleCode::all('filteredModuleCode');
         $adminLatestModule = adminFilteredModuleCode::orderBy('id', 'desc')->first();
