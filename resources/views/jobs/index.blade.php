@@ -1,8 +1,4 @@
-@extends('layouts.app')
-@section('content')
-
-
-    <div class="row">
+ <div class="row">
         <div class="col-12">
           <div class="headings">
             <h1 class="headings">Teaching Assistant Vacancies</h1>
@@ -13,6 +9,8 @@
         </div>
 
     </div>
+    
+    @include('layouts.jobsFilter')
 
     <div class="card">
 
@@ -47,10 +45,6 @@
     </div>
 
     @include('layouts.footer')
-@endsection
-
-
-
 
 
 

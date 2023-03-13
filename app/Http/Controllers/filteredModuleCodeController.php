@@ -33,6 +33,20 @@ class filteredModuleCodeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+
+     public function jobStore(Request $request)
+     {
+         $filteredModuleCode = new filteredModuleCode;
+ 
+         $filteredModuleCode->filteredModuleCode = $request->filteredModuleCode;
+ 
+         $filteredModuleCode->save();
+ 
+ 
+ 
+         return redirect('/jobs/moduleCode');
+     }
     public function store(Request $request)
     {
         $filteredModuleCode = new filteredModuleCode;

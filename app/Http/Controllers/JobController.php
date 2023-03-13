@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Application;
+use App\Models\filteredModuleCode;
 use Illuminate\Http\Request;
 use App\Models\Job;
+use Illuminate\Support\Facades\Auth;
 
 class JobController extends Controller
 {
@@ -14,11 +17,14 @@ class JobController extends Controller
     public function index(){
         
         // $jobs = Job::all();
+        $latestModule = filteredModuleCode::all('filteredModuleCode');
+        $latestModule = filteredModuleCode::orderBy('id', 'desc')->first();
 
         $jobs = Job::latest()->get();
                 
         return view('jobs.index',[
             'jobs' => $jobs,
+            'latestModule' => $latestModule,
         ]);
     }
 
@@ -55,5 +61,20 @@ class JobController extends Controller
         $job->delete();
 
         return redirect('/jobs');
+    }
+
+    public function moduleCode(){
+        
+        // $latestModule = filteredModuleCode::orderBy('id', 'desc')->first();
+        $latestModule = filteredModuleCode::all('filteredModuleCode');
+        $latestModule = filteredModuleCode::orderBy('id', 'desc')->first();
+        
+        $user = Auth::user()->id; 
+        $jobs = Job::all();
+        $application = Application::all();
+        $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
+
+        return view('jobs.filters.moduleCode',['latestModule' => $latestModule,'jobs'=> $jobs, 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
+
     }
 }

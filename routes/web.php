@@ -28,12 +28,16 @@ Route::get('/', function () {
 Route::get('/jobs', [JobController::class, 'index'])->name(('jobs.index'))->middleware(('auth'));
 Route::get('/jobs/create', [JobController::class,'create'])->name(('jobs.create'))->middleware(['auth','auth.isAdmin']);
 Route::post('/jobs', [JobController::class,'store'])->name(('jobs.store'))->middleware(['auth','auth.isAdmin']);
+Route::get('/jobs/moduleCode', [JobController::class, 'moduleCode'])->name(('jobs.moduleCode'))->middleware(['auth']);
+
 Route::get('/jobs/{id}', [JobController::class,'show'])->name(('jobs.show'))->middleware(('auth'));
 Route::delete('/jobs/{id}', [JobController::class,'destroy'])->name(('jobs.destroy'))->middleware(['auth','auth.isAdmin']);
+
 // --------------------------------------------------------------------------------
 
 // student 
 Route::post('/myApplications/moduleCode', [filteredModuleCodeController::class,'store'])->name(('filteredModuleCodes.store'))->middleware(['auth']);
+Route::post('/jobs/moduleCode', [filteredModuleCodeController::class,'jobStore'])->name(('filteredModuleCodes.jobStore'))->middleware(['auth']);
 
 // admin 
 Route::post('/applications/moduleCode', [adminFilteredModuleCodeController::class,'store'])->name(('adminFilteredModuleCodes.store'))->middleware(['auth','auth.isAdmin']);
