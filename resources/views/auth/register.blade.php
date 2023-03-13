@@ -74,5 +74,6 @@
         </div>
     </div>
 </div>
+<div  class="home-footer-padding"></div>
 @include('layouts.footer')
 @endsection
