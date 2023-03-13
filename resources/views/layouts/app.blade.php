@@ -105,10 +105,10 @@
 
 
         <main class="container-fluid">
-        <div class="row">
-            @include('partials.alerts')
-            @yield('content')
-</div>
+            <div class="row">
+                @include('partials.alerts')
+                @yield('content')
+            </div>
         </main>
   
 

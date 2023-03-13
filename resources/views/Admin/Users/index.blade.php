@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+    <div class="wrapper job-index">
     <div class="row">
         <div class="col-12">
           <div class="headings">
@@ -12,12 +12,12 @@
           <h5> Create, Edit & Delete User Accounts On The Platform.</h5>
         </div>
 
-    </div>
-        <div class="row">
-            <div class="col-12">
+
+          
                     <a class="btn btn-sm btn-success create" href="{{route('admin.users.create')}}" role="button"> Create</a>
-            </div>
+           
         </div>
+
         
 
 
@@ -64,9 +64,8 @@
 
 
         </div>
-
-        @include('layouts.footer')
+</div>
+<div  class="home-footer-padding"></div>
+@include('layouts.footer')
 @endsection
-
-
 

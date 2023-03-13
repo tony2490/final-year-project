@@ -2,6 +2,7 @@
 <div class="wrapper job-index">
 <div class="row">
         <div class="col-12">
+            <div class="card-padding"></div>
           <div class="headings">
             <h1 class="headings">Applications</h1>
           </div>
@@ -56,7 +57,7 @@
  
 
     </div>
-
+    <div  class="home-footer-padding"></div>
     @include('layouts.footer')
 
 
