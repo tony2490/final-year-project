@@ -49,6 +49,8 @@ class JobController extends Controller
         $job->jobDescription = request('jobDescription');
         $job->hourlyRate = request('hourlyRate');
         $job->closingDate = request('closingDate');
+        $job->positionsAvailable = request('positionsAvailable');
+        
 
 
         $job->save();

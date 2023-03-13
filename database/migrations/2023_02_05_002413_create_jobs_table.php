@@ -21,6 +21,8 @@ return new class extends Migration
             $table->text('jobDescription');
             $table->float('hourlyRate');
             $table->date('closingDate');
+            $table->integer('positionsAvailable');
+            
 
 
         });

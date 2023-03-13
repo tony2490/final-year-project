@@ -68,9 +68,23 @@
                             <label for="hourlyRate" class="col-md-4 col-form-label text-md-end"> Hourly Rate (In £): </label>
 
                             <div class="col-md-8">
-                                <input id="hourlyRate" class="form-control" type="text" name="hourlyRate" placeholder="Please Enter The Hourly Rate" value=""  required>
+                                <input id="hourlyRate" class="form-control" type="number" name="hourlyRate" placeholder="Please Enter The Hourly Rate" value=""  required>
 
                                 @error('hourlyRate')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>  
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="positionsAvailable" class="col-md-4 col-form-label text-md-end"> Available Positions: </label>
+
+                            <div class="col-md-8">
+                                <input id="positionsAvailable" class="form-control" type="number"  name="positionsAvailable" placeholder="Please Enter The Available Positions" value=""  required>
+
+                                @error('positionsAvailable')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

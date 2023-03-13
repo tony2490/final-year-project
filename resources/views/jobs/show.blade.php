@@ -74,6 +74,25 @@
                         
                     </div>
 
+                    
+                    <div class="row mb-3">
+                        <label for="positionsAvailable" class="col-md-4 col-form-label text-md-end"> Available Positions: </label>
+
+                        <div class="col-md-8" rows="4" cols="50">
+                            <p id="positionsAvailable" type="text" class="form-control @error('positionsAvailable') is-invalid @enderror" name="positionsAvailable" 
+                            value="{{ old('positionsAvailable') }} @isset($job)  @endisset" readonly="readonly">{{$job->positionsAvailable}}  </p>
+
+                            @error('positionsAvailable')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                          
+                        </div>
+                        
+                    </div>
+
+
                     <div class="row mb-3">
                         <label for="closingDate" class="col-md-4 col-form-label text-md-end">Closing Date (YYYY/MM/DD): </label>
 

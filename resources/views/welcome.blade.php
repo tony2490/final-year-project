@@ -50,7 +50,7 @@
                     <p>This website was designed to give the opportunity for Phd & final year Aston students
                         to apply to the latest paid teaching assistant roles available at Aston Universirty. 
                         After feedback from the both staff and students we decided that it was essential 
-                        to launch this website so there can be a reference point to where students can refer to, 
+                        to launch this website so there can be a reference point for students to go to, 
                         when searching for paid teaching assistant work. <br> <br>
 
 
@@ -62,12 +62,14 @@
             <div class="homepage-cards-content homepage-p">
                 <p> <img src="/img/teaching.jpg" class="img-to-left " alt="" >
 
-                <h2 class="content-title">What is Aston University Teaching Assistants?</h2> <br>
-                    <p">This website was designed to give the opportunity for Phd & final year Aston students
-                        to apply to the latest paid teaching assistant roles available at Aston Universirty. 
-                        After feedback from the both staff and students we decided that it was essential 
-                        to launch this website so there can be a reference point to where students can refer to, 
-                        when searching for paid teaching assistant work. <br> <br>
+                <h2 class="content-title">What Kind Of Work Will I Be Doing?</h2> <br>
+                    <p">
+                    The primary focus of this website is to assist with the allocation of part time teaching
+                    assistant roles to modules that are searching for additional teaching support. This therfore
+                    means that each module will require a taeching assistant to be able to different things 
+                    and may require different skills. We strongly recommend that you thorougly read through 
+                    each job description.  
+                 <br> <br>
 
 
                 </p>
@@ -101,8 +103,8 @@
                                 <div class="col-md-4 style-3">
                                     <div class="tour-item ">
                                         <div class="tour-desc bg-white">
-                                            <div class="tour-text color-grey-3 text-center">&ldquo;At this School, our mission is to balance a rigorous comprehensive college preparatory curriculum with healthy social and emotional development.&rdquo;</div>
-                                            <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/6625914/pexels-photo-6625914.jpeg" alt=""></div>
+                                            <div class="tour-text color-grey-3 text-center">&ldquo;  Working as a part time teaching assistant allowed me to improve my communication skills and be able to help others! &rdquo;</div>
+                                            <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="/img/person.svg"  alt=""></div>
                                             <div class="link-name d-flex justify-content-center">Jonothan Davies</div>
                                             <div class="link-position d-flex justify-content-center">Student</div>
                                         </div>
@@ -111,8 +113,8 @@
                                 <div class="col-md-4 style-3">
                                     <div class="tour-item ">
                                         <div class="tour-desc bg-white">
-                                            <div class="tour-text color-grey-3 text-center">&ldquo;At this School, our mission is to balance a rigorous comprehensive college preparatory curriculum with healthy social and emotional development.&rdquo;</div>
-                                            <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></div>
+                                            <div class="tour-text color-grey-3 text-center">&ldquo; With this teaching assistant role now on my cv I have been able to showcase my experiences and have been offered a graduate role! &rdquo;</div>
+                                            <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people"src="/img/person.svg" alt=""></div>
                                             <div class="link-name d-flex justify-content-center">Sarah Corbin</div>
                                             <div class="link-position d-flex justify-content-center">Student</div>
                                         </div>
@@ -121,8 +123,8 @@
                                 <div class="col-md-4 style-3">
                                     <div class="tour-item ">
                                         <div class="tour-desc bg-white">
-                                            <div class="tour-text color-grey-3 text-center">&ldquo;At this School, our mission is to balance a rigorous comprehensive college preparatory curriculum with healthy social and emotional development.&rdquo;</div>
-                                            <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/4946604/pexels-photo-4946604.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></div>
+                                            <div class="tour-text color-grey-3 text-center">&ldquo; Working with the proffesor as a part time teaching assistant has allowed me to also build on my knowledge which has benefited me far in my final year &rdquo;</div>
+                                            <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="/img/person.svg" alt=""></div>
                                             <div class="link-name d-flex justify-content-center">Lisa White</div>
                                             <div class="link-position d-flex justify-content-center">Student</div>
                                         </div>
