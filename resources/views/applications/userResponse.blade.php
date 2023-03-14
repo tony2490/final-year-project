@@ -199,7 +199,30 @@
                         </div>
                         
                     </div>
+                    
 
+                    
+                    <!-- unavailableDates -->
+                    <div class="row mb-3">
+                        <label for="unavailableDates" class="col-md-4 col-form-label text-md-end">Unavailable Dates Next Semester</label>
+
+                        <div class="col-md-8">
+                            <input id="unavailableDates" type="text" class="form-control @error('unavailableDates') is-invalid @enderror" name="unavailableDates" 
+                            value="{{ old('unavailableDates') }} @isset($application) {{$application->unavailableDates}} @endisset" readonly="readonly" hidden>
+
+                            <p id="unavailableDates" type="text" class="form-control @error('unavailableDates') is-invalid @enderror" name="unavailableDates" 
+                            value="{{ old('unavailableDates') }} @isset($application) {{$application->unavailableDates}} @endisset" readonly="readonly">
+                            {{$application->unavailableDates}}
+                            </p>
+
+                            @error('unavailableDates')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        
+                    </div>
 
                     <!-- placementComplete -->
                     <div class="row mb-3">

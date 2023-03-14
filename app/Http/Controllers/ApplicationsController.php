@@ -67,9 +67,12 @@ class ApplicationsController extends Controller
         $application->courseStudied = request('courseStudied');
         $application->relevantModuleGrades = request('relevantModuleGrades');
         $application->reasonForApplying = request('reasonForApplying');
+        $application->unavailableDates = request('unavailableDates');
         $application->placementComplete = request('placementComplete');
         $application->supportingInfo = request('supportingInfo');
         $application->status = request('status');
+
+        
 
 
         $application->save();
@@ -144,10 +147,13 @@ class ApplicationsController extends Controller
         $application->relevantModuleGrades = $request->relevantModuleGrades;
 
         $application->reasonForApplying = $request->reasonForApplying;
+        $application->unavailableDates = $request->unavailableDates;
         $application->placementComplete = $request->placementComplete;
 
         $application->supportingInfo = $request->supportingInfo;
+        
         $application->status = $request->status;
+
 
 
         $application->save();

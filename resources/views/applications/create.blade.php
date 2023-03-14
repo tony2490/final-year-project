@@ -156,6 +156,8 @@
                         </div>  
                     </div>
 
+                    
+
                     <!-- placementComplete -->
 
                     <div class="row mb-3">
@@ -198,6 +200,23 @@
 
                     <!-- status -->
                     <input type="hidden" id="status" name="status" value="Under Review">
+
+                                        <!-- unavailableDates -->
+                                        <div class="row mb-3">
+                    <label for="unavailableDates" class="col-md-4 col-form-label text-md-end">Unavailable Dates Next Semester</label>
+
+                    <div class="col-md-8">
+                        <input id="unavailableDates" class="form-control" type="text" name="unavailableDates" placeholder="Please Provide Dates You Are Unavailable"   value="" required>
+
+                        @error('unavailableDates')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                        </div>  
+                    </div>
+
+                    
 
                     <div class="row mb-0">
                         <div class="col-md-8 offset-md-4">

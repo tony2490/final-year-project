@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('placementComplete');
             $table->text('supportingInfo');
             $table->string('status');
+            $table->string('unavailableDates');
             $table->timestamps();
         });
     }
