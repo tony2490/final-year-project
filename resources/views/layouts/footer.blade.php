@@ -1,7 +1,9 @@
 <footer class="footer">
             <div class="footer-container">
                 <div class="row-footer">
+                    <div style="padding-left: 300px;"></div>
                     <div class="footer-col">
+                     
                         <h4>Important Pages</h4>
                         <ul>
                             <li><a href="/applications/myApplications">My Application</a></li>
@@ -9,33 +11,19 @@
 
                         </ul>
                     </div>
-                    <div class="footer-col">
-                        <h4>Help</h4>
-                        <ul>
-                            <li><a href="">Contact Us</a></li>
-                            <li><a href="">faq</a></li>
+                    
 
-                        </ul>
-                    </div>
+                
 
                     <div class="footer-col">
                         <h4>Help</h4>
                         <ul>
-                            <li><a href="">Contact Us</a></li>
-                            <li><a href="">faq</a></li>
+                            <li><a href="/contacts">Contact Us</a></li>
+                            <li><a href="/faq">faq</a></li>
 
                         </ul>
                     </div>
-
-                    <div class="footer-col">
-                        <h4>Help</h4>
-                        <ul>
-                            <li><a href="">Contact Us</a></li>
-                            <li><a href="">faq</a></li>
-
-                        </ul>
-                    </div>
-                  
+             
                 </div>
             </div>
             <br> <br>

@@ -6,8 +6,8 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\ApplicationsController;
 use App\Http\Controllers\filteredModuleCodeController;
 use App\Http\Controllers\adminFilteredModuleCodeController;
-
-
+use App\Http\Controllers\FaqController;
+use App\Http\Controllers\ContactsPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -83,6 +83,9 @@ Route::patch('/applications/edit/{id}', [ApplicationsController::class, 'update'
 // -------------------------------------------------
 
 Route::get('/contacts', [ContactsPageController::class, 'index'])->name(('contacts.index'))->middleware(('auth'));
+
+
+Route::get('/faq', [FaqController::class, 'index'])->name(('faq.index'))->middleware(('auth'));
 
 
 

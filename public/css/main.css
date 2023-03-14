@@ -1,4 +1,6 @@
 footer{
+    padding-left: 80px;
+
     padding-top: 30px;
 }
 .home-page{
@@ -76,7 +78,6 @@ html, body:not(.home-page){
 }
 
 footer{
-    
     padding-top: 30px;
     background: #eee;
     padding:20px;
@@ -354,3 +355,22 @@ footer{
     scale: 0.65;
     color: white;
 }
+
+
+
+.infoPages h4{
+    text-transform: capitalize;
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 70px;
+    padding-right: 70px;
+    text-decoration: underline;
+}
+
+.infoPages p {
+    /* text-transform: capital3ize; */
+    text-align: center;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+

@@ -9,7 +9,7 @@
           </div>
         </div>
         <div class="subHeadings">
-          <h5> Please Ensure You Are Changes Are Accurate</h5>
+          <h5> Please Ensure Changes Are Accurate</h5>
         </div>
 </div>
 
