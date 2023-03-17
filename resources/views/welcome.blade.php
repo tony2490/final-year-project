@@ -30,28 +30,31 @@
                     <img class="card-img-top" src="/img/school.svg" alt="invaluable experience">
                     <div class="card-body">
                     <h5 class="card-title">An Invaluable Experience</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text">Gain an invaluable experience which can work to your advantage when applying for jobs</p>
                     </div>
                 </div>
                 <div class="card">
                     <img class="card-img-top" src="/img/balance.svg" alt="balance work and studies">
                     <div class="card-body">
                     <h5 class="card-title">Great Work-Life Balance</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <p class="card-text">With capped hours for each role, you are able to focus on your individual learning progress too!</p>
                     </div>
                 </div>
             </div>
             <!-- <strong> <div class="underline homepage-content" ></div> </strong> -->
 
             <div class="homepage-cards-content homepage-p">
-                <p> <img src="/img/teaching.jpg" class="img-to-right " alt="" >
+                <p> <img src="/img/aston-our-teaching-staff-ui.jpg" class="img-to-right " alt="" width="600" height="300" >
 
-                <h2 class="content-title">What is Aston University Teaching Assistants?</h2> <br>
-                    <p>This website was designed to give the opportunity for Phd & final year Aston students
-                        to apply to the latest paid teaching assistant roles available at Aston Universirty. 
-                        After feedback from the both staff and students we decided that it was essential 
-                        to launch this website so there can be a reference point for students to go to, 
-                        when searching for paid teaching assistant work. <br> <br>
+                     <h2 class="content-title">What Work Will I Be Doing?</h2> <br>
+                    <p">
+                    The primary focus of this website is to assist with the allocation of part time teaching
+                    assistant roles to modules that are searching for additional teaching support. This therefore
+                    means that each module will require a taeching assistant to be able to different activities 
+                    and may require different skills. We strongly recommend that you thorougly read through 
+                    each job description.  
+                 <br> <br>
+                 <a class="btn btn-sm btn-primary" href="/jobs" role="button"> View Jobs </a>
 
 
                 </p>
@@ -60,22 +63,25 @@
             <div style="padding-top: 80px;"></div>
 
             <div class="homepage-cards-content homepage-p">
-                <p> <img src="/img/teaching.jpg" class="img-to-left " alt="" >
+                <p> <img src="/img/teaching.jpg" class="img-to-left " alt="" width="600" height="300">
 
-                <h2 class="content-title">What Kind Of Work Will I Be Doing?</h2> <br>
+                <h2 class="content-title">Why Sign Up?</h2> <br>
                     <p">
-                    The primary focus of this website is to assist with the allocation of part time teaching
-                    assistant roles to modules that are searching for additional teaching support. This therfore
-                    means that each module will require a taeching assistant to be able to different things 
-                    and may require different skills. We strongly recommend that you thorougly read through 
-                    each job description.  
+                        If you are a PhD or final yesr student at Aston university, signing up will allow you to
+                        view and apply the latest teaching assistant roles avaliable. This incredible opportunity 
+                        can prove to be an important experience to add to your curriculum vitae, and you may gain 
+                        invaluable skills.
+           
+
+                
                  <br> <br>
+                 <a class="btn btn-sm btn-primary" href="/register" role="button"> Sign Up </a>
 
 
                 </p>
             </div>
 
-            <div style="padding-bottom: 80px;"></div>
+            <div style="padding-bottom: 130px;"></div>
 
        
 
