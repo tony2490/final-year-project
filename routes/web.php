@@ -24,6 +24,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/welcomeUpdate', function () {
+    return view('welcomeUpdate');
+});
+
+
 // JOBS 
 Route::get('/jobs', [JobController::class, 'index'])->name(('jobs.index'))->middleware(('auth'));
 Route::get('/jobs/create', [JobController::class,'create'])->name(('jobs.create'))->middleware(['auth','auth.isAdmin']);
