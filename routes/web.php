@@ -25,7 +25,7 @@ Route::get('/', function () {
 });
 
 Route::get('/welcomeUpdate', function () {
-    return view('welcomeUpdate');
+    return view('welcome');
 });
 
 

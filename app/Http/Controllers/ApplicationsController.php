@@ -25,6 +25,13 @@ class ApplicationsController extends Controller
         return view('applications.index',['jobs'=>$jobs, 'applications' => Application::paginate(10)]);
     }
 
+    public function index2()
+    {
+        $jobs = Job::all();
+        
+        return view('applications.index2',['jobs'=>$jobs, 'applications' => Application::paginate(10)]);
+    }
+
     public function userShow()
     {
         $application = Application::all();
@@ -158,7 +165,7 @@ class ApplicationsController extends Controller
 
         $application->save();
         
-        return redirect(route('applications.index'));
+        return redirect('welcomeUpdate');
     }
 
     /**
