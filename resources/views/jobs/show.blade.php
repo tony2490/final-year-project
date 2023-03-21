@@ -12,10 +12,9 @@
         <div class="subHeadings">
           <h5> Please Read The Details Of The Role Carefully Before Applying</h5>
         </div>
-        <h1>  </h1>
-</div>
+    </div>  
 
-<!-- <h1> Role for {{ $job->moduleCode}} </h1> -->
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -145,6 +144,7 @@
             </div>
         </div>
     </div>
+    
 
     <div  class="home-footer-padding"></div>
 @include('layouts.footer')
