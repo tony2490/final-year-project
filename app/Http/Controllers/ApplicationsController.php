@@ -52,8 +52,9 @@ class ApplicationsController extends Controller
         $jobs = Job::all();
         $username = Auth::user()->name;
         $user_id = Auth::id(); 
+        $email = Auth::user()->email;
 
-        return view('applications.create',['jobs'=> $jobs,'user_id'=>$user_id,'username'=>$username]);
+        return view('applications.create',['jobs'=> $jobs,'user_id'=>$user_id,'username'=>$username, 'email'=>$email]);
     }
 
     /**
@@ -68,6 +69,7 @@ class ApplicationsController extends Controller
 
         $application->name = request('name');
         $application->user_id = request('user_id');
+        $application->email = request('email');
         $application->role = request('role');
         $application->astonID = request('astonID');
         $application->studentType = request('studentType');
@@ -142,11 +144,11 @@ class ApplicationsController extends Controller
     public function update(Request $request, $id)
     {
 
-    
         $application = Application::findOrFail($id);
 
         $application->name = $request->name;
         $application->user_id = $request->user_id;
+        $application->email = $request->email;
         $application->role = $request->role;
         $application->astonID = $request->astonID;
         $application->studentType = $request->studentType;

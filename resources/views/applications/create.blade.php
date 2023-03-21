@@ -55,6 +55,14 @@
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
+
+                             <!-- USER EMAIL -->
+                             <input id="email" class="form-control" type="hidden" name="email"  value="{{$email}}" required>
+                        @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                        
 
 

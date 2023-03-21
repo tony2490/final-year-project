@@ -1,5 +1,7 @@
 <?php
 
+use App\Mail\statusUpdate;
+use App\Mail\statusUpdateMail;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\Admin\UserController;
@@ -25,8 +27,10 @@ Route::get('/', function () {
 });
 
 Route::get('/welcomeUpdate', function () {
+    Mail::send(new statusUpdateMail);
     return view('welcome');
 });
+
 
 
 // JOBS 
@@ -86,6 +90,7 @@ Route::get('/applications/userResponse/{id}', [ApplicationsController::class, 'u
 Route::patch('/applications/edit/{id}', [ApplicationsController::class, 'update'])->name(('applications.update'));
 
 // -------------------------------------------------
+
 
 Route::get('/contacts', [ContactsPageController::class, 'index'])->name(('contacts.index'))->middleware(('auth'));
 

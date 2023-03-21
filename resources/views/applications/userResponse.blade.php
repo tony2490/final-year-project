@@ -47,6 +47,17 @@
                         @enderror
                     </div>
 
+                    <div class="col-md-8">
+                        <input id="email" type="hidden" name="email" 
+                        value="{{ old('email') }} @isset($application) {{$application->email}} @endisset" >
+
+                        @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+
                     <!-- ROLE  -->
 
                     <div class="row mb-3">
