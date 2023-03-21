@@ -33,7 +33,7 @@
                 
                     <td> {{$job->moduleCode}} </td>
                     <td> {{$job->hiringManager}} </td>
-                    <td> {{$job->jobDescription}} </td>
+                    <td class="textDone"> {{$job->jobDescription}} </td>
                     <td>
                         <a class="btn btn-sm btn-primary" href="/jobs/{{$job->id}}" role="button"> View </a>
 

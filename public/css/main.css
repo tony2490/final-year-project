@@ -374,3 +374,11 @@ footer{
     padding-right: 70px;
 }
 
+
+.textDone {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
