@@ -382,3 +382,17 @@ footer{
 }
 
 
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+   
+    footer{
+        height: 400px;
+    }
+  
+
+    }
+
