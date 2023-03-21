@@ -1,12 +1,16 @@
 <x-mail::message>
-# Introduction
+Dear Applicant,<br>
 
-The body of your message.
+We are writing to notify you that there has been an update regarding your recent application.
+Please log in to view the update.
 
-<x-mail::button :url="''">
-Button Text
+Regards,<br>
+Aston Teaching Assistant Admin Team
+
+
+<x-mail::button :url="'http://127.0.0.1:8000/applications/myApplications'">
+View Update
 </x-mail::button>
 
-Thanks,<br>
-{{ config('app.name') }}
+
 </x-mail::message>

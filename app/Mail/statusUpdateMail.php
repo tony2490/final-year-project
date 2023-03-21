@@ -34,7 +34,7 @@ class statusUpdateMail extends Mailable
         $application = Application::all('updated_at');
         $application = Application::orderBy('updated_at', 'desc')->first();
         return new Envelope(
-            subject: 'Update'  ,
+            subject: 'Update Regarding Your Application'  ,
             to: $application->email, 
         );
     }
