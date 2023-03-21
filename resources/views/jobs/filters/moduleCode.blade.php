@@ -11,14 +11,14 @@
     </div>
     @include('layouts.jobsFilter')
 
-<div class="card">
+    <div class="table-responsive">
     <table class="table">
         <thead>
           <tr>
             <th scope="col">#Id</th>
             <th scope="col">Role</th>
-            <th scope="col">Name</th>
-            <th scope="col">Status</th>
+            <th scope="col">Hiring Manager</th>
+            <th scope="col">Job Description</th>
             <th scope="col">Actions</th>
             
           </tr>
@@ -34,7 +34,7 @@
           <th scope="row"> {{$job->id}} </th>
           <td> {{$job->moduleCode}} </td>
           <td> {{$job->hiringManager}} </td>
-          <td> {{$job->jobDescription}} </td>
+          <td class="textDone"> {{$job->jobDescription}} </td>
           <td>
                         <a class="btn btn-sm btn-primary" href="/jobs/{{$job->id}}" role="button"> View </a>
 
@@ -47,6 +47,7 @@
         
         </tbody>
       </table>
+       </div>
       {{$applications->links()}}
 
 

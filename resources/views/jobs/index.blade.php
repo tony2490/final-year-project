@@ -15,9 +15,8 @@
     
     @include('layouts.jobsFilter')
 
-    <div class="card">
-
-        <table class="table">
+    <div class="table-responsive">
+    <table class="table">
             <thead>
               <tr>
                 <th scope="col">Module</th>
@@ -43,6 +42,7 @@
             </tbody>
             @endforeach
           </table>
+</div>
 
 
     </div>
