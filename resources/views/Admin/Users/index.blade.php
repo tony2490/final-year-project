@@ -21,9 +21,10 @@
         
 
 
-        <div class="card">
+ 
 
-            <table class="table">
+        <div class="table-responsive">
+          <table class="table">
                 <thead>
                   <tr>
                     <th scope="col">#Id</th>
@@ -60,6 +61,7 @@
                 
                 </tbody>
               </table>
+</div>
               {{$users->links()}}
 
 
