@@ -21,14 +21,14 @@ class UserController extends Controller
     public function index()
     {
         if(Gate::denies('logged-in')){
-            dd('access denied');
+            redirect('/');
         }
         
         if(Gate::allows('is-admin')){
             return view('admin.users.index')->with(['users'=> User::paginate(10)]);
         
         }
-        dd('no access ');
+        redirect('/');
     }
 
     /**

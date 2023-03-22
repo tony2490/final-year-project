@@ -31,7 +31,7 @@
   <h4>How long can i expect to get a response?</h4>
 
 <p>
-  We aim to respond to all applicants as soon as possible however there is not a set range of time. 
+  We aim to respond to all applicants as soon as possible however there is not a set time frame. 
   We suggest applicants keep a close eye out for any emails from noreply@astonta.co.uk
 
 </p>

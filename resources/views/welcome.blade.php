@@ -15,7 +15,7 @@
             </div>
         </section>
         <div class="home-stripe">
-            <h3 >Teaching Assistant Roles For Both Final Year & PHD Aston Students</h3>
+            <h3 >Teaching Assistant Roles For Both Final Year & PhD Aston Students</h3>
         </div>
         
         <div class="homepage-content">
@@ -49,7 +49,7 @@
                     <p">
                     The primary focus of this website is to assist with the allocation of part time teaching
                     assistant roles to modules that are searching for additional teaching support. This therefore
-                    means that each module will require a taeching assistant to be able to different activities 
+                    means that each module will require a teaching assistant to be able to different activities 
                     and may require different skills.
                  <br> <br>
                  <a class="btn btn-sm btn-primary" href="/jobs" role="button"> View Jobs </a>
@@ -65,7 +65,7 @@
 
                 <h2 class="content-title">Why Sign Up?</h2> <br>
                     <p">
-                        If you are a PhD or final yesr student at Aston university, signing up will allow you to
+                        If you are a PhD or final year student at Aston university, signing up will allow you to
                         view and apply the latest teaching assistant roles avaliable. This incredible opportunity 
                         can prove to be an important experience to add to your curriculum vitae, and you may gain 
                         invaluable skills.
@@ -126,7 +126,7 @@
                                 <div class="col-md-4 style-3">
                                     <div class="tour-item">
                                         <div class="tour-desc bg-white">
-                                            <div class="tour-text color-grey-3 text-center">&ldquo; Working with the professor as a part-time teaching assistant has allowed me to also build on my knowledge, which has benefited me far in my final year &rdquo;</div>
+                                            <div class="tour-text color-grey-3 text-center">&ldquo; Working with the professor as a part-time teaching assistant has allowed me to also build on my knowledge, which has benefited me so far in my final year &rdquo;</div>
                                             <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="/img/person.svg" alt=""></div>
                                             <div class="link-name d-flex justify-content-center">Lisa White</div>
                                             <div class="link-position d-flex justify-content-center">Student</div>
