@@ -2,6 +2,7 @@
 @section('content')
 
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
        <link rel="stylesheet" href="css/style.css" >
     </head>
 
@@ -81,14 +82,7 @@
 
             <div style="padding-bottom: 130px;"></div>
 
-       
-
-
-
-    
-
-   
-   
+        <!-- Testimonials -->
             
             <section class="home-testimonial homepage-content">
                 <div class="container-fluid">

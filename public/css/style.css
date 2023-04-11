@@ -5,7 +5,7 @@ body {
 
 .hero {
     /* Sizing */
-    width: 100vw;
+    width: 100vh;
     height: 100vh;
     
     /* Flexbox stuff */
