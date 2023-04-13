@@ -23,7 +23,7 @@ class DatabaseTest extends TestCase
     }
 
 
-    public function testDatabaseNewJobCreation()
+    public function testDatabaseHasNewJobCreation()
     {
         $user = User::factory()->create();
     
@@ -35,7 +35,7 @@ class DatabaseTest extends TestCase
         ]);
     
     
-        $response = $this->post('jobs', [
+        $this->post('jobs', [
             'hiringManager' => 'John Doe', 
             'moduleCode' => 'CS123',
             'jobDescription' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec ex congue, cursus tellus ac, consequat nibh. Maecenas eget augue semper magna gravida imperdiet sed consequat augue. Quisque iaculis congue libero, eget pharetra erat bibendum venenatis. Nulla metus ex, posuere eget tellus sed, sollicitudin sollicitudin tellus. Vivamus varius tortor imperdiet, finibus lacus at, maximus nibh. Vivamus luctus, magna et viverra luctus, eros turpis commodo lacus, vel mattis urna lacus sit amet sapien. Cras vestibulum finibus diam, interdum varius lectus suscipit at. Sed lobortis ex orci, quis egestas diam mollis in. Duis nec ultricies dui, mollis blandit dolor. Duis sit amet arcu dolor. Nam semper elementum finibus. Nulla non elit nunc. Maecenas vitae ex ac dui auctor molestie eget nec nisl. Suspendisse tellus urna, maximus sit amet orci quis, tempor hendrerit nibh.        ',
@@ -67,7 +67,7 @@ class DatabaseTest extends TestCase
     ]);
 
 
-    $response = $this->post('applications', [
+    $this->post('applications', [
      
 
         'name' => 'John Doe',
