@@ -28,19 +28,19 @@ class PageMiddlewareForRolesTest extends TestCase
         $response->assertRedirect('/home');
      }
 
-     public function testUserCannotAccessAdminPage(){
+     public function testUserCannotAccessAdminUsersPage(){
         $user = User::factory()->create();
 
-        $response = $this->post('/login',[
+         $this->post('/login',[
             'email' => $user->email,
             'password' => 'password'
            
         ]);
-        $this->get('admin/users');
-        $response->assertRedirect('/home');
+        $response = $this->get('admin/users');
+        $response->assertRedirect('/');
      }
 
-     public function testUserCanAccessAdminPage(){
+     public function testAdminCanAccessAdminPage(){
         $user = User::factory()->create();
 
         $user->roles()->attach(1);
