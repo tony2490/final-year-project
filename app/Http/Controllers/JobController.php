@@ -25,6 +25,7 @@ class JobController extends Controller
         return view('jobs.index',[
             'jobs' => $jobs,
             'latestModule' => $latestModule,
+            'jobs' => Job::paginate(10),
         ]);
     }
 

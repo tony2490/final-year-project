@@ -1,16 +1,16 @@
 @extends('layouts.app')
 @section('content')
 
-        <div class="col-12">
-          <div class="headings">
-            <h1 class="headings">Contact Us </h1>
-          </div>
-        </div>
-        <div class="subHeadings">
-          <h5> </h5>
-        </div>
+  <div class="col-12">
+    <div class="headings">
+      <h1 class="headings">Contact Us </h1>
+    </div>
+  </div>
+  <div class="subHeadings">
+    <h5> </h5>
+  </div>
 
-        <div style="padding-top: 40px;"></div>
+  <div style="padding-top: 40px;"></div>
 
 
 <div class="infoPages">

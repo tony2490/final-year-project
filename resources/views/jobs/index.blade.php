@@ -96,6 +96,11 @@
             </tbody>
             @endforeach
           </table>
+          </div>
+          {{$jobs->links()}}
+
+
+    </div>
 </div>
 
 

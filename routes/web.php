@@ -108,6 +108,8 @@ Route::prefix('admin')->middleware(['auth','auth.isAdmin'])->name('admin.')->gro
     Route::resource('/users', UserController::class);
 });
 
+// Laravel Fortify 
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
