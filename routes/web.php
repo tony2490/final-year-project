@@ -23,7 +23,7 @@ use App\Http\Controllers\ContactsPageController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('/welcomeUpdate', function () {
