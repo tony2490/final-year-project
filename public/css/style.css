@@ -19,7 +19,7 @@ body {
     
     /* Background styles */
     
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('/img/home-page.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('https://www.aston.ac.uk/sites/default/files/styles/ui_card_image_800x600/public/2021-01/aston-ssh-society-matters-podcast-undergraduate-ui-card.jpg?itok=Emu2vcVb');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -60,3 +60,8 @@ body {
     background-color: rgba(147, 112, 219, 0.8);
 }
 
+@media screen and (max-device-width: 500px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+}

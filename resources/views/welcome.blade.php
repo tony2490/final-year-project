@@ -44,7 +44,7 @@
             <!-- <strong> <div class="underline homepage-content" ></div> </strong> -->
 
             <div class="homepage-cards-content homepage-p">
-                <p> <img src="/img/aston-our-teaching-staff-ui.jpg" class="img-to-right " alt="" width="600" height="300" >
+                <p> <img src="https://www.aston.ac.uk/sites/default/files/2020-12/aston-our-teaching-staff-ui.jpg" class="img-to-right " alt="" width="600" height="300" >
 
                      <h2 class="content-title">What Work Will I Be Doing?</h2> <br>
                     <p">
@@ -62,7 +62,7 @@
             <div style="padding-top: 80px;"></div>
 
             <div class="homepage-cards-content homepage-p">
-                <p> <img src="/img/teaching.jpg" class="img-to-left " alt="" width="600" height="300">
+                <p> <img src="https://www.oncampus.global/ugc-1/gallery/417/417_full.jpg" class="img-to-left " alt="" width="600" height="300">
 
                 <h2 class="content-title">Why Sign Up?</h2> <br>
                     <p">
