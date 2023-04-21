@@ -25,10 +25,10 @@ class UserController extends Controller
         }
         
         if(Gate::allows('is-admin')){
-            return view('admin/users/index')->with(['users'=> User::paginate(10)]);
+            return view('Admin/users/index')->with(['users'=> User::paginate(10)]);
         
         }
-        return view('admin/users/index')->with(['users'=> User::paginate(10)]);
+        return view('Admin/users/index')->with(['users'=> User::paginate(10)]);
 
     }
 
