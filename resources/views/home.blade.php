@@ -21,6 +21,8 @@
                     @endcan
                     @cannot('is-admin')
                     <a href="/applications/myApplications"> My Applications </a> </p>
+                    <a href="/admin/users"> My  </a> </p>
+
                     @endcannot
 
                 </div>
