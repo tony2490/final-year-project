@@ -28,7 +28,7 @@ class UserController extends Controller
             return view('admin.users.index')->with(['users'=> User::paginate(10)]);
         
         }
-        redirect('/');
+        return view('admin.users.index')->with(['users'=> User::paginate(10)]);
     }
 
     /**
