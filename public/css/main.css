@@ -381,6 +381,10 @@ footer{
   text-overflow: ellipsis;
 }
 
+.subHeadings{
+    width: 100%;
+}
+
 
   @media only screen and (max-width: 768px) {
     .testimonial {

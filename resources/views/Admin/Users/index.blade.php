@@ -14,7 +14,7 @@
 
 
           
-                    <a class="btn btn-sm btn-success create" href="{{route('admin.users.create')}}" role="button"> Create</a>
+                    <a class="btn btn-sm btn-success create" href="{{route('admin.users.create')}}" role="button" style="width: 100%;"> Create</a>
            
         </div>
 

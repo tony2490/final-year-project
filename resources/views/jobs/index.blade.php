@@ -10,7 +10,7 @@
           <h5>Select from The Available Roles & Apply Today</h5>
         </div>
         @can('is-admin')
-        <a class="btn btn-sm btn-success create" href="{{route('jobs.create')}}" role="button"> Create</a>
+        <a class="btn btn-sm btn-success create" href="{{route('jobs.create')}}" style="width: 100%;" role="button"> Create</a>
         @endcan
 
     </div>
