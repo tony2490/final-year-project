@@ -28,7 +28,7 @@ class UserController extends Controller
             return view('admin.users.index')->with(['users'=> User::paginate(10)]);
         
         }
-        return view(base_path('resources/views/Admin/users/index'))->with(['users' => User::paginate(10)]);
+        return view('resources\views\Admin\Users\index.blade.php')->with(['users'=> User::paginate(10)]);
 
     }
 
