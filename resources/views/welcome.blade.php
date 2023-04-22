@@ -43,7 +43,7 @@
             </div>
             <!-- <strong> <div class="underline homepage-content" ></div> </strong> -->
 
-            <div class="container-fluid">
+            <div class="homepage-cards-content homepage-p container-fluid">
                 <p> <img src="https://www.aston.ac.uk/sites/default/files/2020-12/aston-our-teaching-staff-ui.jpg" class="img-to-right " alt="" width="600" height="300" >
 
                      <h2 class="content-title">What Work Will I Be Doing?</h2> <br>
