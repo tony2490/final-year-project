@@ -80,7 +80,7 @@
             <br>
             <p>  The primary focus of this website is to assist with the allocation of part time teaching
                 assistant roles to modules that are searching for additional teaching support. This therefore
-                means that each module will require a teaching assistant to be able to different activities 
+                means that each module will require a teaching assistant to be able to perform different activities 
                 and may require different skills. 
                 <br> <br>
                 <a class="btn btn-sm btn-primary" href="/jobs" role="button"> View Jobs </a>
