@@ -1,0 +1,90 @@
+/* HERO SECTION START */
+body,html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #f1f1f1;
+    font-family: sans-serif;
+}
+
+.hero1-image{
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('https://www.aston.ac.uk/sites/default/files/styles/ui_card_image_800x600/public/2021-01/aston-ssh-society-matters-podcast-undergraduate-ui-card.jpg?itok=Emu2vcVb') no-repeat center;
+
+
+    background-size: cover;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.container h1{
+    font-size: 72px;
+    letter-spacing: 0.2em;
+    margin: 0;
+}
+
+.container h1 span{
+    border: 10px solid white;
+    padding: 6px 14px;
+    display: inline-block;
+}
+
+.des{
+    margin: 20px;
+    display: block;
+    font-size: 26px;
+    text-shadow: 0 0 10px black;
+}
+
+.btn {
+    /* Positioning and sizing */
+    display: block;
+    width: 200px;
+    
+    /* Padding and margins */
+    padding: 1em;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* Text styles */
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    
+    /* Border styles */
+    border: 3px solid white;
+    border-radius: 20px;
+    
+    /* Background styles */
+    background-color: rgba(147, 112, 219, 0.8);
+}
+
+.btn:hover{
+    opacity: 0.4;
+}
+
+/* HERO SECTION END */
+
+
+
+/* INFO START  */
+
+
+
+/* INFO END  */
+
+/* CARDS START  */
+
+/* CARDS END  */
+
