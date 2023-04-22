@@ -20,7 +20,7 @@
         </div>
         
         <div class="homepage-content">
-            <div class="card-group homepage-content " style="width: 100%; padding-left: 70px;">
+            <div class="card-group homepage-content container-fluid">
                 <div class="card card-responsive col-sm-6 col-md-4 col-lg-4 ">
                     <img class="card-img-top" src="/img/money.svg" alt="hourly pay">
                     <div class="card-body">
@@ -43,7 +43,7 @@
             </div>
             <!-- <strong> <div class="underline homepage-content" ></div> </strong> -->
 
-            <div class="homepage-cards-content homepage-p">
+            <div class="container-fluid">
                 <p> <img src="https://www.aston.ac.uk/sites/default/files/2020-12/aston-our-teaching-staff-ui.jpg" class="img-to-right " alt="" width="600" height="300" >
 
                      <h2 class="content-title">What Work Will I Be Doing?</h2> <br>
@@ -84,7 +84,7 @@
 
         <!-- Testimonials -->
             
-            <section class="home-testimonial homepage-content">
+            <section class="home-testimonial homepage-content container-fluid">
                 <div class="container-fluid">
                     <div class="row d-flex justify-content-center testimonial-pos">
                         <div class="col-md-12 pt-4 d-flex justify-content-center">
