@@ -85,10 +85,10 @@ footer{
     
 }
 
-.card{
+/* .card{
     box-shadow: 0 2px 4px rgba(204, 204, 204, 0.8);
     padding: 20px 40px;
-}
+} */
 
 h1{
     margin-bottom: 30px;
@@ -134,10 +134,10 @@ html {
     padding: 15px;
 
 }
-.card{
+/* .card{
 
     padding: 60px;
-}
+} */
 .table { table-layout:fixed; }
 .table td { overflow: hidden; }
 
@@ -327,9 +327,9 @@ footer{
   text-align: center;
 }
 
-.card-img-top{
+/* .card-img-top{
     transform:scale(0.5);
-}
+} */
 
 .img-to-right{
     float: right;

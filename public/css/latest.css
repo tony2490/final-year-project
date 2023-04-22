@@ -16,7 +16,7 @@ body,html{
 
     background-size: cover;
 }
-.container{
+.container-hero{
     position: absolute;
     top: 50%;
     left:50%;
@@ -46,7 +46,7 @@ body,html{
     text-shadow: 0 0 10px black;
 }
 
-.btn {
+.btn.hero {
     /* Positioning and sizing */
     display: block;
     width: 200px;
@@ -70,21 +70,71 @@ body,html{
     background-color: rgba(147, 112, 219, 0.8);
 }
 
-.btn:hover{
+.btn.hero:hover{
     opacity: 0.4;
+}
+.hero h1 {
+    /* Text styles */
+    font-size: 5em;
+    
+    /* Margins */
+    margin-top: 0;
+    margin-bottom: 0.5em;
 }
 
 /* HERO SECTION END */
 
-
+.card-title.benefits{
+    text-decoration: underline;
+    text-align: center;
+    text-transform: capitalize;
+}
+.card-text.benefits{
+    text-align: center;
+    text-transform: capitalize;
+}
 
 /* INFO START  */
+.description-container{
+    max-width: 800px;
+    margin: 40px auto 20px;
+}
 
+.description-container p{
+    text-align: center;
+}
+.description-container .floating-image{
+    max-width: 400px;
+}
 
+.description-container .floating-image.right{
+    float: right;
+    margin-left: 35px;
+    margin-bottom: 10px;
+}
+
+.description-container .floating-image.left{
+    float: left;
+    margin-right: 35px;
+    margin-bottom: 10px;
+}
+.description-container h3{
+    text-decoration: underline;
+    text-transform: capitalize;
+    text-align: center;
+}
 
 /* INFO END  */
 
+/* testimonials  */
+
+
+.home-testimonial{background-color: #231834;height: 380px}.home-testimonial-bottom{background-color: #f8f8f8;transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;margin-top: 20px;margin-bottom: 0px;position: relative;height: 130px;top: 190px}.home-testimonial h3{color: var(--orange);font-size: 14px;font-weight: 500;text-transform: uppercase}.home-testimonial h2{color: white;font-size: 28px;font-weight: 700}.testimonial-inner{position: relative;top: -174px}.testimonial-pos{position: relative;top: 24px}.testimonial-inner .tour-desc{border-radius: 5px;padding: 40px}.color-grey-3{font-family: "Montserrat", Sans-serif;font-size: 14px;color: #6c83a2}.testimonial-inner img.tm-people{width: 60px;height: 60px;-webkit-border-radius: 50%;border-radius: 50%;-o-object-fit: cover;object-fit: cover;max-width: none}.link-name{font-family: "Montserrat", Sans-serif;font-size: 14px;color: #6c83a2}.link-position{font-family: "Montserrat", Sans-serif;font-size: 12px;color: #6c83a2}
+
+/* testimonails  */
+
 /* CARDS START  */
+
 
 /* CARDS END  */
 
