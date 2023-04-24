@@ -22,12 +22,14 @@ class JobController extends Controller
         $latestModule = filteredModuleCode::all('filteredModuleCode');
         $latestModule = filteredModuleCode::orderBy('id', 'desc')->first();
 
-        $jobs = Job::latest()->get();
+        // $jobs = Job::latest()->get();
+          
                 
         return view('jobs.index',[
-            'jobs' => $jobs,
-            'latestModule' => $latestModule,
+           
             'jobs' => Job::paginate(10),
+            'latestModule' => $latestModule,
+
         ]);
     }
     // this function return the job selected 

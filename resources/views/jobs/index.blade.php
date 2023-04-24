@@ -99,7 +99,6 @@
           </div>
           {{$jobs->links()}}
 
-
     </div>
 </div>
 
