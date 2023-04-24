@@ -1,7 +1,9 @@
+<!-- this file creates a new user  -->
 @extends('layouts.app')
 
 @section('content')
 
+<!-- displays the headings and subHeadings of the page  -->
 <div class="row">
         <div class="col-12">
           <div class="headings">
@@ -13,6 +15,7 @@
         </div>
 </div>
 
+<!-- this displays the create a user form  -->
 <h1></h1>
 <div class="container">
     <div class="row justify-content-center">

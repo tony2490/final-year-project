@@ -11,6 +11,8 @@ class FaqController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+      //  this function directs the user to the faq page 
     public function index()
     {
         return view('faq.faqPage');

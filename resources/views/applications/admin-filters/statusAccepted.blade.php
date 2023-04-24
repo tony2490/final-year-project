@@ -1,6 +1,9 @@
+<!-- this page displays all the status accepted applicationsallows for admins to filter through modules and status and view applications  -->
+
 @extends('layouts.app')
 
 @section('content')
+<!-- displays the headings and subHeadings of the page  -->
 <div class="row">
         <div class="col-12">
           <div class="headings">
@@ -12,15 +15,15 @@
         </div>
 </div>
 
-
+<!-- filter button  -->
 <div class="container">                                       
     <div class="dropdown">
       <div class="filter-button">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Filter
       </button>
-  
-  
+
+       <!-- drop down menu  -->
       <ul class="dropdown-menu">
         <!-- <li><a class="test a-link" tabindex="-1" href="#">Roles</a></li> -->
 
@@ -29,6 +32,7 @@
        
           <ul class="dropdown-menu">
         
+             <!-- posts the module selected into a database  -->
           <form action="/applications/moduleCode" method="POST">
             @csrf
 
@@ -47,7 +51,7 @@
         </li>
 
 
-
+    <!-- drop down based on appliction status  -->
         <li class="dropdown-submenu">
           <a class="test a-link" tabindex="-1" href="#">Status </a>
   
@@ -114,7 +118,9 @@
 
         @foreach($applications as $application)
       <?php
-  if($application->status == "Accepted") :?>
+            
+      // display all the applications if it meets the following conditions display
+     if($application->status == "Accepted") :?>
 
       <tr>
           <th scope="row"> {{$application->id}} </th>
@@ -132,6 +138,7 @@
         </tbody>
       </table>
   </div>
+      <!-- links to view other page  -->
       {{$applications->links()}}
 
 

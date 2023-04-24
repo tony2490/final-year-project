@@ -11,6 +11,9 @@ return new class extends Migration
      *
      * @return void
      */
+
+         //  this function creates the fields for this table 
+
     public function up()
     {
         Schema::create('role_user', function (Blueprint $table) {

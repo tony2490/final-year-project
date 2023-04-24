@@ -32,7 +32,9 @@ class ApplicationsController extends Controller
         return view('applications.index2',['jobs'=>$jobs, 'applications' => Application::paginate(10)]);
     }
 
-    public function userShow()
+
+    // this function return the logged in user with a list of all ther application 
+        public function userShow()
     {
         $application = Application::all();
         $jobs = Job::all();
@@ -47,6 +49,8 @@ class ApplicationsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    //  this function provides the application form details when a student is applying for a role 
     public function create()
     {
         $jobs = Job::all();
@@ -63,6 +67,8 @@ class ApplicationsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    //  this function stores all the fields from the application form into the database table 
     public function store(Request $request)
     {
         $application = new Application();
@@ -81,8 +87,6 @@ class ApplicationsController extends Controller
         $application->supportingInfo = request('supportingInfo');
         $application->status = request('status');
 
-        
-
 
         $application->save();
 
@@ -95,6 +99,8 @@ class ApplicationsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    //  this function shows the selected application 
     public function show($id)
     {
         $application = Application::findorFail($id);
@@ -109,6 +115,8 @@ class ApplicationsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    //  this function allows the user to edit an application 
     public function edit($id){
 
         
@@ -119,7 +127,7 @@ class ApplicationsController extends Controller
     $request->session()->flash('success', 'You have edited the user');
     }
 
-    
+    // this function allows the logged in students to view their application and respond to an offer 
     public function userResponse($id){
         $user = Auth::user()->id; 
         $myApplications = Application::with('user')->where('applications.user_id', '=', $user)->get();
@@ -141,7 +149,9 @@ class ApplicationsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    
+    //  this function allows users to update an application in the databse 
+     public function update(Request $request, $id)
     {
 
         $application = Application::findOrFail($id);
@@ -181,6 +191,8 @@ class ApplicationsController extends Controller
         //
     }
 
+    // this function allows this page to use the filter based on the module code 
+
     public function statusAcceptedAdmin(){
 
         $adminLatestModule = adminFilteredModuleCode::all('filteredModuleCode');
@@ -193,6 +205,9 @@ class ApplicationsController extends Controller
         return view('applications.admin-filters.statusAccepted',['adminLatestModule'=>  $adminLatestModule, 'jobs'=> $jobs,'applications' => Application::paginate(10)]);
 
     }
+
+    
+    // this function allows this page to use the filter based on the module code 
 
     public function underReviewAdmin(){
         $adminLatestModule = adminFilteredModuleCode::all('filteredModuleCode');
@@ -207,6 +222,7 @@ class ApplicationsController extends Controller
 
     }
 
+    // this function allows this page to use the filter based on the module code 
     public function offeredAdmin(){
         $adminLatestModule = adminFilteredModuleCode::all('filteredModuleCode');
         $adminLatestModule = adminFilteredModuleCode::orderBy('id', 'desc')->first();
@@ -219,6 +235,9 @@ class ApplicationsController extends Controller
         return view('applications.admin-filters.statusOffered',['adminLatestModule'=>  $adminLatestModule, 'jobs'=> $jobs,'applications' => Application::paginate(10)]);
 
     }
+
+    
+    // this function allows this page to use the filter based on the module code 
 
     public function withdrawnAdmin(){
         $adminLatestModule = adminFilteredModuleCode::all('filteredModuleCode');
@@ -233,6 +252,9 @@ class ApplicationsController extends Controller
 
     }
 
+    
+    // this function allows this page to use the filter based on the module code 
+
     public function unsucessfulAdmin(){
         $adminLatestModule = adminFilteredModuleCode::all('filteredModuleCode');
         $adminLatestModule = adminFilteredModuleCode::orderBy('id', 'desc')->first();
@@ -246,6 +268,9 @@ class ApplicationsController extends Controller
 
     }
 
+    
+    // this function allows this page to use the filter based on the module code 
+
     public function assignedAdmin(){
         $adminLatestModule = adminFilteredModuleCode::all('filteredModuleCode');
         $adminLatestModule = adminFilteredModuleCode::orderBy('id', 'desc')->first();
@@ -258,6 +283,9 @@ class ApplicationsController extends Controller
         return view('applications.admin-filters.statusAssigned',['adminLatestModule'=>  $adminLatestModule, 'jobs'=> $jobs,'applications' => Application::paginate(10)]);
 
     }
+
+    
+    // this function allows this page to use the filter based on the module code 
 
 
     public function moduleCodeAdmin(){
@@ -273,6 +301,9 @@ class ApplicationsController extends Controller
 
     }
 
+    
+    // this function allows this page to use the filter based on the module code 
+
     public function statusAcceptedStudent(){
         $latestModule = filteredModuleCode::where('filteredModuleCode')->latest()->get();
         $user = Auth::user()->id; 
@@ -284,6 +315,7 @@ class ApplicationsController extends Controller
 
     }
 
+    // this function allows this page to use the filter based on the module code 
 
     public function statusUnderReviewStudent(){
 
@@ -295,6 +327,9 @@ class ApplicationsController extends Controller
 
         return view('applications.student-filters.statusUnderReview',['latestModule' => $latestModule,'jobs'=> $jobs, 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
     }
+
+    
+    // this function allows this page to use the filter based on the module code 
     public function statusOfferedStudent(){
         $latestModule = filteredModuleCode::where('filteredModuleCode')->latest()->get();
         $user = Auth::user()->id; 
@@ -304,6 +339,9 @@ class ApplicationsController extends Controller
 
         return view('applications.student-filters.statusOffered',['latestModule' => $latestModule, 'jobs'=> $jobs,'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
     }
+
+    
+    // this function allows this page to use the filter based on the module code 
 
     public function statusWithdrawnStudent(){
         $latestModule = filteredModuleCode::where('filteredModuleCode')->latest()->get();
@@ -315,6 +353,9 @@ class ApplicationsController extends Controller
         return view('applications.student-filters.statusWithdrawn',['latestModule' => $latestModule, 'jobs'=> $jobs, 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
     }
 
+    
+    // this function allows this page to use the filter based on the module code 
+
     public function statusUnsuccessfulStudent(){
         $latestModule = filteredModuleCode::where('filteredModuleCode')->latest()->get();
         $user = Auth::user()->id; 
@@ -324,6 +365,9 @@ class ApplicationsController extends Controller
 
         return view('applications.student-filters.statusUnsuccessful',['latestModule' => $latestModule,'jobs'=> $jobs, 'application' => $application,'myApplications'=> $myApplications,'applications' => Application::paginate(10)]);
     }
+
+    
+    // this function allows this page to use the filter based on the module code 
 
     public function statusAssignedStudent(){
         $latestModule = filteredModuleCode::where('filteredModuleCode')->latest()->get();
@@ -336,6 +380,7 @@ class ApplicationsController extends Controller
     }
 
 
+    // this function allows this page to use the filter based on the module code 
     public function moduleCode(){
 
 

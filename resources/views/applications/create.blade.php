@@ -1,6 +1,8 @@
+<!-- this file is an application form to apply for roles  -->
 @extends('layouts.app')
 @section('content')
 
+<!-- displays the headings and subHeadings of the page  -->
 <div class="row">
         <div class="col-12">
           <div class="headings">

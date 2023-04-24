@@ -1,3 +1,4 @@
+<!-- this page is the email that will be used to notify users on an update  -->
 <x-mail::message>
 Dear Applicant,<br>
 

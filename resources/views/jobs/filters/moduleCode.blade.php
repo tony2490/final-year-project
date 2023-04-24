@@ -1,5 +1,8 @@
+<!-- this page displays all the modules based on the one selects allows for admins to filter through modules and status and view applications  -->
+
 @extends('layouts.app')
 @section('content')
+<!-- displays the headings and subHeadings of the page  -->
 <div class="row">
         <div class="col-12">
           <div class="headings">
@@ -11,7 +14,7 @@
         </div>
 
     </div>
-
+<!-- filter button  -->
     <div class="container">                                       
     <div class="dropdown">
       <div class="filter-button">
@@ -19,7 +22,7 @@
         Filter
       </button>
   
-  
+   <!-- drop down menu  -->
       <ul class="dropdown-menu">
         <!-- <li><a class="test a-link" tabindex="-1" href="#">Roles</a></li> -->
 
@@ -29,7 +32,7 @@
           <a class="test a-link" tabindex="-1" href="#">Module </a>
        
           <ul class="dropdown-menu">
-        
+            <!-- posts the module selected into a database  -->
           <form action="/jobs/moduleCode" method="POST">
             @csrf
 
@@ -81,7 +84,9 @@
         <tbody>
 
         @foreach($jobs as $job)
+        
       <?php
+         // if the module code that was filtered is  == to the application role display the details
 
        if($job->moduleCode == $latestModule->filteredModuleCode)  :?>
   
@@ -103,6 +108,7 @@
         </tbody>
       </table>
        </div>
+              <!-- links to view other page  -->
       {{$applications->links()}}
 
 

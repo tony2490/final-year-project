@@ -1,6 +1,8 @@
+<!-- this page allows for admins to filter through modules and status and view applications  -->
 @extends('layouts.app')
 
 @section('content')
+<!-- displays the headings and subHeadings of the page  -->
 <div class="row">
         <div class="col-12">
           <div class="headings">
@@ -12,7 +14,7 @@
         </div>
 </div>
 
-
+<!-- filter button  -->
 <div class="container">                                       
     <div class="dropdown">
       <div class="filter-button">
@@ -20,7 +22,7 @@
         Filter
       </button>
   
-  
+    <!-- drop down menu  -->
       <ul class="dropdown-menu">
         <!-- <li><a class="test a-link" tabindex="-1" href="#">Roles</a></li> -->
 
@@ -30,7 +32,7 @@
           <a class="test a-link" tabindex="-1" href="#">Module </a>
        
           <ul class="dropdown-menu">
-        
+            <!-- posts the module selected into a database  -->
           <form action="/myApplications/moduleCode" method="POST">
             @csrf
 
@@ -49,7 +51,7 @@
         </li>
 
 
-
+ <!-- drop down based on appliction status  -->
         <li class="dropdown-submenu">
           <a class="test a-link" tabindex="-1" href="#">Status </a>
   
@@ -116,6 +118,7 @@
 
         @foreach($myApplications as $myApplication)
       <?php
+        // display all the applications if it meets the following conditions display
   if($myApplication->status == "Withdrew") :?>
 
       <tr>
@@ -132,6 +135,7 @@
         </tbody>
       </table>
   </div>
+       <!-- links to view other page  -->
       {{$applications->links()}}
 
 

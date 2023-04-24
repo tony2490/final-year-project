@@ -29,6 +29,8 @@ class statusUpdateMail extends Mailable
      *
      * @return \Illuminate\Mail\Mailables\Envelope
      */
+
+    //  this function gets the most recent application and sends an email to that user 
     public function envelope()
     {
         $application = Application::all('updated_at');

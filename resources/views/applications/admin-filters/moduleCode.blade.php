@@ -1,10 +1,13 @@
+<!-- this page displays all the modules based on the one selects allows for admins to filter through modules and status and view applications  -->
 @extends('layouts.app')
 
 @section('content')
+
+<!-- displays the headings and subHeadings of the page  -->
 <div class="row">
         <div class="col-12">
           <div class="headings">
-            <h1 class="headings"> Applications Module</h1>
+            <h1 class="headings"> Applications</h1>
           </div>
         </div>
         <div class="subHeadings">
@@ -12,7 +15,7 @@
         </div>
 </div>
 
-
+<!-- filter button  -->
 <div class="container">                                       
     <div class="dropdown">
       <div class="filter-button">
@@ -20,7 +23,7 @@
         Filter
       </button>
   
-  
+      <!-- drop down menu  -->
       <ul class="dropdown-menu">
         <!-- <li><a class="test a-link" tabindex="-1" href="#">Roles</a></li> -->
 
@@ -28,7 +31,8 @@
           <a class="test a-link" tabindex="-1" href="#">Module </a>
        
           <ul class="dropdown-menu">
-        
+
+          <!-- posts the module selected into a database  -->
           <form action="/applications/moduleCode" method="POST">
             @csrf
 
@@ -46,7 +50,7 @@
           </ul>
         </li>
 
-
+       <!-- drop down based on appliction status  -->
 
         <li class="dropdown-submenu">
           <a class="test a-link" tabindex="-1" href="#">Status </a>
@@ -116,7 +120,7 @@
       <?php
 
       
-
+      // if the module code that was filtered is  == to the application role display the details
        if($application->role == $adminLatestModule->filteredModuleCode)  :?>
   
 
@@ -137,6 +141,7 @@
         </tbody>
       </table>
        </div>
+       <!-- links to view other page  -->
       {{$applications->links()}}
 
 

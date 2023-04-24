@@ -1,5 +1,8 @@
+<!-- allows for users to edit an application  -->
 @extends('layouts.app')
 @section('content')
+
+<!-- displays the headings and subHeadings of the page  -->
 <div class="row">
         <div class="col-12">
           <div class="headings">
@@ -19,6 +22,7 @@
         <div class="card-padding"></div>
             <div class="card">
                 <div class="card-body">
+                    <!-- this form updates a specific application and posts it into the database  -->
                     <form method="POST" action="{{ route('applications.update', $application->id) }}">
                         @method('PATCH')
                         @csrf
@@ -36,6 +40,7 @@
                         @enderror
                     </div>
 
+                    <!-- the user user id field  -->
 
                     <div class="col-md-8">
                         <input id="user_id" type="hidden" name="user_id" 
@@ -47,6 +52,8 @@
                             </span>
                         @enderror
                     </div>
+
+                    <!-- the user email  -->
 
                     <div class="col-md-8">
                         <input id="email" type="hidden" name="email" 

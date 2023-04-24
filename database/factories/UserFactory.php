@@ -15,6 +15,8 @@ class UserFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
+    //  this function creates 10 fake users 
     public function definition()
     {
         return [

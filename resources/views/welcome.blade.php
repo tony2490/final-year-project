@@ -1,3 +1,4 @@
+<!-- this is the view of the home page  -->
 @extends('layouts.app')
 @section('content')
 
@@ -10,10 +11,11 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/latest.css" >
+        <link rel="stylesheet" href="css/home.css" >
         <link rel="stylesheet" href="css/style.css" >
     </head>
     <body>
+        <!-- her section of the home page  -->
         <div class="hero1-image">
             <div class="hero">
                 <div class="hero-inner">
@@ -29,7 +31,7 @@
             <h3 >Teaching Assistant Roles For Both Final Year & PhD Aston Students</h3>
         </div>
 
-
+        <!-- 3 benefit cards  -->
         <div style="padding-bottom: 50px;"></div>
     <div class="container-fluid">
             <div class="row g-3">
@@ -71,7 +73,8 @@
             </div>
         </div>
         <div style="padding-bottom: 50px;"></div>
-    <!-- ####  -->
+
+        <!-- first information section  -->
 
     <div class="container">
         <div class="description-container">
@@ -91,6 +94,7 @@
 
             <div style="padding-bottom: 50px;"></div>
 
+            <!-- second information section  -->
             <img src="https://www.oncampus.global/ugc-1/gallery/417/417_full.jpg" alt="" class="img-responsive floating-image left">
             <h3> Why Sign Up? </h3>
             <br>
@@ -161,7 +165,6 @@
 
 
 
-    <!-- testimonials  -->
         
         <script src="" async defer></script>
         <div  class="home-footer-padding"></div>

@@ -33,7 +33,7 @@ Route::get('/welcomeUpdate', function () {
 
 
 
-// JOBS 
+// Jobs routes and middleare to protect the routes 
 Route::get('/jobs', [JobController::class, 'index'])->name(('jobs.index'))->middleware((['auth', 'verified']));
 Route::get('/jobs/create', [JobController::class,'create'])->name(('jobs.create'))->middleware(['auth','auth.isAdmin', 'verified']);
 Route::post('/jobs', [JobController::class,'store'])->name(('jobs.store'))->middleware(['auth','auth.isAdmin', 'verified']);
@@ -44,20 +44,20 @@ Route::delete('/jobs/{id}', [JobController::class,'destroy'])->name(('jobs.destr
 
 // --------------------------------------------------------------------------------
 
-// student 
+// posts modules to database for students routes and middleare to protect the routes 
 Route::post('/myApplications/moduleCode', [filteredModuleCodeController::class,'store'])->name(('filteredModuleCodes.store'))->middleware(['auth', 'verified']);
 Route::post('/jobs/moduleCode', [filteredModuleCodeController::class,'jobStore'])->name(('filteredModuleCodes.jobStore'))->middleware(['auth', 'verified']);
 
-// admin 
+// posts modules to database for admins routes and middleare to protect the routes 
 Route::post('/applications/moduleCode', [adminFilteredModuleCodeController::class,'store'])->name(('adminFilteredModuleCodes.store'))->middleware(['auth','auth.isAdmin', 'verified']);
 
 
 
 // ------------------------------------------
-// APPLICATIONS - ADMIN VIEW
+// APPLICATIONS - ADMIN VIEW routes and middleare to protect the routes 
 Route::get('/applications', [ApplicationsController::class, 'index'])->name(('applications.index'))->middleware(['auth','auth.isAdmin', 'verified']);
 
-// Filters Admin
+// Admin filter routes routes and middleare to protect the routes 
 Route::get('/applications/Accepted', [ApplicationsController::class, 'statusAcceptedAdmin'])->name(('applications.statusAccepted'))->middleware(['auth','auth.isAdmin', 'verified']);
 Route::get('/applications/underReview', [ApplicationsController::class, 'underReviewAdmin'])->name(('applications.underReview'))->middleware(['auth','auth.isAdmin', 'verified']);
 Route::get('/applications/offered', [ApplicationsController::class, 'offeredAdmin'])->name(('applications.offered'))->middleware(['auth','auth.isAdmin', 'verified']);
@@ -68,7 +68,7 @@ Route::get('/applications/assigned', [ApplicationsController::class, 'assignedAd
 Route::get('/applications/moduleCode', [ApplicationsController::class, 'moduleCodeAdmin'])->name(('applications.moduleCode'))->middleware(['auth','auth.isAdmin', 'verified']);
 
 
-// Filters Students 
+// Filters for students routes and middleare to protect the routes 
 Route::get('/myApplications/Accepted', [ApplicationsController::class, 'statusAcceptedStudent'])->name(('applications.statusAcceptedStudent'))->middleware(['auth', 'verified']);
 Route::get('/myApplications/underReview', [ApplicationsController::class, 'statusUnderReviewStudent'])->name(('applications.statusUnderReviewStudent'))->middleware(['auth', 'verified']);
 Route::get('/myApplications/offered', [ApplicationsController::class, 'statusOfferedStudent'])->name(('applications.statusOfferedStudent'))->middleware(['auth', 'verified']);
@@ -79,7 +79,7 @@ Route::get('/myApplications/assigned', [ApplicationsController::class, 'statusAs
 
 Route::get('/myApplications/moduleCode', [ApplicationsController::class, 'moduleCode'])->name(('applications.moduleCode'))->middleware(['auth', 'verified']);
 
-// APPLICATIONS - STUDENT VIEW
+// APPLICATIONS - STUDENT VIEW routes and middleare to protect the routes 
 
 Route::get('/applications/myApplications', [ApplicationsController::class, 'userShow'])->name(('applications.userShow'))->middleware((['auth', 'verified']));
 Route::get('/applications/create', [ApplicationsController::class,'create'])->name(('applications.create'))->middleware((['auth', 'verified']));
@@ -91,10 +91,10 @@ Route::patch('/applications/edit/{id}', [ApplicationsController::class, 'update'
 
 // -------------------------------------------------
 
-
+// contact us routes and middleare to protect the routes 
 Route::get('/contacts', [ContactsPageController::class, 'index'])->name(('contacts.index'))->middleware(('auth'));
 
-
+// faq routes and middleare to protect the routes 
 Route::get('/faq', [FaqController::class, 'index'])->name(('faq.index'))->middleware(('auth'));
 
 
@@ -108,7 +108,7 @@ Route::prefix('admin')->middleware(['auth','auth.isAdmin'])->name('admin.')->gro
     Route::resource('/users', UserController::class);
 });
 
-// Laravel Fortify 
+// Laravel Fortify routes
 
 Auth::routes();
 

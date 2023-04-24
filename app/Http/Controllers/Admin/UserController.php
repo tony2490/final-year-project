@@ -18,16 +18,22 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function index()
     {
+        // if user is not logged in redirect them to the home page 
         if(Gate::denies('logged-in')){
             redirect('/');
         }
         
+        // if the user is an admin direct them the /admin/users page 
         if(Gate::allows('is-admin')){
             return view('admin.users.index')->with(['users'=> User::paginate(10)]);
         
         }
+
+        // or else redirect them to the home page 
         redirect('/');
     }
 

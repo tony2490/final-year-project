@@ -1,6 +1,8 @@
+<!-- this page is used for students to respond to a specific application  -->
 @extends('layouts.app')
 @section('content')
 
+<!-- displays the headings and subHeadings of the page  -->
 <div class="row">
         <div class="col-12">
           <div class="headings">
@@ -19,6 +21,7 @@
         <div class="card-padding"></div>
             <div class="card">
                 <div class="card-body">
+                    <!-- this form posts the update of the response into the database  -->
                     <form method="POST" action="{{ route('applications.update', $application->id) }}">
                         @method('PATCH')
                         @csrf

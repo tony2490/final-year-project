@@ -14,6 +14,8 @@ class JobController extends Controller
     // public function __construct(){
     //     $this->middleware('auth');
     // }
+
+    // this function allows the jobs page to access the filters 
     public function index(){
         
         // $jobs = Job::all();
@@ -28,6 +30,7 @@ class JobController extends Controller
             'jobs' => Job::paginate(10),
         ]);
     }
+    // this function return the job selected 
 
     public function show($id){
 
@@ -37,10 +40,13 @@ class JobController extends Controller
 
     }
 
+    // this function directs users to create a job page 
     public function create(){
 
         return view('jobs.create');
     }
+
+    // this function stores the create job to the database table 
 
     public function store(){
         $job = new Job();
@@ -59,13 +65,15 @@ class JobController extends Controller
         return redirect('/')->with('mssg', 'Your job has successfully been uploaded!');
     }
 
+    // this function allows users to delete the job 
+
     public function destroy($id){
         $job = Job::findorFail($id);
         $job->delete();
 
         return redirect('/jobs');
     }
-
+   // this function allows the jobs page to access the filters 
     public function moduleCode(){
         
         // $latestModule = filteredModuleCode::orderBy('id', 'desc')->first();

@@ -1,3 +1,4 @@
+<!-- this is the user email verify notice page  -->
 @extends('layouts.app')
 
 @section('content')

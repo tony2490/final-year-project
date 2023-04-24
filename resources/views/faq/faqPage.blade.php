@@ -1,3 +1,4 @@
+<!-- this is the Frequently Answered Questions page that will be used to answer users' questions  -->
 @extends('layouts.app')
 @section('content')
 

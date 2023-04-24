@@ -1,5 +1,7 @@
+<!-- this form presents an application for an admin to update  -->
 @csrf
 
+<!-- store id into databse  -->
     <div class="row mb-3">
         <label for="id" class="col-md-4 col-form-label text-md-end"></label>
 
@@ -16,7 +18,7 @@
         
     </div>
 
-
+<!-- this displays the role  -->
     <div class="row mb-3">
         <label for="role" class="col-md-4 col-form-label text-md-end">{{ __('Role') }}</label>
 
@@ -32,7 +34,7 @@
         </div>
         
     </div>
-
+<!-- this field displays the aston id  -->
     <div class="row mb-3">
         <label for="astonID" class="col-md-4 col-form-label text-md-end">{{ __(' Aston ID') }}</label>
 
@@ -50,7 +52,7 @@
     </div>
 
 
-    
+    <!-- this field displays the name  -->
     <div class="row mb-3">
         <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
 
@@ -67,6 +69,7 @@
         
     </div>
 
+    <!-- this field displays the student type  -->
     <div class="row mb-3">
         <label for="studentType" class="col-md-4 col-form-label text-md-end">{{ __(' Student Type') }}</label>
 
@@ -82,6 +85,8 @@
         </div>
         
     </div>
+
+    <!-- this field displays the course studied  -->
 
     <div class="row mb-3">
         <label for="courseStudied" class="col-md-4 col-form-label text-md-end">{{ __(' Course Studied') }}</label>
@@ -100,6 +105,7 @@
     </div>
 
 
+    <!-- this field displays the relevant Module Grades -->
     <div class="row mb-3">
         <label for="relevantModuleGrades" class="col-md-4 col-form-label text-md-end">{{ __('Relevant Module Grades') }}</label>
 
@@ -116,6 +122,7 @@
         
     </div>
 
+    <!-- this field displays the supporting Info -->
     <div class="row mb-3">
         <label for="supportingInfo" class="col-md-4 col-form-label text-md-end">{{ __('Supporting Information') }}</label>
 
@@ -132,7 +139,7 @@
         
     </div>
 
-
+    <!-- this field allows an application status to be updated  -->
     <div class="row mb-3">
         <label for="status" class="col-md-4 col-form-label text-md-end">{{ __('Status') }}</label>
 
@@ -155,7 +162,7 @@
         
     </div>
 
-
+<!-- this button stores the update -->
 
 
     <div class="row mb-0">

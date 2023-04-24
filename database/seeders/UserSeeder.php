@@ -13,6 +13,8 @@ class UserSeeder extends Seeder
      *
      * @return void
      */
+
+    //  creates 10 new users 
     public function run()
     {
         User::factory()->times(10)->create();

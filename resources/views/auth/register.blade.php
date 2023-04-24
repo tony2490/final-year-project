@@ -1,3 +1,4 @@
+<!-- ths is the user register page  -->
 @extends('layouts.app')
 
 @section('content')

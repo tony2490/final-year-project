@@ -34,7 +34,7 @@ class filteredModuleCodeController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-
+    // this function stores the module code selected for filter in the database table for jobs
      public function jobStore(Request $request)
      {
          $filteredModuleCode = new filteredModuleCode;
@@ -47,6 +47,8 @@ class filteredModuleCodeController extends Controller
  
          return redirect('/jobs/moduleCode');
      }
+
+      // this function stores the module code selected for filter in the database table for applications
     public function store(Request $request)
     {
         $filteredModuleCode = new filteredModuleCode;

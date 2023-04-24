@@ -1,3 +1,4 @@
+<!-- this is the contact us page that is displayed to users detailing how to contact the team  -->
 @extends('layouts.app')
 @section('content')
 

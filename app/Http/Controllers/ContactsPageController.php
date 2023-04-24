@@ -11,6 +11,8 @@ class ContactsPageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    //  this function directs the user to the contact us page 
     public function index()
     {
         return view('contacts.contactsPage');
