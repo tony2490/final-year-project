@@ -1,0 +1,107 @@
+<!-- mailtrap
+
+email: helloteeno123@gmail.com
+password: Arsenal4life
+
+Admins Credentials
+admins email: admin@aston.ac.uk
+admin password: Password1
+
+admins email: admin2@aston.ac.uk
+admin password: Password1
+
+
+
+Student Credentials
+students email: student1@aston.ac.uk
+students password: Password1
+
+students email: student2@aston.ac.uk
+students password: Password1 
+
+
+####################
+
+
+clone the repo: https://github.com/tony2490/fyp.git
+
+
+channge env file to :
+
+APP_NAME=Laravel
+APP_ENV=local
+APP_KEY=base64:wmOfWjE/6qvz9lBgj+hCXzQg9sZ8QCa5CyY5Wvr41tg=
+APP_DEBUG=true
+APP_URL=http://localhost
+
+LOG_CHANNEL=stack
+LOG_DEPRECATIONS_CHANNEL=null
+LOG_LEVEL=debug
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=flexroles
+DB_USERNAME=root
+DB_PASSWORD=
+
+BROADCAST_DRIVER=log
+CACHE_DRIVER=file
+FILESYSTEM_DISK=local
+QUEUE_CONNECTION=sync
+SESSION_DRIVER=file
+SESSION_LIFETIME=120
+
+MEMCACHED_HOST=127.0.0.1
+
+REDIS_HOST=127.0.0.1
+REDIS_PASSWORD=null
+REDIS_PORT=6379
+
+MAIL_MAILER=smtp
+MAIL_HOST=sandbox.smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=05ec8245f76b60
+MAIL_PASSWORD=2f59c82f1c5712
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS="noreply@astonta.com"
+MAIL_FROM_NAME="Aston Teaching Assistant Admin Team"
+
+
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_DEFAULT_REGION=us-east-1
+AWS_BUCKET=
+AWS_USE_PATH_STYLE_ENDPOINT=false
+
+PUSHER_APP_ID=
+PUSHER_APP_KEY=
+PUSHER_APP_SECRET=
+PUSHER_HOST=
+PUSHER_PORT=443
+PUSHER_SCHEME=https
+PUSHER_APP_CLUSTER=mt1
+
+VITE_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
+VITE_PUSHER_HOST="${PUSHER_HOST}"
+VITE_PUSHER_PORT="${PUSHER_PORT}"
+VITE_PUSHER_SCHEME="${PUSHER_SCHEME}"
+VITE_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
+
+
+
+Run:
+
+npm install
+npm run dev
+npm run build
+composer install
+ mv .env.example .env
+php artisan cache:clear
+ composer dump-autoload
+ php artisan key:generate
+
+php artisan serve
+
+
+ -->
